@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <GlobalNav/>
     <router-view/>
   </div>
 </template>
+<script>
+
+import GlobalNav from '@/components/GlobalNav.vue'
+
+export default {
+  components: {
+    GlobalNav
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -25,5 +32,8 @@
       color: #42b983;
     }
   }
+}
+body {
+  margin: 0;
 }
 </style>
