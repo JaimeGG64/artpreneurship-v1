@@ -1,7 +1,7 @@
 <template>
-    <div class="Awards">
+    <main class="Awards">
         <h1>Awards Page</h1>
-    </div>
+    </main>
 </template>
 
 <script>

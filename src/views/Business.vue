@@ -1,7 +1,7 @@
 <template>
-    <div class="Business">
+    <main class="Business">
         <h1>Business Page</h1>
-    </div>
+    </main>
 </template>
 
 <script>

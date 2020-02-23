@@ -1,7 +1,7 @@
 <template>
-    <div class="Collaborators">
+    <main class="Collaborators">
         <h1>Collaborators Page</h1>
-    </div>
+    </main>
 </template>
 
 <script>

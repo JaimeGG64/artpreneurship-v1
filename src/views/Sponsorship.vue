@@ -1,7 +1,7 @@
 <template>
-    <div class="Sponsorship">
+    <main class="Sponsorship">
         <h1>Sponsorship Page</h1>
-    </div>
+    </main>
 </template>
 
 <script>
