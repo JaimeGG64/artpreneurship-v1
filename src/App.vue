@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <GlobalNav/>
-    <router-view/>
+    <router-view v-title="title"/>
   </div>
 </template>
 <script>
@@ -11,6 +11,16 @@ import GlobalNav from '@/components/GlobalNav.vue'
 export default {
   components: {
     GlobalNav
+  },
+  data() {
+    return {
+      title: 'Artpreneurship'
+    }
+  },
+  watch:{
+    $route (to, from){
+        this.title = to.meta.title;
+    },
   }
 }
 </script>
