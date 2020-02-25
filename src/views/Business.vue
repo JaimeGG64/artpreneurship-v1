@@ -7,5 +7,6 @@
 <script>
 export default {
     name: 'business',
+    title: 'Business',
 }
 </script>

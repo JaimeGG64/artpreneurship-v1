@@ -10,16 +10,10 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home,
-      meta: {
-        title: 'Artpreneurship - Home',
-      },
     },
     {
       path: '/about',
       name: 'about',
-      meta: {
-        title: 'About',
-      },
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -28,9 +22,6 @@ export default new Router({
     {
       path: '/awards',
       name: 'awards',
-      meta: {
-        title: 'Awards',
-      },
       // route level code-splitting
       // this generates a separate chunk (awards.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -39,9 +30,6 @@ export default new Router({
     {
       path: '/business',
       name: 'business',
-      meta: {
-        title: 'Business',
-      },
       // route level code-splitting
       // this generates a separate chunk (business.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -50,9 +38,6 @@ export default new Router({
     {
       path: '/collaborators',
       name: 'collaborators',
-      meta: {
-        title: 'Collaborators',
-      },
       // route level code-splitting
       // this generates a separate chunk (collaborators.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -61,9 +46,6 @@ export default new Router({
     {
       path: '/sponsorship',
       name: 'sponsorship',
-      meta: {
-        title: 'Sponsorship',
-      },
       // route level code-splitting
       // this generates a separate chunk (sponsorship.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

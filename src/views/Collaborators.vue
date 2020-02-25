@@ -7,5 +7,6 @@
 <script>
 export default {
     name: 'collaborators',
+    title: 'Collaborators',
 }
 </script>
