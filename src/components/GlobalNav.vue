@@ -1,6 +1,5 @@
 <template>
     <nav class="global-nav">
-        <a v-title="title"></a>
         <router-link to="/"><img alt="Artpreneurship logo" src="../assets/logo.png" class="global-nav__logo"></router-link>
         <ul class="global-nav__links">
             <li class="global-nav__element"><router-link to="/about">About</router-link></li>
