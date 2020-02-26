@@ -11,7 +11,7 @@ import GlobalNav from '@/components/GlobalNav.vue'
 export default {
   components: {
     GlobalNav
-  }
+  },
 }
 </script>
 

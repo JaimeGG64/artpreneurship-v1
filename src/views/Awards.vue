@@ -6,6 +6,7 @@
 
 <script>
 export default {
-    name: "awards"
+    name: 'awards',
+    title: 'Awards',
 };
 </script>
