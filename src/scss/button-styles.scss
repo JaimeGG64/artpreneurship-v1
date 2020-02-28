@@ -1,21 +1,32 @@
 @import "/variables.scss";
 
 @mixin base-btn-style($buttonColor, $fontSize, $fontWeight) {
-    color: if ($buttonColor == $yellow-hue-1, $black-hue-1, $white);
+    /* Only need to pass in the button color, font size, and weight. This check will set the correct
+        text color. 
+        If the button is yellow, the text should be black. Otherwise the text color is white. */
+    @if ($buttonColor == $yellow-hue-1) {
+        color: $black-hue-1;
+    } @else {
+        color: $white;
+    }
     background-color: $buttonColor;
     font-size: $fontSize;
     font-weight: $fontWeight;
 
+    // Unchanging properties in the base button.
     font-family: $default-font; // from variables.scss
+    border-radius: 10px;
+    border: none;
 }
 
 @mixin border-btn-style($borderColor, $borderWidth){
     border-width: $borderWidth;
     border-color: $borderColor;
-    border-radius: 10px;
+    border-style: solid;
 }
 
 @mixin btn-size($buttonWidth, $buttonHeight){
+    // Some of the button sizes vary slightly.
     width: $buttonWidth;
     height: $buttonHeight;
 }

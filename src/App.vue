@@ -2,7 +2,6 @@
   <div id="app">
     <GlobalNav/>
     <router-view/>
-    <button id="test">Button</button>
   </div>
 </template>
 <script>
@@ -18,6 +17,7 @@ export default {
 
 <style lang="scss">
 @import "/scss/variables.scss";
+@import "/scss/button-styles.scss";
 #app {
   font-family: $default-font;
   -webkit-font-smoothing: antialiased;
