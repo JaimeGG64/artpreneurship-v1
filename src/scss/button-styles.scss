@@ -1,14 +1,18 @@
-@mixin base-btn-style($buttonColor, $textColor, $fontFamily, $fontSize, $fontWeight) {
+@import "/variables.scss";
+
+@mixin base-btn-style($buttonColor, $fontSize, $fontWeight) {
+    color: if ($buttonColor == $yellow-hue-1, $black-hue-1, $white);
     background-color: $buttonColor;
-    color: $textColor;
-    font-family: $fontFamily;
-    font-size: $fontFamily;
+    font-size: $fontSize;
     font-weight: $fontWeight;
+
+    font-family: $default-font; // from variables.scss
 }
-@mixin border-btn-style($borderColor, $borderWidth, $borderRadius){
+
+@mixin border-btn-style($borderColor, $borderWidth){
     border-width: $borderWidth;
     border-color: $borderColor;
-    border-radius: $borderRadius;
+    border-radius: 10px;
 }
 
 @mixin btn-size($buttonWidth, $buttonHeight){

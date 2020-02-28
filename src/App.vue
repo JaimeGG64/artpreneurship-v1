@@ -2,6 +2,7 @@
   <div id="app">
     <GlobalNav/>
     <router-view/>
+    <button id="test">Button</button>
   </div>
 </template>
 <script>
@@ -10,7 +11,7 @@ import GlobalNav from '@/components/GlobalNav.vue'
 
 export default {
   components: {
-    GlobalNav
+    GlobalNav,
   },
 }
 </script>
