@@ -1,0 +1,17 @@
+@mixin base-btn-style($buttonColor, $textColor, $fontFamily, $fontSize, $fontWeight) {
+    background-color: $buttonColor;
+    color: $textColor;
+    font-family: $fontFamily;
+    font-size: $fontFamily;
+    font-weight: $fontWeight;
+}
+@mixin border-btn-style($borderColor, $borderWidth, $borderRadius){
+    border-width: $borderWidth;
+    border-color: $borderColor;
+    border-radius: $borderRadius;
+}
+
+@mixin btn-size($buttonWidth, $buttonHeight){
+    width: $buttonWidth;
+    height: $buttonHeight;
+}
