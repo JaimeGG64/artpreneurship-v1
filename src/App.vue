@@ -18,12 +18,10 @@ export default {
 <style lang="scss">
 @import "/scss/variables.scss";
 @import "/scss/button-styles.scss";
+@import "/scss/type.scss";
+
 #app {
   font-family: $default-font;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 body {
   margin: 0;
