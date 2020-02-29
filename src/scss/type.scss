@@ -1,0 +1,38 @@
+@import "variables.scss";
+
+h1, h2, h3, p, strong {
+    font-family: $default-font;
+    margin: 0;
+    color: $black-hue-1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-heading, h1{
+    font-weight: 900;
+    font-size: 4rem;
+}
+
+.secondary-heading, h2{
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.tertiary-heading, h3{
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+
+.copy, p{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.copy-bold, p{
+    strong, b{
+        font-weight: 700;
+        font-size: 1.15rem;
+        line-height: 1.875;
+    }
+}
