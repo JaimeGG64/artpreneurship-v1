@@ -10,13 +10,14 @@ import GlobalNav from '@/components/GlobalNav.vue'
 
 export default {
   components: {
-    GlobalNav
+    GlobalNav,
   },
 }
 </script>
 
 <style lang="scss">
 @import "/scss/variables.scss";
+@import "/scss/button-styles.scss";
 @import "/scss/type.scss";
 
 #app {
