@@ -4,7 +4,7 @@
     /* Only need to pass in the button color and border properties. This check will set the correct
         text color. 
         If the button is yellow, the text should be black. Otherwise the text color is white. */
-    @if ($buttonColor == $yellow-hue-1) {
+    @if ($buttonColor == $yellow-hue-1) or ($buttonColor == $white) {
         color: $black-hue-1;
     } @else {
         color: $white;
