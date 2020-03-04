@@ -21,7 +21,6 @@ export default {
 @import "../scss/variables.scss";
 
 .global-nav{
-    position: sticky;
     width: 100%;
     background: $black-hue-1;
     display: flex;
