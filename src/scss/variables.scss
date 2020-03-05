@@ -1,18 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:400,900,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Lato:400,900,700&display=swap");
 
 // yellow hues
-$yellow-hue-1:#FFD800;
-$yellow-hue-2:#FFE65F;
-$yellow-hue-3:#FFF2AA;
+$yellow-hue-1: #ffd800;
+$yellow-hue-2: #ffe65f;
+$yellow-hue-3: #fff2aa;
 
 // black hues
-$black-hue-1:#231F20;
-$black-hue-2:#363636;
-$black-hue-3:#363636;
+$black-hue-1: #231f20;
+$black-hue-2: #363636;
+$black-hue-3: #363636;
 
-$white:#FFFFFF;
-$blue:#2772E5;
-$coral:#F3665B;
-$light-pink:#F6B5C5;
+$white: #ffffff;
+$blue: #2772e5;
+$coral: #f3665b;
+$light-pink: #f6b5c5;
 
-$default-font: 'Lato', sans-serif;
+$default-font: "Lato", sans-serif;
+
+$break-point: (
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px
+);

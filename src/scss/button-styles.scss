@@ -18,6 +18,8 @@
     font-weight: 700;
     padding: .75rem 2.5rem;
     border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
 }
 
 @mixin base-btn-blur($blur, $shadowColor) {
