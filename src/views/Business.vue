@@ -1,7 +1,7 @@
 <template>
     <main class="Business">
         <h1>Business Page</h1>
-        <div>{{ userEB }}</div>
+        <div>{{ events }}</div>
     </main>
 </template>
 
@@ -12,7 +12,7 @@ export default {
 
     data: function() {
         return {
-            userEB: {},     
+            events: {},     
         }
     },
 
@@ -26,9 +26,11 @@ export default {
 
         request.onreadystatechange = function () {
         if (this.readyState === 4) {
-            console1.log('Status:', this.status);
-            console1.log('Headers:', this.getAllResponseHeaders());
-            console1.log('Body:', this.responseText);
+            //console1.log('Status:', this.status);
+            //console1.log('Headers:', this.getAllResponseHeaders());
+            //console1.log('Body:', this.responseText);
+            this.events = this.responseText.events;
+            console1.log(this.events);
         }
     };
         request.send();
