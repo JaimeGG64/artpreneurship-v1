@@ -20,7 +20,7 @@ export default {
         var request = new XMLHttpRequest();
         const console1 = console;
 
-        request.open('GET', 'https://www.eventbriteapi.com/v3/users/17588567121/');
+        request.open('GET', 'https://www.eventbriteapi.com/v3/organizations/17588567121/events/');
 
         request.setRequestHeader('Authorization', 'Bearer H4NWI3NXE5UR3WS24AXZ');
 
