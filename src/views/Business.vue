@@ -17,12 +17,21 @@ export default {
     },
 
     mounted: function() {
-        const axios = require('axios');
-        //var token = 'H4NWI3NXE5UR3WS24AXZ';
+        var request = new XMLHttpRequest();
+        const console1 = console;
 
-        axios
-            .get('https://www.eventbriteapi.com/v3/users/17588567121/')
-            .then(response => (this.userEB = response))
+        request.open('GET', 'https://www.eventbriteapi.com/v3/users/17588567121/');
+
+        request.setRequestHeader('Authorization', 'Bearer H4NWI3NXE5UR3WS24AXZ');
+
+        request.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            console1.log('Status:', this.status);
+            console1.log('Headers:', this.getAllResponseHeaders());
+            console1.log('Body:', this.responseText);
+        }
+    };
+        request.send();
     }
 }
 </script>
