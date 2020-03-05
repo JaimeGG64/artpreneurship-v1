@@ -12,7 +12,7 @@ export default {
 
     data: function() {
         return {
-            events: {},     
+            eventsEB: {},     
         }
     },
 
@@ -22,15 +22,15 @@ export default {
 
         request.open('GET', 'https://www.eventbriteapi.com/v3/organizations/17588567121/events/');
 
-        request.setRequestHeader('Authorization', 'Bearer 5JYFQW7M3S522QWKXD');
+        request.setRequestHeader('Authorization', 'Bearer 4FXQ6WMAZSFXKLMCIKZV');
 
         request.onreadystatechange = function () {
         if (this.readyState === 4) {
             //console1.log('Status:', this.status);
             //console1.log('Headers:', this.getAllResponseHeaders());
             //console1.log('Body:', this.responseText);
-            this.events = this.responseText.events;
-            console1.log(this.events);
+            this.eventsEB = this.responseText.events;
+            console1.log(this.eventsEB);
         }
     };
         request.send();
