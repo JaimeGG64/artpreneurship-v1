@@ -15,6 +15,10 @@ export default {
         }
     },
 
+    methods: {
+        outData
+    },
+
     mounted: function() {
         const axios = require('axios');
         const vm = this;
@@ -23,7 +27,7 @@ export default {
 
         axios({
             method: 'get',
-            url: "https://www.eventbrite.com/o/exchange-la-17588567121"
+            url: "https://www.eventbriteapi.com/v3/users/17588567121/"
         })
         .then(function (response) {
             console1.log(response);
