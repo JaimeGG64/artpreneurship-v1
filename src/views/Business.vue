@@ -1,7 +1,7 @@
 <template>
     <main class="Business">
         <h1>Business Page</h1>
-        <div>{{ eventsEB }}</div>
+        <span>{{ eventsEB }}</span>
     </main>
 </template>
 
