@@ -26,11 +26,11 @@ export default {
 
         request.onreadystatechange = function () {
         if (this.readyState === 4) {
-            //console1.log('Status:', this.status);
-            //console1.log('Headers:', this.getAllResponseHeaders());
-            //console1.log('Body:', this.responseText);
-            this.eventsEB = this.response;
-            console1.log(this.response);
+            console1.log('Status:', this.status);
+            console1.log('Headers:', this.getAllResponseHeaders());
+            console1.log('Body:', this.response);
+            //this.eventsEB = this.response;
+            //console1.log(this.response);
         }
     };
         request.send();
