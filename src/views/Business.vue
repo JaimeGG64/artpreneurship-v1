@@ -22,7 +22,7 @@ export default {
 
         request.open('GET', 'https://www.eventbriteapi.com/v3/organizations/17588567121/events/');
 
-        request.setRequestHeader('Authorization', 'Bearer H4NWI3NXE5UR3WS24AXZ');
+        request.setRequestHeader('Authorization', 'Bearer 4FXQ6WMAZSFXKLMCIKZV');
 
         request.onreadystatechange = function () {
         if (this.readyState === 4) {
