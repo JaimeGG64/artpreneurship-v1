@@ -1,17 +1,19 @@
 <template>
-    <main class="Business">
-        <h1>Business Page</h1>
-    </main>
+    <event class="event-info">
+
+    </event>
 </template>
 
 <script>
 export default {
-    name: 'business',
-    title: 'Business',
+    props: {
+        eventId: String,
+    },
 
     data: function() {
         return {
-            eventResponse: {},     
+            eventName: '',
+            ticketClasses: [],
         }
     },
 
@@ -19,16 +21,20 @@ export default {
         const axios = require('axios');
         const vm = this;
         const console1 = console;
-        //var token = 'H4NWI3NXE5UR3WS24AXZ';
+        var token = 'H4NWI3NXE5UR3WS24AXZ';
 
         axios({
             method: 'get',
-            url: "https://www.eventbrite.com/o/exchange-la-17588567121"
+            url: this.url,
         })
         .then(function (response) {
             console1.log(response);
-            vm.eventResponse = response;
+            vm.ticketClasses = response;
         });
     }
 }
 </script>
+
+<style scoped>
+
+</style>
