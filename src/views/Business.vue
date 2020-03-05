@@ -29,8 +29,8 @@ export default {
             //console1.log('Status:', this.status);
             //console1.log('Headers:', this.getAllResponseHeaders());
             //console1.log('Body:', this.responseText);
-            this.eventsEB = this.responseText;
-            console1.log(this.responseText);
+            this.eventsEB = this.response;
+            console1.log(this.response);
         }
     };
         request.send();
