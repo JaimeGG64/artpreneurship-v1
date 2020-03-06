@@ -36,9 +36,17 @@ export default {
         // request.send();
         const axios = require('axios');
         axios.defaults.headers.common['Authorization'] = 'Bearer 4FXQ6WMAZSFXKLMCIKZV';
-        axios
-            .get('https://www.eventbriteapi.com/v3/organizers/29883110681/events/')
-            .then(response => (this.eventsEB = response))
+        const vm = this;
+        const console1 = console;
+
+        axios({
+            method: 'get',
+            url: 'https://www.eventbriteapi.com/v3/organizers/29883110681/events/'
+        })
+        .then(function (response) {
+            console1.log(response.data)
+            vm.eventEB = response.data
+        });
     }
 }
 </script>
