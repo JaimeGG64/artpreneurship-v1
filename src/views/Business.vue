@@ -35,9 +35,9 @@ export default {
 
     mounted: function() {
         // Load 3 events into events[]
-        this.loadEvent()
-        this.loadEvent()
-        this.loadEvent()
+        // this.loadEvent()
+        // this.loadEvent()
+        // this.loadEvent()
     }
 }
 </script>
