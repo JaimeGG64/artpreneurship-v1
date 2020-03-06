@@ -4,7 +4,7 @@
       <h1 class="about-us__heading">About Us</h1>
       <p class="about-us__copy">Artpreneurship was developed to help all artists, creatives, and designers to start or sustain a business, whether as a sole inventor, contributing innovator, or as an equal partner when developing a new product or service. With proven curriculums and support from collaborators, the goal of Artpreneurship is to create Artpreneurs who will use their thinking, curiosity, and talents to enhance society by developing products and services that improve human lives.</p>
       <router-link to="/sponsorship" class="about-us__btn">Donate</router-link>
-      <img class="about-us__image" src="../assets/about/about-group-pictures.jpg" alt="group photo on the beach"/>
+      <img class="about-us__image" src="../assets/about/about-group-photo.jpg" alt="group photo on the beach"/>
     </section>
     <section class="goals">
       <h2 class="goals__heading">Our Goal</h2>
