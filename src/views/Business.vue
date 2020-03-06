@@ -1,7 +1,6 @@
 <template>
     <main class="Business">
         <h1>Business Page</h1>
-        <div>{{eventsEB}}</div>
     </main>
 </template>
 
@@ -12,24 +11,33 @@ export default {
 
     data: function() {
         return {
-            eventsEB: '',     
+            events: [],
+        }
+    },
+
+    methods: {
+        loadEvent: function(eventID) {
+            const axios = require('axios');
+            const vm = this;
+            const console1 = console;
+            axios.defaults.headers.common['Authorization'] = 'Bearer H4NWI3NXE5UR3WS24AXZ';
+
+            axios({
+                method: 'get',
+                url: 'https://www.eventbriteapi.com/v3/events/' + eventID + '/',
+            })
+            .then(function (response) {
+                console1.log(response.data)
+                vm.events.push(response.data)
+            });
         }
     },
 
     mounted: function() {
-        const axios = require('axios');
-        const vm = this;
-        const console1 = console;
-        axios.defaults.headers.common['Authorization'] = 'Bearer 4FXQ6WMAZSFXKLMCIKZV';
-
-        axios({
-            method: 'get',
-            url: 'https://www.eventbriteapi.com/v3/organizations/29883110681/events/'
-        })
-        .then(function (response) {
-            console1.log(response.data)
-            vm.eventEB = response.data
-        });
+        // Load 3 events into events[]
+        this.loadEvent()
+        this.loadEvent()
+        this.loadEvent()
     }
 }
 </script>
