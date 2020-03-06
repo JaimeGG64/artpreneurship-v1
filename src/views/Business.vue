@@ -20,9 +20,9 @@ export default {
         var request = new XMLHttpRequest();
         const console1 = console;
 
-        request.open('GET', 'https://www.eventbriteapi.com/v3/organizations/17588567121/events/');
+        request.open('GET', 'https://www.eventbriteapi.com/v3/organizations/17588567121/events/?token=H4NWI3NXE5UR3WS24AXZ');
 
-        request.setRequestHeader('Authorization', 'Bearer 4FXQ6WMAZSFXKLMCIKZV');
+        request.setRequestHeader('Authorization', 'Bearer 5JYFQW7M3S522QWKXD');
 
         request.onreadystatechange = function () {
         if (this.readyState === 4) {
