@@ -17,23 +17,28 @@ export default {
     },
 
     mounted: function() {
-        var request = new XMLHttpRequest();
-        const console1 = console;
+        // var request = new XMLHttpRequest();
+        // const console1 = console;
 
-        request.open('GET', 'https://www.eventbriteapi.com/v3/o/29883110681/events/');
+        // request.open('GET', 'https://www.eventbriteapi.com/v3/o/29883110681/events/');
 
-        request.setRequestHeader('Authorization', 'Bearer 4FXQ6WMAZSFXKLMCIKZV');
+        // request.setRequestHeader('Authorization', 'Bearer 4FXQ6WMAZSFXKLMCIKZV');
 
-        request.onreadystatechange = function () {
-        if (this.readyState === 4) {
-            console1.log('Status:', this.status);
-            console1.log('Headers:', this.getAllResponseHeaders());
-            console1.log('Body:', this.responseText);
-            this.eventsEB = this.responseText;
-            //console1.log(this.response);
-        }
-    };
-        request.send();
+        // request.onreadystatechange = function () {
+        // if (this.readyState === 4) {
+        //     console1.log('Status:', this.status);
+        //     console1.log('Headers:', this.getAllResponseHeaders());
+        //     console1.log('Body:', this.responseText);
+        //     this.eventsEB = this.responseText;
+        //     //console1.log(this.response);
+        //     }
+        // };
+        // request.send();
+        const axios = require('axios');
+        axios.defaults.headers.common['Authorization'] = 'Bearer 4FXQ6WMAZSFXKLMCIKZV';
+        axios
+            .get('https://www.eventbriteapi.com/v3/o/29883110681/events/')
+            .then(response => (this.eventsEB = response))
     }
 }
 </script>
