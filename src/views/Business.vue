@@ -24,7 +24,7 @@ export default {
 
         axios({
             method: 'get',
-            url: 'https://www.eventbriteapi.com/v3/organizers/29883110681/events/'
+            url: 'https://www.eventbriteapi.com/v3/organizations/29883110681/events/'
         })
         .then(function (response) {
             console1.log(response.data)
