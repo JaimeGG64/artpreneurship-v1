@@ -1,7 +1,7 @@
 <template>
     <main class="Business">
         <h1>Business Page</h1>
-        <span>{{ eventsEB }}</span>
+        <div>{{ eventsEB }}</div>
     </main>
 </template>
 
@@ -29,7 +29,7 @@ export default {
             console1.log('Status:', this.status);
             console1.log('Headers:', this.getAllResponseHeaders());
             console1.log('Body:', this.response);
-            //this.eventsEB = this.response;
+            this.eventsEB = this.response;
             //console1.log(this.response);
         }
     };
