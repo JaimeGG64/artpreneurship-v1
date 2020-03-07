@@ -1,9 +1,11 @@
 <template>
     <main class="Business">
         <h1>Business Page</h1>
-        <ul v-for="(event, index) in events" :key=index>
-            <EventInfo :eventObj="event"></EventInfo>
-        </ul>
+        <div id="events-section">
+            <ul v-for="(event, index) in events" :key=index>
+                <EventInfo :eventObj="event"></EventInfo>
+            </ul>
+        </div>
     </main>
 </template>
 
