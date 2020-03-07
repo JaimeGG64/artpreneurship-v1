@@ -1,14 +1,21 @@
 <template>
     <main class="Business">
         <h1>Business Page</h1>
+        <ul v-for="(event, index) in events" :key=index>
+            <EventInfo :eventObj="event"></EventInfo>
+        </ul>
     </main>
 </template>
 
 <script>
+import EventInfo from '@/components/EventInfo.vue'
+
 export default {
     name: 'business',
     title: 'Business',
-
+    components: {
+        EventInfo,
+    },
     data: function() {
         return {
             events: [],
@@ -35,9 +42,9 @@ export default {
 
     mounted: function() {
         // Load 3 events into events[]
-        // this.loadEvent()
-        // this.loadEvent()
-        // this.loadEvent()
+        this.loadEvent('91892927219')
+        this.loadEvent('91637172249')
+        this.loadEvent('85699332009')
     }
 }
 </script>
