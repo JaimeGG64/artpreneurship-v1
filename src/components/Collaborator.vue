@@ -1,33 +1,42 @@
 <template>
-    <div class="collaborator">
-        <img id="pic" :src='filename' :alt='altTxt'>
-        <div id="name">{{ cName }}</div>
-        <div id="desc">{{ description }}</div>
-    </div>
+    <dl class=“curricula__def-list”>
+        <div class=“bio-wrapper”>
+            <img class=“bio-wrapper__img” :src='collabInfo.filename' :alt='collabInfo.altTxt'/>
+            <dt class=“bio-wrapper__name”>{{collabInfo.Name}}</dt>
+                <dd class=“bio-wrapper__desc”>{{collabInfo.description}}</dd>
+        </div>
+    </dl>
 </template>
 
 <script>
 export default {
     props: {
-        cName: String,
-        description: String,
-        filename: String,
-        altTxt: String,
+        collabInfo: Object
     },
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     @import "../scss/variables.scss";
     @import "../scss/type.scss";
 
-    #name {
-        font-weight: 700;
-        font-size: 2rem;
+    // .curricula {
+    //     &__def-list {
+
+    //     }
+    // }
+
+    .bio-wrapper {
+        &__name {
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        &__desc {
+            font-weight: 400;
+            font-size: 1.25rem;
+        }
     }
-    #desc {
-        font-weight: 400;
-        font-size: 1rem;
-    }
+    
     
 </style>

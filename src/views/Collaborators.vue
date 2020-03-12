@@ -1,13 +1,10 @@
 <template>
     <main class="Collaborators">
         <h1>Collaborators Page</h1>
-        <div id="collaborators-people">
-            <ul v-for="(collaborator, index) in collaborators" :key=index>
-                <Collaborator 
-                    :cName="collaborator.name"
-                    :description="collaborator.description"
-                    :filename="collaborator.filename"
-                    :altTxt="collaborator.altTxt"
+        <div class="collab-wrapper">
+            <ul class="collab-wrapper__list" v-for="(collaborator, index) in collaborators" :key=index>
+                <Collaborator class="collab-wrapper__collaborator"
+                    :collabInfo=collaborator
                 ></Collaborator>
             </ul>
         </div>
@@ -28,15 +25,22 @@ export default {
 
     data: function() {
         return {
-            collaborators: [
-                {
-                    name: 'Dave Moon',
-                    description: 'Hello World!',
-                    filename: DaveImg,
-                    altTxt: 'iss dave',
-                },
-            ],
+            collaborators: [],
         }
+    },
+    methods: {
+        pushCollaborator: function(title, desc, file, alt) {
+            var collab = {
+                Name: title,
+                description: desc,
+                filename: file,
+                altTxt: alt,
+            };
+            this.collaborators.push(collab);
+        },
+    },
+    beforeMount() {
+        this.pushCollaborator("Dave Moon", "Hello World!", DaveImg, "issa dave")
     },
 }
 </script>
