@@ -26,28 +26,30 @@
       <img class="goals__image" src="../assets/global/air_rally_illustration_2.svg"/>
     </section>
     <section class="curricula">
-      <h2 class="curricula__heading">Curricula</h2>
-      <p class="curricula__copy-1">
-        The following is a short outline for new businesses. And there are three tiers of potential curriculums we can build.
-      </p>
-      <p class="curricula__copy-2">
-        Through these hands-on curriculum options, students will start, refine, or expand their work for an entrepreneurial venture.
-      </p>
+      <div class="curricula__copy-wrapper">
+        <h2 class="curricula__heading">Curricula</h2>
+        <p class="curricula__copy">
+          The following is a short outline for new businesses. And there are three tiers of potential curriculums we can build.
+        </p>
+        <p class="curricula__copy">
+          Through these hands-on curriculum options, students will start, refine, or expand their work for an entrepreneurial venture.
+        </p>
+      </div>
       <dl class="curricula__def-list">
         <div class="curricula__list-wrapper">
-          <dt>Idealist</dt>
-            <dd>First is the Idealist. These are individuals who may have a dream of opening up a  new business, but they really don’t have many resources or knowledge about how to start a new business.</dd>
-            <img src="../assets/about/icon-cloud.svg"/>
+          <dt class="curricula__list-term">Idealist</dt>
+            <dd class="curricula__list-def">First is the Idealist. These are individuals who may have a dream of opening up a  new business, but they really don’t have many resources or knowledge about how to start a new business.</dd>
+            <img class="curricula__list-icon" src="../assets/about/icon-cloud.svg" alt=""/>
         </div>
         <div class="curricula__list-wrapper">
-          <dt>Start-Ups</dt>
-            <dd>The second group is a pre-existing group of “Start-Ups.” They have some knowledge about business, but they need additional help.</dd>
-            <img src="../assets/about/icon-power.svg"/>
+          <dt class="curricula__list-term">Start-Ups</dt>
+            <dd class="curricula__list-def">The second group is a pre-existing group of “Start-Ups.” They have some knowledge about business, but they need additional help.</dd>
+            <img class="curricula__list-icon" src="../assets/about/icon-power.svg" alt=""/>
         </div>
         <div class="curricula__list-wrapper">
-          <dt>Owners</dt>
-            <dd>The last group is comprised of existing business owners who simply want to expand or make their companies more sustainable.</dd>
-            <img src="../assets/about/icon-suitcase.svg"/>
+          <dt class="curricula__list-term">Owners</dt>
+            <dd class="curricula__list-def">The last group is comprised of existing business owners who simply want to expand or make their companies more sustainable.</dd>
+            <img class="curricula__list-icon" src="../assets/about/icon-suitcase.svg" alt=""/>
         </div>
       </dl>
     </section>
@@ -73,66 +75,47 @@ export default {
 <style lang="scss">
 @import "../scss/button-styles.scss";
 @import "../scss/variables.scss";
+
 .about{
-  background: url("../assets/about/about-background.png");
-  background-position: center 97%;
-  background-repeat: no-repeat;
-  background-size: contain;
+  background: $white;
 }
 .about-us{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, auto);
-  grid-row-gap: 1.25rem;
-  &__heading, &__copy, &__btn{
-    grid-column: 2/3;
-    margin: 0 5.5rem;
-  }
-  &__heading{
-    grid-row: 2/3;
-  }
-  &__copy{
-    grid-row: 3/4;
+  grid-template-columns: 100%;
+  grid-template-rows: 4;
+  &__heading, &__copy{
+    padding: 0 1.75rem;
   }
   &__btn{
-    grid-row: 4/5;
     @include base-btn-style($yellow-hue-1, none);
+    grid-row: 4/5;
     width: 6.5rem;
-    &:hover{
+    justify-self: center;
+    margin: 3rem 0;
+    &:hover, &:focus{
       @include base-btn-blur(30px, $yellow-hue-1);
     }
   }
   &__image{
-    grid-column: 1/2;
-    grid-row: 1/6;
+    grid-row: 1/2;
     width: 100%;
   }
 }
 .goals{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 5rem auto auto auto 5rem;
-  padding: 0 5rem;
-  &__heading, &__copy, &__list{
-    grid-column: 1/2;
-  }
-  &__heading{
-    grid-row: 2/3
-  }
-  &__copy{
-    grid-row: 3/4;
-  }
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(4, auto);
+  padding: 1.75rem;
   &__list{
-    grid-row: 4/5;
-    padding-left: 5rem;
+    grid-row: 3/4;
     padding: 0;
   }
   &__list-item{
     display: grid;
-    grid-template-columns: 8rem auto;
+    grid-template-columns: 4.75rem auto;
     margin-bottom: 1rem;
     img{
-      width: 3.5rem;
+      width: 3rem;
       justify-self: start;
       grid-column: 1/2;
       grid-row: 1/2;
@@ -140,77 +123,184 @@ export default {
     }
   }
   &__image{
-    grid-column: 2/3;
-    grid-row: 2/5;
-    height: 27rem;
+    height: 20rem;
     align-self: center;
     justify-self: center;
   }
 }
 .curricula{
   display: grid;
-  grid-template-rows: 5rem auto auto auto 5rem;
-  grid-template-columns: repeat(2, 1fr);
-  &__heading, &__copy-1, &__copy-2{
-    grid-column: 1/2;
-    padding: 0 5rem;
-  }
-  &__heading{
-    grid-row: 2/3;
-  }
-  &__copy{
-    &-1{
-      grid-row: 3/4;
-    }
-    &-2{
-      grid-row: 4/5;
-    }
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, auto);
+  &__copy-wrapper{
+    background: $yellow-hue-1;
+    border-radius: 0;
+    padding: 1.75rem;
   }
   &__def-list{
-    grid-column: 2/3;
-    grid-row: 2/5;
-    padding: 0 5rem;
+    padding: 1.75rem;
   }
-  &::before{
-    content: "";
-    background: $yellow-hue-1;
-    grid-column: 1/2;
-    grid-row: 1/6;
-    border-radius: 0 10px 10px 0;
-  }
-  &__list-wrapper{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, auto);
-    margin-bottom: 1rem;
-    dt, dd{
-      grid-column: 2/7;
+
+  &__list{
+    &-wrapper{
+      display: grid;
+      grid-template-columns: 5.5rem auto;
+      grid-template-rows: repeat(2, auto);
+      margin-bottom: 1rem;
+      grid-row-gap: 1rem;
     }
-    dt{
+    &-term{
       grid-row: 1/2;
-      font-weight: 700;
+      grid-column: 2/3;
+      align-self: end;
+      line-height: 1.5rem;
+      font-size: 1.65rem;
     }
-    dd{
+    &-def{
       grid-row: 2/3;
+      grid-column: 1/3;
       margin: 0;
     }
-    img{
+    &-icon{
+      grid-row: 1/2;
       grid-column: 1/2;
-      grid-row: 2/3;
-      width: 3.5rem;
-      justify-self: center;
-      padding-top: .5rem;
+      width: 4rem;
     }
   }
 }
+
 .cooperation{
-  padding: 10rem 25rem;
-  &__heading{
-    text-align: center;
+  padding: 1.75rem;
+}
+
+@media screen and (min-width: map-get($break-point , "xl")){
+  .about{
+    background: url("../assets/about/about-background.png");
+    background-position: center 97%;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
-  &__copy{
-    text-align: left;
-    margin-bottom: 1rem;
+  .about-us{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-row-gap: 1.25rem;
+    &__heading, &__copy, &__btn{
+      grid-column: 2/3;
+      margin: 0 5.5rem;
+    }
+    &__heading{
+      grid-row: 2/3;
+      padding: 0;
+    }
+    &__copy{
+      grid-row: 3/4;
+      padding: 0;
+    }
+    &__btn{
+      justify-self: start;
+    }
+    &__image{
+      grid-column: 1/2;
+      grid-row: 1/6;
+      width: 100%;
+    }
+  }
+  .goals{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 5rem auto auto auto 5rem;
+    padding: 0 5rem;
+    &__heading, &__copy, &__list{
+      grid-column: 1/2;
+    }
+    &__heading{
+      grid-row: 2/3
+    }
+    &__copy{
+      grid-row: 3/4;
+    }
+    &__list{
+      grid-row: 4/5;
+      padding-left: 5rem;
+      padding: 0;
+    }
+    &__list-item{
+      display: grid;
+      grid-template-columns: 8rem auto;
+      margin-bottom: 1rem;
+      img{
+        width: 3.5rem;
+        justify-self: start;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding-top: .5rem;
+      }
+    }
+    &__image{
+      grid-column: 2/3;
+      grid-row: 2/5;
+      height: 27rem;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+  .curricula{
+    display: grid;
+    grid-template-rows: 5rem auto 5rem;
+    grid-template-columns: repeat(2, 1fr);
+    &__heading, &__copy{
+      grid-column: 1/2;
+      margin-bottom: 1rem;
+    }
+    &__def-list{
+      grid-column: 2/3;
+      grid-row: 1/5;
+      grid-area: "list";
+      padding: 5rem;
+    }
+    &__copy-wrapper{
+      grid-column: 1/2;
+      grid-row: 1/6;
+      border-radius: 0 10px 10px 0;
+      display: grid;
+      align-content: center;
+      padding: 5rem;
+    }
+    &__list-wrapper{
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      grid-template-rows: repeat(2, auto);
+      margin-bottom: 1rem;
+      dt, dd{
+        grid-column: 2/7;
+      }
+      dt{
+        grid-row: 1/2;
+        font-weight: 700;
+      }
+      dd{
+        grid-row: 2/3;
+        margin: 0;
+      }
+      img{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 3.5rem;
+        justify-self: center;
+        padding-top: .5rem;
+      }
+    }
+  }
+  .cooperation{
+    padding: 10rem 25rem;
+    &__heading{
+      text-align: center;
+    }
+    &__copy{
+      text-align: left;
+      margin-bottom: 1rem;
+    }
   }
 }
 </style>
