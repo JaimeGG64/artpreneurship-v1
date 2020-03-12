@@ -113,5 +113,14 @@ export default {
     @import "../scss/variables.scss";
     @import "../scss/button-styles.scss";
 
+    .event-wrapper {
+        &__button, a {
+            @include base-btn-style($blue, none);
+            text-decoration: none;
+        }
+        &__button:hover{
+            @include base-btn-blur(30px, $blue);
+        }
+    }
     
 </style>
