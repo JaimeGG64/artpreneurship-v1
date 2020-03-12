@@ -78,13 +78,17 @@ export default {
                     formattedDate += date[0] + date[1]
 
             switch(date) {
-                case '01', '21', '31':
+                case '01':
+                case '21':
+                case '31':
                     formattedDate += 'st';
                     break;
-                case '02', '22':
+                case '02':
+                case '22':
                     formattedDate += 'nd';
                     break;
-                case '03', '23':
+                case '03':
+                case '23':
                     formattedDate += 'rd';
                     break;
                 default:
