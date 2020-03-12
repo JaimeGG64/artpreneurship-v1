@@ -76,6 +76,13 @@ export default {
 @import "../scss/button-styles.scss";
 @import "../scss/variables.scss";
 
+$mobile-gutter: 1.5rem;
+
+%mobile-heading{
+  padding: 1rem $mobile-gutter;
+  font-weight: 900;
+}
+
 .about{
   background: $white;
 }
@@ -83,8 +90,12 @@ export default {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 4;
-  &__heading, &__copy{
-    padding: 0 1.75rem;
+  &__heading{
+    @extend %mobile-heading;
+  }
+  &__copy{
+    padding: 0 $mobile-gutter;
+    font-weight: 600;
   }
   &__btn{
     @include base-btn-style($yellow-hue-1, none);
@@ -105,15 +116,23 @@ export default {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: repeat(4, auto);
-  padding: 1.75rem;
+  padding: $mobile-gutter $mobile-gutter 5rem $mobile-gutter;
+  &__heading{
+    @extend %mobile-heading;
+  }
+  &__copy{
+    font-weight: 600;
+  }
   &__list{
     grid-row: 3/4;
-    padding: 0;
+    padding: 2rem 0;
   }
   &__list-item{
     display: grid;
     grid-template-columns: 4.75rem auto;
     margin-bottom: 1rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
     img{
       width: 3rem;
       justify-self: start;
@@ -132,13 +151,16 @@ export default {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: repeat(3, auto);
+  &__heading{
+    @extend %mobile-heading;
+  }
   &__copy-wrapper{
     background: $yellow-hue-1;
     border-radius: 0;
-    padding: 1.75rem;
+    padding: 2rem $mobile-gutter;
   }
   &__def-list{
-    padding: 1.75rem;
+    padding: 3rem $mobile-gutter;
   }
 
   &__list{
@@ -146,7 +168,7 @@ export default {
       display: grid;
       grid-template-columns: 5.5rem auto;
       grid-template-rows: repeat(2, auto);
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       grid-row-gap: 1rem;
     }
     &-term{
@@ -170,7 +192,13 @@ export default {
 }
 
 .cooperation{
-  padding: 1.75rem;
+  padding-bottom: 2.5rem;
+  &__heading{
+    @extend %mobile-heading;
+  }
+  &__copy{
+    padding: 0 $mobile-gutter;
+  }
 }
 
 @media screen and (min-width: map-get($break-point , "xl")){
