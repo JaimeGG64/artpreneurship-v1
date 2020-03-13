@@ -1,9 +1,9 @@
 <template>
     <main class="Business">
         <h1>Business Page</h1>
-        <div id="events-section">
-            <ul v-for="(event, index) in events" :key=index>
-                <EventInfo :eventObj="event"></EventInfo>
+        <div class="events-wrapper">
+            <ul class="events-wrapper__event-list" v-for="(event, index) in events" :key=index>
+                <EventInfo class="event-wrapper__event" :eventObj="event"></EventInfo>
             </ul>
         </div>
     </main>
@@ -28,7 +28,6 @@ export default {
         loadEvent: function(eventID) {
             const axios = require('axios');
             const vm = this;
-            const console1 = console;
             axios.defaults.headers.common['Authorization'] = 'Bearer H4NWI3NXE5UR3WS24AXZ';
 
             axios({
@@ -36,7 +35,6 @@ export default {
                 url: 'https://www.eventbriteapi.com/v3/events/' + eventID + '/',
             })
             .then(function (response) {
-                console1.log(response.data)
                 vm.events.push(response.data)
             });
         }
@@ -44,7 +42,7 @@ export default {
 
     mounted: function() {
         // Load 3 events into events[]
-        this.loadEvent('91892927219')
+        this.loadEvent('77903821427')
         this.loadEvent('91637172249')
         this.loadEvent('85699332009')
     }
