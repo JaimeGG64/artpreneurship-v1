@@ -36,7 +36,7 @@ export default {
                 url: 'https://www.eventbriteapi.com/v3/events/' + eventID + '/',
             })
             .then(function (response) {
-                console1.log(response.data)
+                //console1.log(response.data)
                 vm.events.push(response.data)
             });
         }
