@@ -40,7 +40,7 @@ export default {
         },
     },
     beforeMount() {
-        this.pushCollaborator("Dave Moon", "Hello World!", DaveImg, "issa dave")
+        this.pushCollaborator("Dave Moon", "Hello World!", DaveImg, "")
     },
 }
 </script>
