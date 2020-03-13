@@ -28,7 +28,6 @@ export default {
         loadEvent: function(eventID) {
             const axios = require('axios');
             const vm = this;
-            const console1 = console;
             axios.defaults.headers.common['Authorization'] = 'Bearer H4NWI3NXE5UR3WS24AXZ';
 
             axios({
