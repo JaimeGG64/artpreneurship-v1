@@ -380,21 +380,20 @@ $tablet-font-size: .85rem;
 
 @media screen and (min-width: map-get($break-point , "lg")) {
   .about {
-    background: url("../assets/about/about-background.png");
+    background: url("../assets/about/about-background-lg.png");
     background-position: center 97%;
     background-repeat: no-repeat;
     background-size: contain;
   }
   .about-us {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 54% 46%;
     grid-template-rows: repeat(5, auto);
     grid-row-gap: 1.25rem;
     &__heading,
     &__copy,
     &__btn {
       grid-column: 2/3;
-      margin: 0 5.5rem;
+      margin: 0 $tablet-gutter;
     }
     &__heading {
       grid-row: 2/3;
@@ -414,17 +413,19 @@ $tablet-font-size: .85rem;
     }
   }
   .goals {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 55% 45%;
     grid-template-rows: 5rem auto auto auto 5rem;
-    padding: 0 5rem;
+    padding: 0 $tablet-gutter;
+    grid-row-gap: 1rem;
     &__heading,
     &__copy,
     &__list {
       grid-column: 1/2;
+      padding: 0;
     }
     &__heading {
       grid-row: 2/3;
+      text-align: left;
     }
     &__copy {
       grid-row: 3/4;
@@ -435,34 +436,23 @@ $tablet-font-size: .85rem;
       padding: 0;
     }
     &__list-item {
-      display: grid;
-      grid-template-columns: 8rem auto;
       margin-bottom: 1rem;
-      &-icon {
-        width: 3.5rem;
-        justify-self: start;
-        grid-column: 1/2;
-        grid-row: 1/2;
-        padding-top: 0.5rem;
-      }
     }
     &__image {
       grid-column: 2/3;
-      grid-row: 2/5;
-      height: 27rem;
+      grid-row: 1/6;
+      height: 28rem;
       align-self: center;
-      justify-self: center;
+      justify-self: end;
+    }
+  }
+  .curricula{
+    &__copy-wrapper{
+      padding: 0 7rem 0 $tablet-gutter;
     }
   }
   .cooperation {
-    padding: 10rem 25rem;
-    &__heading {
-      text-align: center;
-    }
-    &__copy {
-      text-align: left;
-      margin-bottom: 1rem;
-    }
+    padding: 10rem ($tablet-gutter * 4) 8rem ($tablet-gutter * 4);
   }
 }
 </style>
