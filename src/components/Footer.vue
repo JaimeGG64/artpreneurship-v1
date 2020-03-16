@@ -40,7 +40,6 @@ export default {
     }
     &__copyright {
         background: $black-hue-1;
-        background-size: 6.25rem;
         color: white;
         font-size: 1rem;
         font-weight: 400;
