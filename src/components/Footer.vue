@@ -1,16 +1,16 @@
 <template>
     <div class="footer-wrapper">
-        <div class="footer-wrapper__info">
+        <section class="footer-wrapper__info">
             <img alt="Artpreneurship logo" src="../assets/logo.svg" class="footer-wrapper__logo">
-            <p>
+            <p class="footer-wrapper__info-address">
                 18111 Nordhoff St,<br>
                 Northridge, CA, 91330
             </p> 
-            <p>
+            <p class="footer-wrapper__info-contact">
                 +1 (818) 123-4567<br>
                 info@artpreneurship.com
             </p>
-        </div>
+        </section>
         <p class="footer-wrapper__copyright">© Copyright 2019. Artpreneurship All Right Reserved</p>
     </div>
 </template>
@@ -23,6 +23,7 @@ export default {
 
 <style lang="scss">
 @import "../scss/variables.scss";
+@import "../scss/type.scss";
 
 .footer-wrapper {
     width: 100%;
@@ -35,9 +36,10 @@ export default {
         background: white;
         padding: 5rem;
         color: $black-hue-1;
-        font-size: 1rem;
-        font-weight: 700;
-        font-family: $default-font;
+
+        &-address, &-contact {
+            @extend .copy;
+        }
     }
     &__copyright {
         background: $black-hue-1;
@@ -45,9 +47,7 @@ export default {
         text-align: center;
         color: white;
         padding: 2rem;
-        font-size: 1rem;
-        font-weight: 400;
-        font-family: $default-font;
+        @extend .copy;
     }
 }
 </style>
