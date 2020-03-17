@@ -33,6 +33,7 @@ export default {
         display: flex;
         justify-content: space-evenly;
         background: white;
+        padding: 5rem;
         color: $black-hue-1;
         font-size: 1rem;
         font-weight: 700;
@@ -40,7 +41,10 @@ export default {
     }
     &__copyright {
         background: $black-hue-1;
+        align-content: center;
+        text-align: center;
         color: white;
+        padding: 2rem;
         font-size: 1rem;
         font-weight: 400;
         font-family: $default-font;
