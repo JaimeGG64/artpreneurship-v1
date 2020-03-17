@@ -1,7 +1,7 @@
 <template>
     <div class="footer-wrapper">
         <div class="footer-wrapper__info">
-            <img alt="Artpreneurship logo" src="../assets/logo.png" class="footer-wrapper__logo">
+            <img alt="Artpreneurship logo" src="../assets/logo.svg" class="footer-wrapper__logo">
             <p>
                 18111 Nordhoff St,<br>
                 Northridge, CA, 91330
