@@ -1,15 +1,18 @@
 <template>
   <main class="about">
     <section class="about-us">
-      <h1 class="about-us__heading">About Us</h1>
-      <p
-        class="about-us__copy"
-      >Artpreneurship was developed to help all artists, creatives, and designers to start or sustain a business, whether as a sole inventor, contributing innovator, or as an equal partner when developing a new product or service. With proven curriculums and support from collaborators, the goal of Artpreneurship is to create Artpreneurs who will use their thinking, curiosity, and talents to enhance society by developing products and services that improve human lives.</p>
-      <router-link to="/sponsorship" class="about-us__btn">Donate</router-link>
+      <div class="about-us__text-wrapper">
+          <h1 class="about-us__heading">About Us</h1>
+        <p
+          class="about-us__copy"
+        >Artpreneurship was developed to help all artists, creatives, and designers to start or sustain a business, whether as a sole inventor, contributing innovator, or as an equal partner when developing a new product or service. With proven curriculums and support from collaborators, the goal of Artpreneurship is to create Artpreneurs who will use their thinking, curiosity, and talents to enhance society by developing products and services that improve human lives.</p>
+        <router-link to="/sponsorship" class="about-us__btn">Donate</router-link>
+      </div>
       <picture class="about-us__image">
+        <source media="(min-width: 1280px)" srcset="../assets/about/about-group-photo.jpg">
         <source media="(min-width: 1024px)" srcset="../assets/about/about-group-photo-lg.jpg">
         <source media="(min-width: 768px)" srcset="../assets/about/about-group-photo-md.jpg">
-        <img src="../assets/about/about-group-photo.jpg" alt="group photo on the beach" style="width: 100%">
+        <img src="../assets/about/about-group-photo-lg.jpg" alt="group photo on the beach" style="width: 100%">
       </picture>
     </section>
     <section class="goals">
@@ -104,14 +107,17 @@ export default {
 
 $mobile-gutter: 1.5rem;
 $tablet-gutter: 3.25rem;
+$lg-gutter: 14.5rem;
 
 $tablet-font-size: .85rem;
+
+$lg-about-gutter: 7rem;
+$lg-icon-size: 4rem;
 
 %mobile-heading {
   padding: 1rem $mobile-gutter;
   font-weight: 900;
   font-size: 2rem;
-  font-weight: 600;
   text-align: center;
 }
 
@@ -122,6 +128,10 @@ $tablet-font-size: .85rem;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 4;
+  &__text-wrapper{
+    width: 100%;
+    display: grid;
+  }
   &__heading {
     @extend %mobile-heading;
   }
@@ -240,10 +250,12 @@ $tablet-font-size: .85rem;
   .about-us {
     grid-template-columns: 100%;
     grid-template-rows: 4;
+    &__text-wrapper{
+      grid-row-gap: 1rem;
+    }
     &__heading {
       text-align: center;
       font-size: 2rem;
-
     }
     &__copy {
       padding: 0 $tablet-gutter;
@@ -271,6 +283,7 @@ $tablet-font-size: .85rem;
       grid-row: 1/2;
       grid-column: 1/3;
       font-size: 2rem;
+      text-align: left;
     }
     &__copy {
       padding: 0 $tablet-gutter 1.5rem $tablet-gutter;
@@ -330,7 +343,7 @@ $tablet-font-size: .85rem;
     }
     &__list{
       grid-column: 2/3;
-      grid-row: 1/5;
+      grid-row: 1/6;
       grid-area: "list";
       padding: 3.25rem $tablet-gutter 3.25rem 2.5rem;
       display: grid;
@@ -371,6 +384,9 @@ $tablet-font-size: .85rem;
       padding: 0;
       margin-bottom: 0;
     }
+    &__heading{
+      font-weight: 600;
+    }
     &__copy{
       font-size: $tablet-font-size;
       line-height: 1.75rem;
@@ -393,11 +409,17 @@ $tablet-font-size: .85rem;
     &__copy,
     &__btn {
       grid-column: 2/3;
-      margin: 0 $tablet-gutter;
+    }
+    &__text-wrapper{
+      grid-row: 1/6;
+      width: 80%;
+      justify-self: center;
+      align-self: center;
     }
     &__heading {
       grid-row: 2/3;
       padding: 0;
+      text-align: left;
     }
     &__copy {
       grid-row: 3/4;
@@ -405,6 +427,7 @@ $tablet-font-size: .85rem;
     }
     &__btn {
       justify-self: start;
+      margin: 0;
     }
     &__image {
       grid-column: 1/2;
@@ -443,7 +466,7 @@ $tablet-font-size: .85rem;
       grid-row: 1/6;
       height: 28rem;
       align-self: center;
-      justify-self: end;
+      justify-self: center;
     }
   }
   .curricula{
@@ -452,7 +475,108 @@ $tablet-font-size: .85rem;
     }
   }
   .cooperation {
-    padding: 10rem ($tablet-gutter * 4) 8rem ($tablet-gutter * 4);
+    padding: 15rem ($tablet-gutter * 4);
+  }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+  .about {
+    background: url("../assets/about/about-background.png");
+    background-position: center 98%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .about-us {
+    grid-template-columns: 56% 44%;
+    &__heading{
+      font-size: 4.5rem;
+      font-weight: 900;
+    }
+  }
+  .goals {
+    grid-template-rows: repeat(4, auto);
+    padding: 0 $lg-gutter;
+    grid-template-columns: 46%;
+    grid-row-gap: 2rem;
+    &__heading {
+      font-size: 4rem;
+      font-weight: 900;
+    }
+    &__copy {
+      font-weight: 600;
+      font-size: 1.4rem;
+      line-height: 2.25rem;
+    }
+    &__list {
+      font-size: 1.15rem;
+    }
+    &__list-item {
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      grid-template-columns: (($lg-icon-size * 2) - .25rem) auto;
+      &-icon {
+        width: $lg-icon-size;
+        justify-self: start;
+        padding-top: 0.5rem;
+      }
+    }
+    &__image {
+      height: 75%;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+  .curricula {
+    grid-template-rows: 5rem auto 5rem;
+    grid-template-columns: 42% 58%;
+    &__heading,
+    &__copy {
+      grid-column: 1/2;
+    }
+    &__heading{
+      font-size: 3rem;
+    }
+    &__copy{
+      font-size: 1.25rem;
+    }
+    &__copy-wrapper {
+      padding: $lg-gutter;
+    }
+    &__list{
+      padding: 3.25rem $lg-gutter 3.25rem 2.5rem;
+        grid-row-gap: 2.5rem;
+        width: 80%;
+        justify-self: center;
+        padding: 0;
+        align-self: center;
+      &-item-wrapper{
+        grid-template-columns: (($lg-icon-size * 2) - .25rem) auto;
+        grid-row-gap: .25rem;
+      }
+      &-term {
+        font-size: 1.5rem;
+      }
+      &-def {
+        font-size: 1.25rem;
+        margin: 0;
+      }
+      &-icon {
+        width: $lg-icon-size;
+      }
+    }
+  }
+  .cooperation {
+    justify-items: center;
+    &__heading, &__copy{
+      width: 40%;
+    }
+    &__heading{
+      font-size: 3rem;
+    }
+    &__copy{
+      font-size: 1.25rem;
+    }
   }
 }
 </style>
