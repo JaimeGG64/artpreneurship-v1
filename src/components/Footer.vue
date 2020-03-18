@@ -1,18 +1,20 @@
 <template>
-    <div class="footer-wrapper">
+    <section class="footer-wrapper">
         <section class="footer-wrapper__info">
             <img alt="Artpreneurship logo" src="../assets/global/logo.svg" class="footer-wrapper__logo">
-            <p class="footer-wrapper__info--address">
-                18111 Nordhoff St,<br>
-                Northridge, CA, 91330
-            </p> 
+            <p class="footer-wrapper__info--address">18111 Nordhoff St,<br>Northridge, CA, 91330</p> 
             <section class="footer-wrapper__info--contact">
                 <a class="footer-wrapper__info--contact-phone" href="tel:8181234567">+1 (818) 123-4567</a><br>
                 <a class="footer-wrapper__info--contact-email" href="mailto:info@artpreneurship.com">info@artpreneurship.com</a>
             </section>
         </section>
-        <p class="footer-wrapper__copyright">© Copyright {{ year }}. Artpreneurship All Right Reserved</p>
-    </div>
+        <section class="footer-wrapper__copyright">
+            <section class="footer-wrapper__copyright--social-media">
+                
+            </section>
+            <p class="footer-wrapper__copyright--copy">© Copyright {{ year }}. Artpreneurship All Right Reserved</p>
+        </section>
+    </section>
 </template>
 
 <script>
@@ -24,7 +26,7 @@ export default {
     },
     created: function() {
         this.year = new Date().getFullYear();
-    }
+    },
 }
 </script>
 
@@ -33,31 +35,40 @@ export default {
 @import "../scss/type.scss";
 
 .footer-wrapper {
-    width: 100%;
-    box-shadow: 0 -.5rem 1.5rem rgba(0, 0, 0, 0.09);;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2;
+    box-shadow: 0 -.5rem 1.5rem rgba(0, 0, 0, 0.09);
     &__logo {
         width: 4.75rem;
     }
     &__info {
-        display: flex;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 2;
         background: white;
-        padding: 5rem;
         color: $black-hue-1;
-
-        &--address, &--contact {
+        padding: 3.5rem $mobile-gutter;
+        &--address{
             @extend .copy;
+        }
+        &--contact {
+            grid-column: 2/3;
+            &-phone, &-email {
+                @extend .copy-bold;
+            }
         }
     }
     &__copyright {
         background: $black-hue-1;
-        align-content: center;
-
-
-        text-align: center;
-        color: white;
-        padding: 2rem;
-        @extend .copy;
+        padding: 2rem $mobile-gutter;
+        &-copy{
+            width: 70%;
+            font-size: .95rem;
+            text-align: left;
+            color: grey;
+            @extend .copy;
+        }
     }
 }
 </style>
