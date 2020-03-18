@@ -1,9 +1,11 @@
 <template>
   <main class="home">
     <section>
+      <img src="../assets/global/logo.svg" alt="" />
       <h1>Artpreneurship</h1>
       <p>Artperneurship is a uniquely designed program that embraces the entrepreneurial mindset, specifically for students of art and humanities. While developing their personal work, students in the program can adapt and transform that work into an entrepreneurial venture.</p>
       <router-link to="/sponsorship">Donate</router-link> 
+      <img src="../assets/global/air_rally_illustration_1.png" alt="" />
     </section>
     <section>
       <h2>About Our Program</h2>
@@ -22,24 +24,28 @@
           <router-link to="/collaborators">
             <dt>Collaborators</dt>
             <dd>Key industry and community partners who are advocates and network providers.</dd>
+            <img src="../assets/home/icon-people.svg"/>
           </router-link>
         </div>
         <div>
           <router-link to="/business">
             <dt>Business</dt>
             <dd>Our core mission is to emphasize the importance of the business side of creativity.</dd>
+            <img src="../assets/home/icon-suitcase.svg"/>
           </router-link>
         </div>
         <div>
           <router-link to="/sponsorship">
             <dt>Sponsorship</dt>
             <dd>Sponsors provide seed funding or other resources to continue the program. </dd>
+            <img src="../assets/home/icon-dollar.svg"/>
           </router-link>
         </div>
         <div>
           <router-link to="/awards">
             <dt>Awards</dt>
             <dd>We celebrate student achievement by giving creatives an opportunity to be recognized.</dd>
+            <img src="../assets/home/icon-award.svg"/>
           </router-link>
         </div>
       </dl>
