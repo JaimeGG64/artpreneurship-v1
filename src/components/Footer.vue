@@ -1,7 +1,7 @@
 <template>
     <div class="footer-wrapper">
         <section class="footer-wrapper__info">
-            <img alt="Artpreneurship logo" src="../assets/logo.svg" class="footer-wrapper__logo">
+            <img alt="Artpreneurship logo" src="../assets/global/logo.svg" class="footer-wrapper__logo">
             <p class="footer-wrapper__info--address">
                 18111 Nordhoff St,<br>
                 Northridge, CA, 91330
@@ -34,6 +34,7 @@ export default {
 
 .footer-wrapper {
     width: 100%;
+    box-shadow: 0 -.5rem 1.5rem rgba(0, 0, 0, 0.09);;
     &__logo {
         width: 4.75rem;
     }
@@ -51,6 +52,8 @@ export default {
     &__copyright {
         background: $black-hue-1;
         align-content: center;
+
+
         text-align: center;
         color: white;
         padding: 2rem;
