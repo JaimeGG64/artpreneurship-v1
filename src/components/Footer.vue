@@ -39,7 +39,7 @@ export default {
 .footer-wrapper {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(2f, auto);
+    grid-template-rows: repeat(2, auto);
     box-shadow: 0 -.5rem 1.5rem rgba(0, 0, 0, 0.09);
     &__logo {
         width: 4.75rem;
@@ -47,7 +47,7 @@ export default {
     &__info {
         display: grid;
         grid-template-columns: 30% 70%;
-        grid-template-rows: repeat(2f, auto);
+        grid-template-rows: repeat(2, auto);
         background: white;
         color: $black-hue-1;
         padding: 3.5rem $mobile-gutter;
@@ -65,7 +65,7 @@ export default {
         background: $black-hue-1;
         display: grid;
        // grid-template-columns: 15% 70% 15%;
-        grid-template-rows: repeat(2f, auto);
+        grid-template-rows: repeat(2, auto);
         padding: 2rem $mobile-gutter;
         padding-bottom: 1rem;
         &--logos {
