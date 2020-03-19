@@ -10,9 +10,9 @@
         </section>
         <section class="footer-wrapper__copyright">
             <section class="footer-wrapper__copyright--logos">
-                <img class="footer-wrapper__copyright--logos-facebook" href="#" alt="Link to Facebook." src="../assets/global/facebook.svg"></img>
-                <img class="footer-wrapper__copyright--logos-twitter" href="#" alt="Link to Twitter." src="../assets/global/twitter.svg"></img>
-                <img class="footer-wrapper__copyright--logos-instagram" href="#" alt="Link to Instagram." src="../assets/global/instagram.svg"></img>
+                <img class="footer-wrapper__copyright--logos-facebook" href="#" alt="Link to Facebook." src="../assets/global/facebook.svg">
+                <img class="footer-wrapper__copyright--logos-twitter" href="#" alt="Link to Twitter." src="../assets/global/twitter.svg">
+                <img class="footer-wrapper__copyright--logos-instagram" href="#" alt="Link to Instagram." src="../assets/global/instagram.svg">
             </section>
             <p class="footer-wrapper__copyright--copy">© Copyright {{ year }}. Artpreneurship All Right Reserved</p>
         </section>
@@ -64,20 +64,20 @@ export default {
     &__copyright {
         background: $black-hue-1;
         display: grid;
-        grid-template-columns: 15% 70% 15%;
+       // grid-template-columns: 15% 70% 15%;
         grid-template-rows: repeat(2f, auto);
         padding: 2rem $mobile-gutter;
         padding-bottom: 1rem;
         &--logos {
             grid-row: 1/2;
-            grid-column: 2/3;
+            //grid-column: 2/3;
             justify-self: center;
             &-facebook, &-twitter, &-instagram {
                 padding: 0rem .3rem .9rem .3rem;
             }
         }
         &--copy{
-            grid-column: 1/4;
+            //grid-column: 1/4;
             grid-row: 2/2;
             width: 70%;
             font-size: .95rem;
