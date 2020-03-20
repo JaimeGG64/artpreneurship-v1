@@ -10,9 +10,15 @@
         </section>
         <section class="footer-wrapper__copyright">
             <section class="footer-wrapper__copyright--logos">
-                <img class="footer-wrapper__copyright--logos-facebook" href="#" alt="Link to Facebook." src="../assets/global/facebook.svg">
-                <img class="footer-wrapper__copyright--logos-twitter" href="#" alt="Link to Twitter." src="../assets/global/twitter.svg">
-                <img class="footer-wrapper__copyright--logos-instagram" href="#" alt="Link to Instagram." src="../assets/global/instagram.svg">
+                <a href='#'>
+                    <img class="footer-wrapper__copyright--logos-facebook" alt="Link to Facebook." src="../assets/global/facebook.svg">
+                </a>
+                <a href='#'>
+                    <img class="footer-wrapper__copyright--logos-twitter" alt="Link to Twitter." src="../assets/global/twitter.svg">
+                </a>
+                <a href='#'>
+                    <img class="footer-wrapper__copyright--logos-instagram" alt="Link to Instagram." src="../assets/global/instagram.svg">
+                </a>
             </section>
             <p class="footer-wrapper__copyright--copy">© Copyright {{ year }}. Artpreneurship All Right Reserved</p>
         </section>
@@ -122,6 +128,8 @@ export default {
                 justify-self: right;
                 &-facebook, &-twitter, &-instagram {
                     padding: 0rem .3rem;
+                    position: relative;
+                    bottom: -.2rem;
                 }
             }
             &--copy{
