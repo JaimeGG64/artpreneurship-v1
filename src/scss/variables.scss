@@ -15,7 +15,9 @@ $blue: #2772e5;
 $coral: #f3665b;
 $light-pink: #f6b5c5;
 
+// fonts
 $default-font: "Lato", sans-serif;
+$tablet-font-size: .85rem;
 
 $break-point: (
     "sm": 576px,
@@ -28,3 +30,6 @@ $break-point: (
 $mobile-gutter: 1.5rem;
 $tablet-gutter: 3.25rem;
 $lg-gutter: 14.5rem;
+
+// Icons
+$lg-icon-size: 4rem;
