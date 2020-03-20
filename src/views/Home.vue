@@ -208,6 +208,12 @@ export default {
   }
 }
 @media screen and (min-width: map-get($break-point , "md")) {
+  .home{
+    background: url("../assets/home/home-background-md.png");
+    background-position: center 24%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .artperneurship{
     grid-template-columns: auto 42%;
     grid-row-gap: 1.5rem;

@@ -5,10 +5,7 @@
         fade
         :interval="0"
         controls
-        height="500"
         indicators
-        @sliding-start="onSlideStart"
-        @sliding-end="onSlideEnd"
     >
     <b-carousel-slide
         :img-src="getImageOne"
