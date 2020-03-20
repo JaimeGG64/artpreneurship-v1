@@ -58,32 +58,127 @@ export default {
             grid-column: 2/3;
             &-phone, &-email {
                 @extend .copy-bold;
+                color: #333333;
+                font-weight: 600;
+                text-decoration: none;
             }
         }
     }
     &__copyright {
         background: $black-hue-1;
         display: grid;
-       // grid-template-columns: 15% 70% 15%;
         grid-template-rows: repeat(2, auto);
         padding: 2rem $mobile-gutter;
         padding-bottom: 1rem;
         &--logos {
             grid-row: 1/2;
-            //grid-column: 2/3;
             justify-self: center;
             &-facebook, &-twitter, &-instagram {
                 padding: 0rem .3rem .9rem .3rem;
             }
         }
         &--copy{
-            //grid-column: 1/4;
             grid-row: 2/2;
             width: 70%;
             font-size: .95rem;
             text-align: left;
             color: grey;
             @extend .copy;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .footer-wrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, auto);
+        &__logo {
+            justify-self: left;
+        }
+        &__info {
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: 0;
+            padding: 5rem $tablet-gutter;
+            text-align: right;
+            &--address {
+                grid-column: 3/4;
+                justify-self: right;
+                font-size: $tablet-font-size;
+            }
+            &--contact {
+                grid-column: 2/3;
+                justify-self: right;
+                &-phone, &-email {
+                    grid-column: 2/3;
+                    font-size: $tablet-font-size;
+                }
+            }
+        }
+        &__copyright {
+            padding: 1rem $tablet-gutter;
+            &--logos {
+                grid-column: 2/2;
+                grid-row: 1/1;
+                justify-self: right;
+                &-facebook, &-twitter, &-instagram {
+                    padding: 0rem .3rem;
+                }
+            }
+            &--copy{
+                grid-column: 1/1;
+                grid-row: 1/1;
+                width: 100%;
+                align-self: center;
+                font-size: $tablet-font-size;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .footer-wrapper {
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, auto);
+        &__logo {
+            width: 5.5rem;
+            grid-row: 1/1;
+            grid-column: 2/2;
+            position: relative;
+            top: -1rem;
+        }
+        &__info {
+            grid-template-columns: 25% 50% 25%;
+            padding: 4.5rem $lg-gutter;
+            text-align: left;
+            &--address {
+                grid-column: 2/2;
+                justify-self: center;
+                font-size: 1rem;
+                position: relative;
+                left: -2rem;
+            }
+            &--contact {
+                grid-row: 1/1;
+                justify-self: right;
+                &-phone, &-email {
+                    font-size: 1rem;
+                }
+            }
+        }
+        &__copyright {
+            padding: 1.5rem $lg-gutter;
+            &--logos {
+                display: none;
+            }
+            &--copy{
+                grid-column: 1/1;
+                grid-row: 1/1;
+                width: 100%;
+                text-align: center;
+                font-size: 1rem;
+                color: white;
+            }
         }
     }
 }
