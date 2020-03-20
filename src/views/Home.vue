@@ -148,6 +148,7 @@ export default {
   }
   &__copy{
     padding: 0 $mobile-gutter;
+    font-weight: 600;
   }
   &__list{
     display: grid;
@@ -199,6 +200,97 @@ export default {
   &__logo{
     height: 3rem;
     vertical-align: bottom;
+  }
+}
+@media screen and (min-width: map-get($break-point , "md")) {
+  .artperneurship{
+    grid-template-columns: auto 42%;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 1.35rem;
+    padding: 5rem $tablet-gutter;
+    &__logo, &__heading, &__copy, &__btn{
+      grid-column: 1/2;
+    }
+    &__heading, &__copy{
+      padding: 0;
+      text-align: left;
+    }
+    &__logo{
+      display: block;
+      width: 5.5rem;
+    }
+    &__btn{
+      justify-self: start;
+      margin-bottom: 0;
+    }
+    &__image{
+      grid-column: 2/3;
+      grid-row: 1/5;
+      width: 100%;
+      align-self: center;
+    }
+  }
+  .about-program{
+    &__heading, &__copy{
+      padding: 0;
+      width: 80%;
+      justify-self: center;
+    }
+  }
+  .program-feature{
+    display: grid;
+    grid-template-columns: auto 58%;
+    grid-column-gap: 8.5rem;
+    grid-template-rows: 6rem;
+    padding: 8rem $tablet-gutter;
+    &__heading, &__copy, &__list{
+      padding: 0
+    }
+    &__item-wrapper{
+      padding: 1.25rem;
+    }
+    &__heading{
+      text-align: left;
+    }
+    &__list{
+      grid-column: 2/3;
+      grid-row: 1/3;
+    }
+    &__link{
+      grid-row-gap: .25rem;
+    }
+    &__term{
+      font-size: 1.15rem;
+    }
+    &__def{
+      font-size: 1rem;
+    }
+    &__icon{
+      width: 2.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+  .artperneurship{
+    grid-template-columns: auto 44%;
+    grid-column-gap: 4rem;
+  }
+  .about-program{
+    &__heading, &__copy{
+      width: 61%;
+    }
+  }
+  .program-feature{
+    grid-template-columns: auto 67%;
+    grid-column-gap: 7.5rem;
+    &__list{
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+    }
+    &__item-wrapper{
+      padding: 1.5rem 1rem;
+    }
   }
 }
 </style>

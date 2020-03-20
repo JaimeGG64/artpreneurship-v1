@@ -21,6 +21,7 @@
     text-decoration: none;
     text-align: center;
     display: block;
+    align-self: baseline;
 }
 
 @mixin base-btn-blur($blur, $shadowColor) {
