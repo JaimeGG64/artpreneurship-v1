@@ -25,6 +25,7 @@ export default {
     background: $black-hue-1;
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
     padding: 1rem 1.75rem;
     box-sizing: border-box;
     &__logo{

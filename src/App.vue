@@ -2,15 +2,18 @@
   <div id="app">
     <GlobalNav/>
     <router-view/>
+    <Footer/>
   </div>
 </template>
 <script>
 
 import GlobalNav from '@/components/GlobalNav.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
     GlobalNav,
+    Footer,
   }
 }
 </script>
