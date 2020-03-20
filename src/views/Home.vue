@@ -15,6 +15,7 @@
     </section>
     <section class="gallery">
       <h2 class="gallery__heading">Gallery</h2>
+      <carrousel/>
     </section>
     <section class="program-feature">
       <h2 class="program-feature__heading">Program Features</h2>
@@ -58,9 +59,13 @@
 </template>
 
 <script>
+import carrousel from '../components/Carousel'
 export default {
   name: 'Home',
   title: 'Home',
+  components: {
+    carrousel,
+  }
 }
 </script>
 
