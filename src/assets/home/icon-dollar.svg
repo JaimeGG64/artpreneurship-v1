@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74" height="69" viewBox="0 0 74 69">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f3665b;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="Group_109" data-name="Group 109" transform="translate(-768 -3860)">
+    <rect id="Rectangle_69" data-name="Rectangle 69" class="cls-1" width="74" height="69" rx="10" transform="translate(768 3860)"/>
+    <g id="dollar-sign" transform="translate(790.546 3878)">
+      <line id="Line_2" data-name="Line 2" class="cls-2" y2="32" transform="translate(14.455 1)"/>
+      <path id="Path_583" data-name="Path 583" class="cls-2" d="M22,5H11.091a5.091,5.091,0,0,0,0,10.182h7.273a5.091,5.091,0,1,1,0,10.182H6" transform="translate(0 1.818)"/>
+    </g>
+  </g>
+</svg>

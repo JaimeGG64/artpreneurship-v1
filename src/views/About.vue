@@ -105,10 +105,6 @@ export default {
 @import "../scss/button-styles.scss";
 @import "../scss/variables.scss";
 
-$mobile-gutter: 1.5rem;
-$tablet-gutter: 3.25rem;
-$lg-gutter: 14.5rem;
-
 $tablet-font-size: .85rem;
 
 $lg-about-gutter: 7rem;

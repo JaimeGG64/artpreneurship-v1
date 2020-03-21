@@ -16,11 +16,12 @@
     font-family: $default-font; // from variables.scss
     font-size: 1.25rem;
     font-weight: 700;
-    padding: .75rem 2.5rem;
+    padding: 1rem 2.5rem;
     border-radius: 10px;
     text-decoration: none;
     text-align: center;
     display: block;
+    align-self: baseline;
 }
 
 @mixin base-btn-blur($blur, $shadowColor) {
