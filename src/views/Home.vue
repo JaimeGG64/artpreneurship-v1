@@ -115,6 +115,7 @@ export default {
   grid-template-columns: auto;
   grid-template-rows: repeat(4, auto);
   grid-row-gap: 1.25rem;
+  padding-bottom: 4rem;
   &__heading{
     font-size: 2rem;
     font-weight: 900;
@@ -210,7 +211,7 @@ export default {
 @media screen and (min-width: map-get($break-point , "md")) {
   .home{
     background: url("../assets/home/home-background-md.png");
-    background-position: center 24%;
+    background-position: center 43rem;
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -242,6 +243,7 @@ export default {
     }
   }
   .about-program{
+    padding: 10rem 0;
     &__heading, &__copy{
       padding: 0;
       width: 80%;
@@ -283,6 +285,12 @@ export default {
 }
 
 @media screen and (min-width: map-get($break-point , "lg")) {
+  .home{
+    background: url("../assets/home/home-background-lg.png");
+    background-position: center 48rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
   .artperneurship{
     grid-template-columns: auto 44%;
     grid-column-gap: 4rem;
@@ -301,6 +309,71 @@ export default {
     }
     &__item-wrapper{
       padding: 1.5rem 1rem;
+    }
+  }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+  .home{
+    background: url("../assets/home/home-background-xl.png");
+    background-position: center 43rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .artperneurship{
+    padding: 5rem $lg-gutter;
+    &__logo{
+      width: 9.25rem;
+    }
+    &__heading{
+      font-size: 5rem;
+    }
+    &__copy{
+      font-size: 1.35rem
+    }
+    &__image{
+      width: 83%;
+    }
+  }
+  .about-program{
+    &__heading, &__copy{
+      width: 45%;
+    }
+    &__heading{
+      font-size: 3.75rem;
+    }
+  }
+  .program-feature{
+    padding: 8rem $lg-gutter;
+    grid-template-rows: 9.75rem;
+    grid-template-columns: auto 68%;
+    &__link{
+      grid-row-gap: 0rem;
+    }
+    &__heading{
+      font-size: 3.75rem;
+    }
+    &__item-wrapper{
+      padding: 1.75rem;
+    }
+    &__term{
+      font-size: 1.75rem;
+    }
+    &__def{
+      font-size: 1.2rem;
+    }
+    &__icon{
+      width: 4.5rem;
+    }
+  }
+  .knowbility{
+    height: 24rem;
+    grid-row-gap: 2.5rem;
+    &__copy{
+      font-size: 2.25rem;
+    }
+    &__logo{
+      height: 4rem;
     }
   }
 }
