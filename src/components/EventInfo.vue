@@ -1,13 +1,11 @@
 <template>
-    <dl class="event__def-list">
-        <div class="event-wrapper">
-            <dt class="event-wrapper__name">{{eventObj.name.text}}</dt>
-                <dd class='event-wrapper__sumamry'>{{eventObj.summary}}</dd>
-                <dd class="event-wrapper__start-date">{{formattedDateTime.date}}</dd>
-                <dd class="event-wrapper__start-time">{{formattedDateTime.time}}</dd>
-                <a class="event-wrapper__button" :href='eventObj.url' target=_blank>Sign up</a>
-        </div>
-    </dl>
+    <div class="event-wrapper">
+        <dt class="event-wrapper__name">{{eventObj.name.text}}</dt>
+            <dd class="event-wrapper__start-date">{{formattedDateTime.date}}</dd>
+            <dd class="event-wrapper__start-time">{{formattedDateTime.time}}</dd>
+            <dd class='event-wrapper__sumamry'>{{eventObj.summary}}</dd>
+            <a class="event-wrapper__button" :href='eventObj.url' target=_blank>Sign up</a>
+    </div>
 </template>
 
 <script>
@@ -114,12 +112,46 @@ export default {
     @import "../scss/button-styles.scss";
 
     .event-wrapper {
-        &__button, a {
-            @include base-btn-style($blue, none);
-            text-decoration: none;
+        background: $white;
+        padding: 1.5rem;
+        display: grid;
+        grid-template-columns: 7rem auto 5rem;
+        grid-template-rows: repeat(4, auto);
+        border-radius: 7px;
+        grid-row-gap: 1.25rem;
+        box-shadow: 0px 3px 20px rgba(0,0,0,.07);
+        &__start-date{
+            grid-row: 1/2;
+            grid-column: 1/2;
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: $weight-black;
         }
-        &__button:hover{
+        &__start-time{
+            margin: 0;
+            grid-row: 1/2;
+            grid-column: 3/4;
+            text-align: right;
+            font-weight: $weight-bold;
+        }
+        &__name {
+            grid-row: 2/3;
+            grid-column: 1/4;
+        }
+        &__sumamry{
+            margin: 0;
+            grid-row: 3/4;
+            grid-column: 1/4;
+        }
+        &__button {
+            grid-row: 4/5;
+            grid-column: 1/4;
+            width: 9rem;
+            justify-self: center;
+            @include base-btn-style($blue, none);
+            &:hover, &:focus{
             @include base-btn-blur(30px, $blue);
+        }
         }
     }
     
