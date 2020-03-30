@@ -1,11 +1,11 @@
 <template>
-    <dl class=“curricula__def-list”>
-        <div class=“bio-wrapper”>
-            <img class=“bio-wrapper__img” :src='collabInfo.filename' :alt='collabInfo.altTxt'/>
-            <dt class=“bio-wrapper__name”>{{collabInfo.Name}}</dt>
-                <dd class=“bio-wrapper__desc”>{{collabInfo.description}}</dd>
+    <div class="collab">
+        <img class="collab__image" :src="collabInfo.filename" :alt="collabInfo.altTxt">
+        <div class="collab__text-wrapper">
+            <dt class="collab__name">{{collabInfo.Name}}</dt>
+            <dd class="collab__desc">{{collabInfo.description}}</dd>
         </div>
-    </dl>
+    </div>
 </template>
 
 <script>
@@ -17,26 +17,45 @@ export default {
 </script>
 
 <style lang="scss">
-    @import "../scss/variables.scss";
-    @import "../scss/type.scss";
+@import "../scss/variables.scss";
 
-    // .curricula {
-    //     &__def-list {
+.collab {
+    box-shadow: 0 .25rem 1.25rem rgba(0, 0, 0, .07);
+    width: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    max-width: 25rem;
+    &__image {
+        width: 100%;
+    }
+    &__text-wrapper {
+        padding: $mobile-gutter;
+    }
+    &__name {
+        font-size: 1.75rem;
+    }
+    &__desc {
+        margin: 0;
+    }
+}
 
-    //     }
-    // }
-
-    .bio-wrapper {
-        &__name {
-            font-weight: 700;
-            font-size: 2rem;
-        }
-
-        &__desc {
-            font-weight: 400;
-            font-size: 1.25rem;
+@media screen and (min-width: map-get($break-point , "md")) {
+    .collab {
+        max-width: 29rem;
+        &__text-wrapper {
+            padding: 1rem 2rem 1.5rem 2rem;
         }
     }
-    
-    
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .collab {
+        max-width: 29rem;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+
+}
+
 </style>
