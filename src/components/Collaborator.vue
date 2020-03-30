@@ -1,16 +1,11 @@
 <template>
-    <section class="collab-wrapper__list__bio-wrapper">
-        <picture class="collab-wrapper__list__bio-wrapper__image">
-            <source media="(min-width: 1920px)" :srcset="collabInfo.lgFilename">
-            <source media="(min-width: 1024px)" :srcset="collabInfo.mdFilename">
-            <source media="(min-width: 640px)" :srcset="collabInfo.mobileFilename">
-                <img :src="collabInfo.mobileFilename" :alt="collabInfo.altTxt">
-        </picture>
-        <section class="collab-wrapper__list__bio-wrapper__copy">
-            <dt class=“collab-wrapper__list__bio-wrapper__copy__name”>{{collabInfo.Name}}</dt>
-            <dd class=“collab-wrapper__list__bio-wrapper__copy__desc”>{{collabInfo.description}}</dd>
-        </section>
-    </section>
+    <div class="collab">
+        <img class="collab__image" :src="collabInfo.filename" :alt="collabInfo.altTxt">
+        <div class="collab__text-wrapper">
+            <dt class=“collab__name”>{{collabInfo.Name}}</dt>
+            <dd class=“collab__desc”>{{collabInfo.description}}</dd>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -23,54 +18,48 @@ export default {
 
 <style lang="scss">
 @import "../scss/variables.scss";
-@import "../scss/type.scss";
 
-.collab-wrapper {
-    &__list{
-        &__bio-wrapper {
-            box-shadow: 0 3px 20px rgba(0, 0, 0, .09);
-            width: 22.5rem;
-            height: 18.75rem;
-            display: grid;
-            grid-template-columns: 5% 90% 5%;
-            &__image {
-                grid-column: 1/4;
-            }
-            &__copy {
-                grid-column: 2/3;
-                // &__name {
+.collab {
+    box-shadow: 0 .25rem 1.25rem rgba(0, 0, 0, .07);
+    width: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    max-width: 25rem;
+    &__image {
+        width: 100%;
+    }
+    &__text-wrapper {
+        padding: 1rem;
+    }
 
-                // }   
-
-                &__desc {
-                    text-indent: 0;
-                }
-            }
-        }
+    // This is driving me crazy. I can only modify these elements through type.scss.
+    &__name {
+        font-size: 2rem;
+    }
+    &__desc {
+        margin: 0;
     }
 }
 
 @media screen and (min-width: map-get($break-point , "md")) {
-    .collab-wrapper {
-        &__list{
-            &__bio-wrapper {
-                box-shadow: 0 3px 20px rgba(0, 0, 0, .09);
-                width: 29rem;
-                height: 31.25rem;
-            }
+    .collab {
+        max-width: 29rem;
+        &__text-wrapper {
+            padding: 1rem 2rem 1.5rem 2rem;
         }
     }
 }
 
-@media screen and (min-width: map-get($break-point , "xl")) {
-    .collab-wrapper {
-        &__list{
-            &__bio-wrapper {
-                box-shadow: 0 3px 20px rgba(0, 0, 0, .09);
-                width: 29rem;
-                height: 31.25rem;
-            }
-        }
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .collab {
+        max-width: 29rem;
     }
 }
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .collab {
+        max-width: 29rem;
+    }
+}
+
 </style>

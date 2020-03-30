@@ -1,9 +1,9 @@
 <template>
     <main class="Collaborators">
         <h1>Collaborators Page</h1>
-        <section class="collab-wrapper">
-            <dl class="collab-wrapper__list" v-for="(collaborator, index) in collaborators" :key=index>
-                <Collaborator :collabInfo=collaborator></Collaborator>
+        <section class="collab-list-section">
+            <dl class="collab-list-section__list">
+                <Collaborator v-for="(collaborator, index) in collaborators" :key=index :collabInfo=collaborator />
             </dl>
         </section>
     </main>
@@ -11,13 +11,6 @@
 
 <script>
 import Collaborator from '../components/Collaborator.vue'
-
-import JaneMobile from '../assets/collaborators/jane-doe-mobile.png'
-import JohnMobile from '../assets/collaborators/john-doe-mobile.png'
-import JulieMobile from '../assets/collaborators/julie-doe-mobile.png'
-
-import JaneMd from '../assets/collaborators/jane-doe-md.png'
-import JohnMd from '../assets/collaborators/john-doe-md.png'
 
 import JaneDoe from '../assets/collaborators/jane-doe.png'
 import JohnDoe from '../assets/collaborators/john-doe.png'
@@ -37,36 +30,39 @@ export default {
         }
     },
     methods: {
-        pushCollaborator: function(title, desc, mobileFile, mdfile, file, alt) {
+        pushCollaborator: function(title, desc, file, alt) {
             var collab = {
                 Name: title,
                 description: desc,
-                mobileFilename: mobileFile,
-                mdFilename: mdfile,
-                lgFilename: file,
+                filename: file,
                 altTxt: alt,
             };
             this.collaborators.push(collab);
         },
     },
     beforeMount() {
-        this.pushCollaborator("Jane Doe", "Hello World!", JaneMobile, JaneMd, JaneDoe, "")
-        this.pushCollaborator("John Doe", "Hello World!", JohnMobile, JohnMd, JohnDoe, "")
-        this.pushCollaborator("Julie Doe", "Hello World!", JulieMobile, JaneMd, JulieDoe, "")
+        this.pushCollaborator("Jane Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JaneDoe, "")
+        this.pushCollaborator("John Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JohnDoe, "")
+        this.pushCollaborator("Julie Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JulieDoe, "")
     },
 }
 </script>
 
 <style lang="scss">
 @import "../scss/variables.scss";
-@import "../scss/type.scss";
 
-.collab-wrapper {
+.collab-list-section {
     padding: 2rem $mobile-gutter;
     &__list{
         display: grid;
         grid-template-columns: 100%;
-        padding: 1.25rem 0;
+        grid-row-gap: $mobile-gutter;
     }
 }
+
+
+h1 {
+    font-size: 2rem;
+}
+
 </style>
