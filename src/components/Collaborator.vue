@@ -55,9 +55,7 @@ export default {
 }
 
 @media screen and (min-width: map-get($break-point , "xl")) {
-    .collab {
-        max-width: 29rem;
-    }
+
 }
 
 </style>
