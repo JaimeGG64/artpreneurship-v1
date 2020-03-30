@@ -50,16 +50,17 @@ export default {
     }
 }
 
-@media screen and (min-width: map-get($break-point , "lg")) {
-    .collab {
-        max-width: 29rem;
-    }
-}
+// Commenting out until I see view-specific changes.
+// @media screen and (min-width: map-get($break-point , "lg")) {
+//     .collab {
+//         max-width: 29rem;
+//     }
+// }
 
-@media screen and (min-width: map-get($break-point , "xl")) {
-    .collab {
-        max-width: 29rem;
-    }
-}
+// @media screen and (min-width: map-get($break-point , "xl")) {
+//     .collab {
+//         max-width: 29rem;
+//     }
+// }
 
 </style>
