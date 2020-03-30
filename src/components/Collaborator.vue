@@ -2,8 +2,8 @@
     <div class="collab">
         <img class="collab__image" :src="collabInfo.filename" :alt="collabInfo.altTxt">
         <div class="collab__text-wrapper">
-            <dt class=“collab__name”>{{collabInfo.Name}}</dt>
-            <dd class=“collab__desc”>{{collabInfo.description}}</dd>
+            <dt class="collab__name">{{collabInfo.Name}}</dt>
+            <dd class="collab__desc">{{collabInfo.description}}</dd>
         </div>
     </div>
 </template>
@@ -29,12 +29,10 @@ export default {
         width: 100%;
     }
     &__text-wrapper {
-        padding: 1rem;
+        padding: $mobile-gutter;
     }
-
-    // This is driving me crazy. I can only modify these elements through type.scss.
     &__name {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
     &__desc {
         margin: 0;
@@ -50,17 +48,16 @@ export default {
     }
 }
 
-// Commenting out until I see view-specific changes.
-// @media screen and (min-width: map-get($break-point , "lg")) {
-//     .collab {
-//         max-width: 29rem;
-//     }
-// }
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .collab {
+        max-width: 29rem;
+    }
+}
 
-// @media screen and (min-width: map-get($break-point , "xl")) {
-//     .collab {
-//         max-width: 29rem;
-//     }
-// }
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .collab {
+        max-width: 29rem;
+    }
+}
 
 </style>
