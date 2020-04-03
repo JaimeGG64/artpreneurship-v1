@@ -183,13 +183,20 @@ export default {
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 grid-row: 1/5;
-                align-self: c;
+                align-self: center;
                 &-time,&-date{
                     text-align: left;
                     width: 8rem;
                     font-size: 1.2rem;
                     font-weight: $weight-black;
                 }
+            }
+        }
+    }
+    @media screen and (min-width: map-get($break-point , "lg")) {
+        .event-info{
+            &__timestamp{
+                justify-content: center;
             }
         }
     }

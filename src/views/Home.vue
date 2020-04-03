@@ -5,7 +5,7 @@
       <h1 class="artperneurship__heading">Artpreneurship</h1>
       <p class="artperneurship__copy">Artperneurship is a uniquely designed program that embraces the entrepreneurial mindset, specifically for students of art and humanities. While developing their personal work, students in the program can adapt and transform that work into an entrepreneurial venture.</p>
       <router-link class="artperneurship__btn" to="/sponsorship">Donate</router-link> 
-      <img class="artperneurship__image" src="../assets/global/air_rally_illustration_1.png" alt="" />
+      <img class="artperneurship__image" src="../assets/global/air_rally_illustration_1.svg" alt="" />
     </section>
     <section class="about-program">
       <h2 class="about-program__heading">About Our Program</h2>

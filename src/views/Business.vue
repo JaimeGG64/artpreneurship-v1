@@ -80,9 +80,9 @@ export default {
 
     mounted: function() {
         // Load 3 events into events[]
+        this.loadEvent('85699332009')
         this.loadEvent('77903821427')
         this.loadEvent('91637172249')
-        this.loadEvent('85699332009')
     }
 }
 </script>
@@ -190,6 +190,33 @@ export default {
     }
     .upcomming-event{
         padding: 0 $tablet-gutter $tablet-gutter $tablet-gutter;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .business-side{
+        grid-template-columns: 47% auto;
+        &__text-wrapper{
+            grid-row-gap: 2rem;
+            align-content: center;
+        }
+        &__heading{
+            font-size: 3rem;
+            text-align: left;
+            width: 63.5%;
+        }
+    }
+    .resources{
+        grid-template-columns: 50% auto;
+        &__copy{
+            grid-column: 1/2;
+        }
+        &__heading{
+            grid-column: 1/2;
+        }
+        &__image{
+            grid-row: 1/4;
+        }
     }
 }
 </style>
