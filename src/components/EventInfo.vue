@@ -1,10 +1,16 @@
 <template>
-    <div class="event-wrapper">
-        <dt class="event-wrapper__name">{{eventObj.name.text}}</dt>
-            <dd class="event-wrapper__start-date">{{formattedDateTime.date}}</dd>
-            <dd class="event-wrapper__start-time">{{formattedDateTime.time}}</dd>
-            <dd class='event-wrapper__sumamry'>{{eventObj.summary}}</dd>
-            <a class="event-wrapper__button" :href='eventObj.url' target=_blank>Sign up</a>
+    <div class="event-info">
+        <dt class="event-info__name">{{eventObj.name.text}}</dt>
+            <div class="event-info__timestamp">
+                <span class="event-info__timestamp-date">
+                    {{formattedDateTime.date}} 
+                </span>
+                <span class="event-info__timestamp-time">
+                    {{formattedDateTime.time}}
+                </span>
+            </div>
+            <dd class='event-info__sumamry'>{{eventObj.summary}}</dd>
+            <a class="event-info__button" :href='eventObj.url' target=_blank>Sign up</a>
     </div>
 </template>
 
@@ -111,41 +117,38 @@ export default {
     @import "../scss/variables.scss";
     @import "../scss/button-styles.scss";
 
-    .event-wrapper {
+    .event-info {
         background: $white;
         padding: 1.5rem;
         display: grid;
-        grid-template-columns: 7rem auto 5rem;
+        grid-template-columns: 1fr;
         grid-template-rows: repeat(4, auto);
         border-radius: 7px;
         grid-row-gap: 1.25rem;
         box-shadow: 0px 3px 20px rgba(0,0,0,.07);
-        &__start-date{
-            grid-row: 1/2;
-            grid-column: 1/2;
-            margin: 0;
-            font-size: 1.25rem;
-            font-weight: $weight-black;
-        }
-        &__start-time{
-            margin: 0;
-            grid-row: 1/2;
-            grid-column: 3/4;
-            text-align: right;
-            font-weight: $weight-bold;
-        }
         &__name {
             grid-row: 2/3;
-            grid-column: 1/4;
+        }
+        &__timestamp{
+            display: flex;
+            justify-content: space-between;
+            &-time,&-date{
+                display: block;
+            }
+            &-date{
+                font-size: 1.25rem;
+                font-weight: $weight-black;
+            }
+            &-time{
+                font-weight: $weight-bold;
+            }
         }
         &__sumamry{
             margin: 0;
             grid-row: 3/4;
-            grid-column: 1/4;
         }
         &__button {
             grid-row: 4/5;
-            grid-column: 1/4;
             width: 9rem;
             justify-self: center;
             @include base-btn-style($blue, none);
@@ -154,5 +157,40 @@ export default {
         }
         }
     }
-    
+    @media screen and (min-width: map-get($break-point , "md")) {
+        .event-info{
+            grid-template-columns: 17% 51% auto;
+            grid-template-rows: repeat(4,auto);
+            grid-column-gap: 2rem;
+            grid-row-gap: 1rem;
+            &__name {
+                grid-row: 1/2;
+                grid-column: 2/3;
+            }
+            &__sumamry{
+                grid-column: 2/3;
+                grid-row: 2/5;
+            }
+            &__button{
+                grid-column: 3/4;
+                grid-row: 1/5;
+                width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                align-self: end;
+            }
+            &__timestamp{
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                grid-row: 1/5;
+                align-self: center;
+                &-time,&-date{
+                    text-align: left;
+                    width: 8rem;
+                    font-size: 1.2rem;
+                    font-weight: $weight-black;
+                }
+            }
+        }
+    }
 </style>

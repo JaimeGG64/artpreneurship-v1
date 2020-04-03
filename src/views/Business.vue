@@ -136,7 +136,7 @@ export default {
                 grid-column: 1/2;
                 grid-row: 1/2;
                 height: 2.75rem;
-                padding: .35rem;
+                padding-top: .35rem;
             }
         }
     }
@@ -162,6 +162,34 @@ export default {
         &__text-wrapper{
             padding: 2rem $tablet-gutter;
         }
+    }
+    .resources{
+        padding: ($tablet-gutter + 1rem) $tablet-gutter;
+        grid-template-rows: repeat(3,auto);
+        grid-template-columns: 53% auto;
+        grid-column-gap: 2rem;
+        &__heading{
+            grid-row: 1/2;
+            grid-column: 1/3;
+            text-align: left;
+        }
+        &__copy{
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+        &__list{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+        &__image{
+            grid-row: 3/4;
+            grid-column: 2/3;
+            width: 100%;
+            align-self: center;
+        }
+    }
+    .upcomming-event{
+        padding: 0 $tablet-gutter $tablet-gutter $tablet-gutter;
     }
 }
 </style>
