@@ -1,19 +1,20 @@
 <template>
     <main class="Collaborators">
         <h1>Collaborators Page</h1>
-        <div class="collab-wrapper">
-            <ul class="collab-wrapper__list" v-for="(collaborator, index) in collaborators" :key=index>
-                <Collaborator class="collab-wrapper__collaborator"
-                    :collabInfo=collaborator
-                ></Collaborator>
-            </ul>
-        </div>
+        <section class="collab-list-section">
+            <dl class="collab-list-section__list">
+                <Collaborator v-for="(collaborator, index) in collaborators" :key=index :collabInfo=collaborator />
+            </dl>
+        </section>
     </main>
 </template>
 
 <script>
 import Collaborator from '../components/Collaborator.vue'
-import DaveImg from '../assets/collaborators/dave-photo.jpg'
+
+import JaneDoe from '../assets/collaborators/jane-doe.png'
+import JohnDoe from '../assets/collaborators/john-doe.png'
+import JulieDoe from '../assets/collaborators/julie-doe.png'
 
 export default {
     name: 'collaborators',
@@ -40,7 +41,50 @@ export default {
         },
     },
     beforeMount() {
-        this.pushCollaborator("Dave Moon", "Hello World!", DaveImg, "")
+        this.pushCollaborator("Jane Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JaneDoe, "")
+        this.pushCollaborator("John Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JohnDoe, "")
+        this.pushCollaborator("Julie Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JulieDoe, "")
     },
 }
 </script>
+
+<style lang="scss">
+@import "../scss/variables.scss";
+
+.collab-list-section {
+    &__list{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: $mobile-gutter;
+        padding: $mobile-gutter;
+    }
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .collab-list-section {
+        &__list{
+            grid-template-columns: repeat(2, auto);
+            grid-gap: $tablet-gutter;
+            padding: $tablet-gutter;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .collab-list-section {
+        &__list{
+            grid-template-columns: repeat(3, auto);
+            grid-gap: 5rem;
+            padding: 3rem 5rem;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+
+}
+</style>
