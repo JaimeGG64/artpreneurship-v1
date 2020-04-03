@@ -112,7 +112,7 @@ $lg-icon-size: 4rem;
 
 %mobile-heading {
   padding: 1rem $mobile-gutter;
-  font-weight: 900;
+  font-weight: $weight-black;
   font-size: 2rem;
   text-align: center;
 }
@@ -133,7 +133,7 @@ $lg-icon-size: 4rem;
   }
   &__copy {
     padding: 0 $mobile-gutter;
-    font-weight: 600;
+    font-weight: $weight-bold;
   }
   &__btn {
     @include base-btn-style($yellow-hue-1, none);
@@ -160,7 +160,7 @@ $lg-icon-size: 4rem;
     @extend %mobile-heading;
   }
   &__copy {
-    font-weight: 600;
+    font-weight: $weight-bold;
   }
   &__list {
     grid-row: 3/4;
@@ -255,7 +255,7 @@ $lg-icon-size: 4rem;
     }
     &__copy {
       padding: 0 $tablet-gutter;
-      font-weight: 600;
+      font-weight: $weight-bold;
     }
     &__btn {
       @include base-btn-style($yellow-hue-1, none);
@@ -322,7 +322,7 @@ $lg-icon-size: 4rem;
     }
     &__heading{
       padding: 0;
-      font-weight: 600;
+      font-weight: $weight-bold;
       font-size: 1.5rem;
       text-align: left;
     }
@@ -381,7 +381,7 @@ $lg-icon-size: 4rem;
       margin-bottom: 0;
     }
     &__heading{
-      font-weight: 600;
+      font-weight: $weight-bold;
     }
     &__copy{
       font-size: $tablet-font-size;
@@ -486,7 +486,7 @@ $lg-icon-size: 4rem;
     grid-template-columns: 56% 44%;
     &__heading{
       font-size: 4.5rem;
-      font-weight: 900;
+      font-weight: $weight-black;
     }
   }
   .goals {
@@ -496,10 +496,10 @@ $lg-icon-size: 4rem;
     grid-row-gap: 2rem;
     &__heading {
       font-size: 4rem;
-      font-weight: 900;
+      font-weight: $weight-black;
     }
     &__copy {
-      font-weight: 600;
+      font-weight: $weight-bold;
       font-size: 1.4rem;
       line-height: 2.25rem;
     }

@@ -183,7 +183,7 @@ export default {
                 flex-wrap: wrap;
                 justify-content: flex-start;
                 grid-row: 1/5;
-                align-self: center;
+                align-self: c;
                 &-time,&-date{
                     text-align: left;
                     width: 8rem;

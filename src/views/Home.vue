@@ -96,7 +96,7 @@ export default {
   }
   &__copy{
     grid-row: 3/4;
-    font-weight: 600;
+    font-weight: $weight-bold;
     padding: 0 $mobile-gutter;
   }
   &__btn{
@@ -118,7 +118,7 @@ export default {
   padding-bottom: 4rem;
   &__heading{
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: $weight-black;
     padding: 0 $mobile-gutter;
     text-align: center;
   }
@@ -141,7 +141,7 @@ export default {
 .gallery{
   &__heading{
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: $weight-black;
     padding: 0 $mobile-gutter;
     text-align: left;
   }
@@ -149,12 +149,12 @@ export default {
 .program-feature{
   &__heading{
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: $weight-black;
     text-align: center;
   }
   &__copy{
     padding: 0 $mobile-gutter;
-    font-weight: 600;
+    font-weight: $weight-bold;
   }
   &__list{
     display: grid;
@@ -190,7 +190,7 @@ export default {
   &__copy{
     font-size: 2rem;
     padding: 0 $mobile-gutter;
-    font-weight: 600;
+    font-weight: $weight-bold;
     text-align: center;
     line-height: 2.5rem;
   }

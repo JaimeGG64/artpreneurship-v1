@@ -33,7 +33,7 @@ export default {
         }
 
         &__desc {
-            font-weight: 400;
+            font-weight: $weight-regular;
             font-size: 1.25rem;
         }
     }
