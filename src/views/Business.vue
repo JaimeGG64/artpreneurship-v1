@@ -219,4 +219,28 @@ export default {
         }
     }
 }
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .business-side{
+        grid-template-columns: 46% auto;
+        &__text-wrapper{
+            padding: 0 $lg-gutter;
+        }
+        &__heading{
+            font-size: 3.5rem;
+            width: 29rem;
+        }
+    }
+    .resources{
+        padding: 4.25rem $lg-gutter;
+        grid-column-gap: 1rem;
+        align-items: center;
+        &__heading{
+            font-size: 4rem;
+        }
+    }
+    .upcomming-event{
+        padding: 0 $lg-gutter 4rem $lg-gutter;
+    }
+}
 </style>

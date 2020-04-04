@@ -180,10 +180,10 @@ export default {
                 align-self: end;
             }
             &__timestamp{
-                flex-wrap: wrap;
-                justify-content: flex-start;
-                grid-row: 1/5;
+                flex-direction: column;
+                justify-self: flex-start;
                 align-self: center;
+                grid-row: 1/5;
                 &-time,&-date{
                     text-align: left;
                     width: 8rem;
@@ -195,8 +195,9 @@ export default {
     }
     @media screen and (min-width: map-get($break-point , "lg")) {
         .event-info{
+            grid-template-columns: 1fr 3fr 1fr;
             &__timestamp{
-                justify-content: center;
+                justify-self: center;
             }
         }
     }
