@@ -42,6 +42,7 @@ export default {
     &__img {
         width: 100%;
         justify-self: center;
+        align-self: center;
         padding: $mobile-gutter 0;
         max-width: 15rem;
     }
@@ -60,7 +61,7 @@ export default {
 @media screen and (min-width: map-get($break-point , "md")) {
     .sponsorship{
         grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(4, auto);
+        grid-template-rows: repeat(3, auto);
         padding: 5rem $tablet-gutter;
         &__heading {
             grid-column: 1/2;
@@ -79,7 +80,7 @@ export default {
         }
         &__img {
             grid-column: 2/3;
-            grid-row: 1/4;
+            grid-row: 1/3;
             padding: 5rem 0 0 0;
             max-width: 40rem;
         }
@@ -97,7 +98,7 @@ export default {
         grid-template-columns: repeat(2, auto);
         &__heading {
             grid-row: 2/3;
-            width: 60%;
+            width: 50%;
             font-size: 3rem;
         }
         &__text {
@@ -113,7 +114,7 @@ export default {
 
 @media screen and (min-width: map-get($break-point , "xl")) {
     .sponsorship {
-        padding: 0 13rem;
+        padding: 0 $lg-gutter;
         padding-top: 5rem;
         padding-bottom: 10rem;
         grid-template-columns: 40% 60%;
