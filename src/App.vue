@@ -29,4 +29,10 @@ export default {
 body {
   margin: 0;
 }
+
+@media screen and (min-width: 1920px) {
+  html{
+    font-size: 133.33%;
+  }
+}
 </style>
