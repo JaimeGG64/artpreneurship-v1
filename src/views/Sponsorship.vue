@@ -80,7 +80,6 @@ export default {
             text-align: top;
         }
         &__img {
-            width: 100%;
             grid-column: 2/3;
             grid-row: 1/3;
             padding: 5rem 0 0 0;
