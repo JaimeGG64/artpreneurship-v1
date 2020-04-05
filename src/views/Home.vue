@@ -1,10 +1,12 @@
 <template>
   <main class="home">
     <section class="artperneurship">
-      <img class="artperneurship__logo" src="../assets/global/logo.svg" alt="" />
-      <h1 class="artperneurship__heading">Artpreneurship</h1>
-      <p class="artperneurship__copy">Artperneurship is a uniquely designed program that embraces the entrepreneurial mindset, specifically for students of art and humanities. While developing their personal work, students in the program can adapt and transform that work into an entrepreneurial venture.</p>
-      <router-link class="artperneurship__btn" to="/sponsorship">Donate</router-link> 
+      <div class="artperneurship__text-wrapper">
+        <img class="artperneurship__logo" src="../assets/global/logo.svg" alt="" />
+        <h1 class="artperneurship__heading">Artpreneurship</h1>
+        <p class="artperneurship__copy">Artperneurship is a uniquely designed program that embraces the entrepreneurial mindset, specifically for students of art and humanities. While developing their personal work, students in the program can adapt and transform that work into an entrepreneurial venture.</p>
+        <router-link class="artperneurship__btn" to="/sponsorship">Donate</router-link> 
+      </div>
       <img class="artperneurship__image" src="../assets/global/air_rally_illustration_1.png" alt="" />
     </section>
     <section class="about-program">
@@ -79,7 +81,11 @@ export default {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(4, auto);
-  grid-row-gap: 1.25rem;
+  grid-row-gap: 1rem;
+  &__text-wrapper{
+    display: grid;
+    grid-row-gap: 1rem;
+  }
   &__image{
     width: 63%;
     grid-row: 1/2;
@@ -89,13 +95,11 @@ export default {
     display: none;
   }
   &__heading{
-    grid-row: 2/3;
     font-size: 2rem;
     padding: 0 $mobile-gutter;
     text-align: center;
   }
   &__copy{
-    grid-row: 3/4;
     font-weight: 600;
     padding: 0 $mobile-gutter;
   }
@@ -103,7 +107,6 @@ export default {
     @include base-btn-style($blue, none);
     width: 8.5rem;
     justify-self: center;
-    margin-bottom: 4rem;
     &:hover,
     &:focus {
       @include base-btn-blur(30px, $blue);
@@ -152,6 +155,7 @@ export default {
   &__copy{
     padding: 0 $mobile-gutter;
     font-weight: 600;
+    font-size: 1.15rem;
   }
   &__list{
     display: grid;
@@ -319,11 +323,13 @@ export default {
   }
   .artperneurship{
     padding: 5rem $lg-gutter;
+    row-gap: 1.5rem;
     &__logo{
-      width: 6.75rem;
+      width: 6.5rem;
     }
     &__heading{
-      font-size: 3.75rem;
+      font-size: 4.3rem;
+      line-height: 1.25;
     }
     &__image{
       width: 100%;
@@ -331,10 +337,10 @@ export default {
   }
   .about-program{
     &__heading, &__copy{
-      width: 45%;
+      width: 47%;
     }
     &__heading{
-      font-size: 3.75rem;
+      font-size: 3.5rem;
     }
   }
   .program-feature{
