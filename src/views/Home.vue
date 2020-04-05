@@ -221,8 +221,10 @@ export default {
     grid-row-gap: 1.5rem;
     grid-column-gap: 1.35rem;
     padding: 5rem $tablet-gutter;
-    &__logo, &__heading, &__copy, &__btn{
-      grid-column: 1/2;
+    &__text-wrapper{
+      grid-row-gap: 1.5rem;
+      align-self: center;
+      grid-row: 1/5
     }
     &__heading, &__copy{
       padding: 0;

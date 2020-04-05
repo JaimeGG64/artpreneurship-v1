@@ -129,6 +129,7 @@ export default {
   &__copy {
     padding: 0 $mobile-gutter;
     font-weight: $weight-bold;
+    font-size: 1.1rem;
   }
   &__btn {
     @include base-btn-style($yellow-hue-1, none);
@@ -156,6 +157,7 @@ export default {
   }
   &__copy {
     font-weight: $weight-bold;
+    font-size: 1.1rem;
   }
   &__list {
     grid-row: 3/4;
@@ -165,7 +167,7 @@ export default {
     display: grid;
     grid-template-columns: 4.75rem auto;
     margin-bottom: 1rem;
-    font-size: 1.1rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
     &-icon {
       width: 3rem;
@@ -370,6 +372,7 @@ export default {
     }
     &__heading{
       font-weight: $weight-bold;
+      font-size: 2.5rem;
     }
     &__copy{
       line-height: 1.75rem;
@@ -489,9 +492,6 @@ export default {
     &__copy {
       font-weight: $weight-bold;
     }
-    &__list {
-      font-size: 1.15rem;
-    }
     &__list-item {
       margin-bottom: 1rem;
       font-size: 1.1rem;
@@ -504,9 +504,9 @@ export default {
       }
     }
     &__image {
-      height: 69%;
+      height: 82%;
+      justify-self: end;
       align-self: center;
-      justify-self: center;
     }
   }
   .curricula {
@@ -552,9 +552,6 @@ export default {
     justify-items: center;
     &__heading, &__copy{
       width: 58%;
-    }
-    &__heading{
-      font-size: 3rem;
     }
   }
 }

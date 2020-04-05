@@ -25,6 +25,7 @@ export default {
     justify-self: center;
     border-radius: 10px;
     max-width: 25rem;
+    overflow: hidden;
     &__image {
         width: 100%;
     }

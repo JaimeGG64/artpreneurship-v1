@@ -52,11 +52,11 @@ export default {
 @import "../scss/variables.scss";
 
 .collab-list-section {
+    padding: $mobile-gutter;
     &__list{
         display: grid;
         grid-template-columns: 100%;
         grid-gap: $mobile-gutter;
-        padding: $mobile-gutter;
     }
 }
 
@@ -66,10 +66,10 @@ h1 {
 
 @media screen and (min-width: map-get($break-point , "md")) {
     .collab-list-section {
+        padding: $tablet-gutter;
         &__list{
             grid-template-columns: repeat(2, auto);
             grid-gap: $tablet-gutter;
-            padding: $tablet-gutter;
         }
     }
 }
@@ -78,13 +78,13 @@ h1 {
     .collab-list-section {
         &__list{
             grid-template-columns: repeat(3, auto);
-            grid-gap: 5rem;
-            padding: 3rem 5rem;
         }
     }
 }
 
 @media screen and (min-width: map-get($break-point , "xl")) {
-
+    .collab-list-section {
+        padding: 4rem $lg-gutter;
+    }
 }
 </style>
