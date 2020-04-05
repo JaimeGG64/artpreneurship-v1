@@ -101,7 +101,7 @@ export default {
   }
   &__btn{
     @include base-btn-style($blue, none);
-    width: 7rem;
+    width: 8.5rem;
     justify-self: center;
     margin-bottom: 4rem;
     &:hover,
@@ -124,13 +124,10 @@ export default {
   }
   &__copy{
     padding: 0 $mobile-gutter;
-    b{
-      font-size: 1.12rem;
-    }
   }
   &__btn{
     @include base-btn-style($yellow-hue-1, none);
-    width: 7rem;
+    width: 8.5rem;
     justify-self: center;
     &:hover,
     &:focus {
@@ -181,7 +178,7 @@ export default {
   }
 }
 .knowbility{
-  background: $light-pink;
+  background: #FAD4DD;
   height: 20rem;
   display: grid;
   justify-content: center;
@@ -196,7 +193,7 @@ export default {
   }
   &__btn{
     @include base-btn-style($white, none);
-    width: 7rem;
+    width: 8.5rem;
     justify-self: center;
     &:hover,
     &:focus {
@@ -292,8 +289,8 @@ export default {
     background-size: contain;
   }
   .artperneurship{
-    grid-template-columns: auto 44%;
-    grid-column-gap: 4rem;
+    grid-template-columns: auto 52%;
+    grid-column-gap: 1rem;
   }
   .about-program{
     &__heading, &__copy{
@@ -301,11 +298,11 @@ export default {
     }
   }
   .program-feature{
-    grid-template-columns: auto 67%;
+    grid-template-columns: 1fr 3fr;
     grid-column-gap: 7.5rem;
     &__list{
       grid-template-columns: repeat(2, 1fr);
-      grid-gap: 1rem;
+      grid-gap: 1.75rem;
     }
     &__item-wrapper{
       padding: 1.5rem 1rem;
@@ -316,23 +313,20 @@ export default {
 @media screen and (min-width: map-get($break-point , "xl")) {
   .home{
     background: url("../assets/home/home-background-xl.png");
-    background-position: center 43rem;
+    background-position: center 52rem;
     background-repeat: no-repeat;
     background-size: contain;
   }
   .artperneurship{
     padding: 5rem $lg-gutter;
     &__logo{
-      width: 9.25rem;
+      width: 6.75rem;
     }
     &__heading{
-      font-size: 5rem;
-    }
-    &__copy{
-      font-size: 1.35rem
+      font-size: 3.75rem;
     }
     &__image{
-      width: 83%;
+      width: 100%;
     }
   }
   .about-program{
@@ -345,25 +339,22 @@ export default {
   }
   .program-feature{
     padding: 8rem $lg-gutter;
-    grid-template-rows: 9.75rem;
-    grid-template-columns: auto 68%;
+    grid-template-rows: 7.75rem;;
+    grid-template-columns: 1fr 3fr;
     &__link{
       grid-row-gap: 0rem;
     }
     &__heading{
-      font-size: 3.75rem;
+      font-size: 3rem;
     }
     &__item-wrapper{
-      padding: 1.75rem;
+      padding: 2rem;
     }
     &__term{
-      font-size: 1.75rem;
-    }
-    &__def{
-      font-size: 1.2rem;
+      font-size: 1.25rem;
     }
     &__icon{
-      width: 4.5rem;
+      width: 3rem;
     }
   }
   .knowbility{
@@ -373,7 +364,7 @@ export default {
       font-size: 2.25rem;
     }
     &__logo{
-      height: 4rem;
+      height: 5.75rem;
     }
   }
 }
