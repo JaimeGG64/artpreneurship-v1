@@ -202,7 +202,7 @@ export default {
       grid-template-columns: 5.5rem auto;
       grid-template-rows: repeat(2, auto);
       margin-bottom: 3rem;
-      grid-row-gap: 1rem;
+      row-gap: 1rem;
     }
     &-term {
       grid-row: 1/2;
@@ -244,7 +244,7 @@ export default {
     grid-template-columns: 100%;
     grid-template-rows: 4;
     &__text-wrapper{
-      grid-row-gap: 1rem;
+      row-gap: 1rem;
     }
     &__heading {
       text-align: center;
@@ -334,12 +334,12 @@ export default {
       grid-area: "list";
       padding: 3.25rem $tablet-gutter 3.25rem 2.5rem;
       display: grid;
-      grid-row-gap: 2rem;
+      row-gap: 2rem;
       &-item-wrapper{
         grid-template-columns: 3.5rem auto;
         grid-template-rows: repeat(2, auto);
         margin-bottom: 0;
-        grid-row-gap: .25rem;
+        row-gap: .25rem;
       }
       &-term, &-def {
         grid-column: 2/3;
@@ -365,7 +365,7 @@ export default {
   .cooperation {
     padding: 9rem $tablet-gutter 14rem $tablet-gutter;
     display: grid;
-    grid-row-gap: 2rem;
+    row-gap: 2rem;
     &__heading, &__copy {
       padding: 0;
       margin-bottom: 0;
@@ -390,7 +390,7 @@ export default {
   .about-us {
     grid-template-columns: 54% 46%;
     grid-template-rows: repeat(5, auto);
-    grid-row-gap: 1.25rem;
+    row-gap: 1.25rem;
     &__heading,
     &__copy,
     &__btn {
@@ -426,7 +426,7 @@ export default {
     grid-template-columns: 55% 45%;
     grid-template-rows: 5rem auto auto auto 5rem;
     padding: 0 $tablet-gutter;
-    grid-row-gap: 1rem;
+    row-gap: 1rem;
     &__heading,
     &__copy,
     &__list {
@@ -484,7 +484,7 @@ export default {
     grid-template-rows: repeat(4, auto);
     padding: 4rem $lg-gutter;
     grid-template-columns: 46%;
-    grid-row-gap: 2rem;
+    row-gap: 2rem;
     &__heading {
       font-size: 3.5rem;
       font-weight: $weight-black;
@@ -524,14 +524,14 @@ export default {
     }
     &__list{
       padding: 3.25rem $lg-gutter 3.25rem 2.5rem;
-      grid-row-gap: 2.5rem;
+      row-gap: 2.5rem;
       width: 70%;
       justify-self: center;
       padding: 0;
       align-self: center;
       &-item-wrapper{
         grid-template-columns: 6.75rem auto;
-        grid-row-gap: .25rem;
+        row-gap: .25rem;
       }
       &-term {
         font-size: 1.5rem;

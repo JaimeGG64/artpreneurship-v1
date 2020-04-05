@@ -94,7 +94,7 @@ export default {
     display: grid;
     &__text-wrapper{
         display: grid;
-        grid-row-gap: 1rem;
+        row-gap: 1rem;
         padding: $mobile-gutter;
     }
     &__heading{
@@ -111,7 +111,7 @@ export default {
 }
 .resources{
     display: grid;
-    grid-row-gap: 1rem;
+    row-gap: 1rem;
     padding: $mobile-gutter;
     &__heading{
         font-weight: $weight-black;
@@ -157,7 +157,7 @@ export default {
     }
     .event-wrapper__event-list{
         display: grid;
-        grid-row-gap: $mobile-gutter;
+        row-gap: $mobile-gutter;
     }
 }
 
@@ -171,7 +171,7 @@ export default {
         padding: ($tablet-gutter + 1rem) $tablet-gutter;
         grid-template-rows: repeat(3,auto);
         grid-template-columns: 53% auto;
-        grid-column-gap: 2rem;
+        column-gap: 2rem;
         &__heading{
             grid-row: 1/2;
             grid-column: 1/3;
@@ -201,7 +201,7 @@ export default {
     .business-side{
         grid-template-columns: 47% auto;
         &__text-wrapper{
-            grid-row-gap: 2rem;
+            row-gap: 2rem;
             align-content: center;
             padding: 0;
             grid-template-columns: auto 70% auto;
@@ -241,7 +241,7 @@ export default {
     }
     .resources{
         padding: $lg-gutter;
-        grid-column-gap: 2.5rem;
+        column-gap: 2.5rem;
         align-items: center;
         &__heading{
             font-size: 4rem;

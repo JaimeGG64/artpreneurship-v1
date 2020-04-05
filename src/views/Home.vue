@@ -81,10 +81,10 @@ export default {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(4, auto);
-  grid-row-gap: 1rem;
+  row-gap: 1rem;
   &__text-wrapper{
     display: grid;
-    grid-row-gap: 1rem;
+    row-gap: 1rem;
   }
   &__image{
     width: 63%;
@@ -117,7 +117,7 @@ export default {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: repeat(4, auto);
-  grid-row-gap: 1.25rem;
+  row-gap: 1.25rem;
   padding-bottom: 4rem;
   &__heading{
     font-size: 2rem;
@@ -159,7 +159,7 @@ export default {
   }
   &__list{
     display: grid;
-    grid-row-gap: $mobile-gutter;
+    row-gap: $mobile-gutter;
     padding: 1.25rem $mobile-gutter 5rem $mobile-gutter;
   }
   &__item-wrapper{
@@ -169,7 +169,7 @@ export default {
   }
   &__link{
     display: grid;
-    grid-row-gap: 1rem;
+    row-gap: 1rem;
     text-decoration: none;
     color: $black-hue-1;
   }
@@ -187,7 +187,7 @@ export default {
   display: grid;
   justify-content: center;
   align-content: center;
-  grid-row-gap: 1.5rem;
+  row-gap: 1.5rem;
   &__copy{
     font-size: 2rem;
     padding: 0 $mobile-gutter;
@@ -218,11 +218,11 @@ export default {
   }
   .artperneurship{
     grid-template-columns: auto 42%;
-    grid-row-gap: 1.5rem;
-    grid-column-gap: 1.35rem;
+    row-gap: 1.5rem;
+    column-gap: 1.35rem;
     padding: 5rem $tablet-gutter;
     &__text-wrapper{
-      grid-row-gap: 1.5rem;
+      row-gap: 1.5rem;
       align-self: center;
       grid-row: 1/5
     }
@@ -256,7 +256,7 @@ export default {
   .program-feature{
     display: grid;
     grid-template-columns: auto 58%;
-    grid-column-gap: 8.5rem;
+    column-gap: 8.5rem;
     grid-template-rows: 6rem;
     padding: 8rem $tablet-gutter;
     &__heading, &__copy, &__list{
@@ -273,7 +273,7 @@ export default {
       grid-row: 1/3;
     }
     &__link{
-      grid-row-gap: .25rem;
+      row-gap: .25rem;
     }
     &__term{
       font-size: 1.15rem;
@@ -296,7 +296,7 @@ export default {
   }
   .artperneurship{
     grid-template-columns: auto 52%;
-    grid-column-gap: 1rem;
+    column-gap: 1rem;
   }
   .about-program{
     &__heading, &__copy{
@@ -305,7 +305,7 @@ export default {
   }
   .program-feature{
     grid-template-columns: 1fr 3fr;
-    grid-column-gap: 7.5rem;
+    column-gap: 7.5rem;
     &__list{
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1.75rem;
@@ -350,7 +350,7 @@ export default {
     grid-template-rows: 7.75rem;;
     grid-template-columns: 1fr 3fr;
     &__link{
-      grid-row-gap: 0rem;
+      row-gap: 0rem;
     }
     &__heading{
       font-size: 3rem;
@@ -367,7 +367,7 @@ export default {
   }
   .knowbility{
     height: 24rem;
-    grid-row-gap: 2.5rem;
+    row-gap: 2.5rem;
     &__copy{
       font-size: 2.25rem;
     }

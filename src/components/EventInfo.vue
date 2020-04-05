@@ -124,7 +124,7 @@ export default {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, auto);
         border-radius: 7px;
-        grid-row-gap: 1.25rem;
+        row-gap: 1.25rem;
         box-shadow: 0px 3px 20px rgba(0,0,0,.07);
         &__name {
             grid-row: 2/3;
@@ -161,8 +161,8 @@ export default {
         .event-info{
             grid-template-columns: 17% 51% auto;
             grid-template-rows: repeat(4,auto);
-            grid-column-gap: 2rem;
-            grid-row-gap: 1rem;
+            column-gap: 2rem;
+            row-gap: 1rem;
             &__name {
                 grid-row: 1/2;
                 grid-column: 2/3;

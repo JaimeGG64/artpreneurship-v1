@@ -95,7 +95,7 @@ export default {
 @media screen and (min-width: map-get($break-point , "lg")) {
     .sponsorship-and-donation {
         grid-template-columns: 57% auto;
-        grid-column-gap: 1rem;
+        column-gap: 1rem;
         &__heading {
             grid-row: 2/3;
             width: 50%;
