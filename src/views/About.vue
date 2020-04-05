@@ -107,7 +107,7 @@ export default {
 
 %mobile-heading {
   padding: 1rem $mobile-gutter;
-  font-weight: 900;
+  font-weight: $weight-black;
   font-size: 2rem;
   text-align: center;
 }
@@ -128,7 +128,7 @@ export default {
   }
   &__copy {
     padding: 0 $mobile-gutter;
-    font-weight: 600;
+    font-weight: $weight-bold;
   }
   &__btn {
     @include base-btn-style($yellow-hue-1, none);
@@ -155,7 +155,7 @@ export default {
     @extend %mobile-heading;
   }
   &__copy {
-    font-weight: 600;
+    font-weight: $weight-bold;
   }
   &__list {
     grid-row: 3/4;
@@ -250,7 +250,7 @@ export default {
     }
     &__copy {
       padding: 0 $tablet-gutter;
-      font-weight: 600;
+      font-weight: $weight-bold;
     }
     &__btn {
       @include base-btn-style($yellow-hue-1, none);
@@ -314,7 +314,7 @@ export default {
     }
     &__heading{
       padding: 0;
-      font-weight: 600;
+      font-weight: $weight-bold;
       font-size: 1.5rem;
       text-align: left;
     }
@@ -369,7 +369,7 @@ export default {
       margin-bottom: 0;
     }
     &__heading{
-      font-weight: 600;
+      font-weight: $weight-bold;
     }
     &__copy{
       line-height: 1.75rem;
@@ -474,7 +474,7 @@ export default {
     grid-template-columns: 56% 44%;
     &__heading{
       font-size: 3.5rem;
-      font-weight: 900;
+      font-weight: $weight-black;
     }
   }
   .goals {
@@ -484,10 +484,10 @@ export default {
     grid-row-gap: 2rem;
     &__heading {
       font-size: 3.5rem;
-      font-weight: 900;
+      font-weight: $weight-black;
     }
     &__copy {
-      font-weight: 600;
+      font-weight: $weight-bold;
     }
     &__list {
       font-size: 1.15rem;

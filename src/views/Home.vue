@@ -7,7 +7,7 @@
         <p class="artperneurship__copy">Artperneurship is a uniquely designed program that embraces the entrepreneurial mindset, specifically for students of art and humanities. While developing their personal work, students in the program can adapt and transform that work into an entrepreneurial venture.</p>
         <router-link class="artperneurship__btn" to="/sponsorship">Donate</router-link> 
       </div>
-      <img class="artperneurship__image" src="../assets/global/air_rally_illustration_1.png" alt="" />
+      <img class="artperneurship__image" src="../assets/global/air_rally_illustration_1.svg" alt="" />
     </section>
     <section class="about-program">
       <h2 class="about-program__heading">About Our Program</h2>
@@ -121,7 +121,7 @@ export default {
   padding-bottom: 4rem;
   &__heading{
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: $weight-black;
     padding: 0 $mobile-gutter;
     text-align: center;
   }
@@ -141,7 +141,7 @@ export default {
 .gallery{
   &__heading{
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: $weight-black;
     padding: 0 $mobile-gutter;
     text-align: left;
   }
@@ -149,7 +149,7 @@ export default {
 .program-feature{
   &__heading{
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: $weight-black;
     text-align: center;
   }
   &__copy{
@@ -191,7 +191,7 @@ export default {
   &__copy{
     font-size: 2rem;
     padding: 0 $mobile-gutter;
-    font-weight: 600;
+    font-weight: $weight-bold;
     text-align: center;
     line-height: 2.5rem;
   }

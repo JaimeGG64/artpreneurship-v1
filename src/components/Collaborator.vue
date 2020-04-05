@@ -54,8 +54,4 @@ export default {
     }
 }
 
-@media screen and (min-width: map-get($break-point , "xl")) {
-
-}
-
 </style>
