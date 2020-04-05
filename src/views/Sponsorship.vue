@@ -68,7 +68,8 @@ export default {
             grid-row: 1/2;
             justify-self: left;
             text-align: left;
-            width: 50%;
+            align-self: end;
+            width: 55%;
             font-size: 2.2rem;
         }
         &__text {
@@ -79,10 +80,12 @@ export default {
             text-align: top;
         }
         &__img {
+            width: 100%;
             grid-column: 2/3;
             grid-row: 1/3;
             padding: 5rem 0 0 0;
-            max-width: 40rem;
+            min-width: 20rem;
+            max-width: 35rem;
         }
         &__btn {
             display: none;
@@ -92,7 +95,7 @@ export default {
 
 @media screen and (min-width: map-get($break-point , "lg")) {
     .sponsorship {
-        padding: 0 $tablet-gutter;
+        padding: 0 10rem;
         padding-top: $tablet-gutter;
         padding-bottom: 10rem;
         grid-template-columns: repeat(2, auto);
@@ -107,6 +110,7 @@ export default {
             max-width: 40rem;
         }
         &__img {
+            max-width: 40rem;
             grid-row: 1/4;
         }
     }
