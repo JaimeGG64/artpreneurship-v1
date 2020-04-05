@@ -2,7 +2,7 @@
     <main class="business">
         <section class="business-side">
             <div class="business-side__text-wrapper">
-                <h1 class="business-side__heading">The Business Side Of Creativity</h1>
+                <h1 class="business-side__heading">The Business Side of Creativity</h1>
                 <p class="business-side__copy">
                     Classroom: Filled with online videos and other online resources with specific topics to help you launch your new business. Additionally, check out the Events section, as we will have many in-person classes for you to attend. Seating is always limited, so please register early.
                 </p>
@@ -103,6 +103,7 @@ export default {
     }
     &__copy{
         font-weight: $weight-bold;
+        font-size: 1.1rem;
     }
     &__image{
         grid-row: 1/2;
@@ -119,6 +120,7 @@ export default {
     }
     &__copy{
         font-weight: $weight-bold;
+        font-size: 1.1rem;
     }
     &__image{
         grid-row: 1/2;
@@ -129,13 +131,15 @@ export default {
     &__list{
         margin: 0;
         padding: 0;
+        display: grid;
+        row-gap: 1rem;
         &-item{
             display: grid;
-            grid-template-columns: 4.5rem auto;
+            grid-template-columns: 6rem auto;
             &-icon{
                 grid-column: 1/2;
                 grid-row: 1/2;
-                height: 2.75rem;
+                height: 3rem;
                 padding-top: .35rem;
             }
         }
@@ -199,20 +203,28 @@ export default {
         &__text-wrapper{
             grid-row-gap: 2rem;
             align-content: center;
+            padding: 0;
+            grid-template-columns: auto 70% auto;
         }
         &__heading{
             font-size: 3rem;
             text-align: left;
-            width: 63.5%;
+        }
+        &__heading, &__copy{
+            grid-column: 2/3;
         }
     }
     .resources{
-        grid-template-columns: 50% auto;
+        grid-template-columns: 46% auto;
+        row-gap: 2.75rem;
+        &__heading{
+            grid-column: 1/2;
+        }
         &__copy{
             grid-column: 1/2;
         }
-        &__heading{
-            grid-column: 1/2;
+        &__list{
+            row-gap: 2.75rem;
         }
         &__image{
             grid-row: 1/4;
@@ -222,18 +234,14 @@ export default {
 
 @media screen and (min-width: map-get($break-point , "xl")) {
     .business-side{
-        grid-template-columns: 46% auto;
-        &__text-wrapper{
-            padding: 0 $lg-gutter;
-        }
         &__heading{
-            font-size: 3.5rem;
-            width: 29rem;
+            font-size: 3.25rem;
+            width: 28rem;
         }
     }
     .resources{
-        padding: 4.25rem $lg-gutter;
-        grid-column-gap: 1rem;
+        padding: $lg-gutter;
+        grid-column-gap: 2.5rem;
         align-items: center;
         &__heading{
             font-size: 4rem;
