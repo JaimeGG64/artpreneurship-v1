@@ -105,11 +105,6 @@ export default {
 @import "../scss/button-styles.scss";
 @import "../scss/variables.scss";
 
-$tablet-font-size: .85rem;
-
-$lg-about-gutter: 7rem;
-$lg-icon-size: 4rem;
-
 %mobile-heading {
   padding: 1rem $mobile-gutter;
   font-weight: 900;
@@ -138,7 +133,7 @@ $lg-icon-size: 4rem;
   &__btn {
     @include base-btn-style($yellow-hue-1, none);
     grid-row: 4/5;
-    width: 6.5rem;
+    width: 8rem;
     justify-self: center;
     margin: 3rem 0;
     &:hover,
@@ -222,7 +217,7 @@ $lg-icon-size: 4rem;
     &-icon {
       grid-row: 1/2;
       grid-column: 1/2;
-      width: 4rem;
+      width: 3.5rem;
     }
   }
 }
@@ -260,7 +255,6 @@ $lg-icon-size: 4rem;
     &__btn {
       @include base-btn-style($yellow-hue-1, none);
       grid-row: 4/5;
-      width: 6.5rem;
       justify-self: center;
       margin: 3rem 0;
     }
@@ -285,7 +279,6 @@ $lg-icon-size: 4rem;
       padding: 0 $tablet-gutter 1.5rem $tablet-gutter;
       grid-row: 2/3;
       grid-column: 1/3;
-      font-size: $tablet-font-size;
       line-height: 2rem
     }
     &__list {
@@ -296,7 +289,6 @@ $lg-icon-size: 4rem;
       display: grid;
       grid-template-columns: 3.75rem auto;
       margin-bottom: 1rem;
-      font-size: $tablet-font-size;
       &-icon {
         width: 2rem;
         justify-self: start;
@@ -318,16 +310,13 @@ $lg-icon-size: 4rem;
     &__heading,
     &__copy {
       grid-column: 1/2;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
     &__heading{
       padding: 0;
       font-weight: 600;
       font-size: 1.5rem;
       text-align: left;
-    }
-    &__copy{
-      font-size: $tablet-font-size;
     }
     &__copy-wrapper {
       grid-column: 1/2;
@@ -360,7 +349,6 @@ $lg-icon-size: 4rem;
       }
       &-def {
         grid-row: 2/3;
-        font-size: $tablet-font-size;
         margin: 0;
       }
       &-icon {
@@ -384,7 +372,6 @@ $lg-icon-size: 4rem;
       font-weight: 600;
     }
     &__copy{
-      font-size: $tablet-font-size;
       line-height: 1.75rem;
     }
   }
@@ -408,7 +395,8 @@ $lg-icon-size: 4rem;
     }
     &__text-wrapper{
       grid-row: 1/6;
-      width: 80%;
+      width: 76%;
+      row-gap: 2rem;
       justify-self: center;
       align-self: center;
     }
@@ -485,23 +473,21 @@ $lg-icon-size: 4rem;
   .about-us {
     grid-template-columns: 56% 44%;
     &__heading{
-      font-size: 4.5rem;
+      font-size: 3.5rem;
       font-weight: 900;
     }
   }
   .goals {
     grid-template-rows: repeat(4, auto);
-    padding: 0 $lg-gutter;
+    padding: 4rem $lg-gutter;
     grid-template-columns: 46%;
     grid-row-gap: 2rem;
     &__heading {
-      font-size: 4rem;
+      font-size: 3.5rem;
       font-weight: 900;
     }
     &__copy {
       font-weight: 600;
-      font-size: 1.4rem;
-      line-height: 2.25rem;
     }
     &__list {
       font-size: 1.15rem;
@@ -518,7 +504,7 @@ $lg-icon-size: 4rem;
       }
     }
     &__image {
-      height: 75%;
+      height: 69%;
       align-self: center;
       justify-self: center;
     }
@@ -531,47 +517,44 @@ $lg-icon-size: 4rem;
       grid-column: 1/2;
     }
     &__heading{
-      font-size: 3rem;
-    }
-    &__copy{
-      font-size: 1.25rem;
+      font-size: 2.25rem;
     }
     &__copy-wrapper {
-      padding: $lg-gutter;
+      padding: 12rem $lg-gutter;
     }
     &__list{
       padding: 3.25rem $lg-gutter 3.25rem 2.5rem;
-        grid-row-gap: 2.5rem;
-        width: 80%;
-        justify-self: center;
-        padding: 0;
-        align-self: center;
+      grid-row-gap: 2.5rem;
+      width: 70%;
+      justify-self: center;
+      padding: 0;
+      align-self: center;
       &-item-wrapper{
-        grid-template-columns: (($lg-icon-size * 2) - .25rem) auto;
+        grid-template-columns: 6.75rem auto;
         grid-row-gap: .25rem;
       }
       &-term {
         font-size: 1.5rem;
       }
       &-def {
-        font-size: 1.25rem;
+        font-size: 1rem;
         margin: 0;
       }
       &-icon {
-        width: $lg-icon-size;
+        width: 4rem;
+        padding: 0;
+        grid-row: 1/3;
+        align-self: center;
       }
     }
   }
   .cooperation {
     justify-items: center;
     &__heading, &__copy{
-      width: 40%;
+      width: 58%;
     }
     &__heading{
       font-size: 3rem;
-    }
-    &__copy{
-      font-size: 1.25rem;
     }
   }
 }
