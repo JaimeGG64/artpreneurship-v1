@@ -65,7 +65,7 @@ export default {
             &-phone, &-email {
                 @extend .copy-bold;
                 color: #333333;
-                font-weight: 600;
+                font-weight: $weight-bold;
                 text-decoration: none;
             }
         }
