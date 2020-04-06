@@ -25,7 +25,7 @@ export default {
         }
     },
     created: function() {
-        this.formattedDateTime = this.formatDate(this.eventObj.start.local);
+        this.formattedDateTime = this.formatDate(this.eventObj.start.utc);
     },
     methods: {
         clickUrl: function() {
@@ -99,11 +99,17 @@ export default {
                     formattedDate += 'th';
                     break;
             }
-            
-            hours[0] === '0' ? 
-                formattedTime += hours[1] + ':' + mins + 'am' :
-                    formattedTime += hours + ':' + mins + 'pm'
-
+            var parsed = parseInt(hours);
+            if (parsed === 0)
+                formattedTime += '12' + ':' + mins + 'am';
+            else if (parsed < 12) 
+                formattedTime += hours[1] + ':' + mins + 'am';
+            else if (parsed === 12)
+                formattedTime += '12' + ':' + mins + 'pm';
+            else {
+                parsed -= 12;
+                formattedTime += parsed.toString() + ':' + mins + 'pm';
+            }
             return {
                 date: formattedDate,
                 time: formattedTime,
