@@ -74,6 +74,7 @@ export default {
             })
             .then(function (response) {
                 vm.events.push(response.data)
+                console.log(response.data);
             });
         }
     },
