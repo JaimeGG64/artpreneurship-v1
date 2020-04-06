@@ -100,11 +100,15 @@ export default {
                     break;
             }
             var parsed = parseInt(hours);
-            if (parsed < 12) 
-                formattedTime += hours[1] + ':' + mins + 'am UTC';
+            if (parsed === 0)
+                formattedTime += '12' + ':' + mins + 'am';
+            else if (parsed < 12) 
+                formattedTime += hours[1] + ':' + mins + 'am';
+            else if (parsed === 12)
+                formattedTime += '12' + ':' + mins + 'pm';
             else {
-                parsed -= 10;
-                formattedTime += parsed.toString() + ':' + mins + 'pm UTC';
+                parsed -= 12;
+                formattedTime += parsed.toString() + ':' + mins + 'pm';
             }
             return {
                 date: formattedDate,
