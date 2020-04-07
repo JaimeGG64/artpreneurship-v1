@@ -115,4 +115,89 @@ export default {
         justify-self: center;
     }
 }
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .artpreneur-awards{
+        padding: 1rem 0;
+        padding: 0;
+        align-items: center;
+        &__image{
+            grid-row: 1/2;
+        }
+        &__heading{
+            font-size: 2.5rem;
+        }
+        &__copy{
+            font-size: 1rem;
+            font-weight: $weight-regular;
+            line-height: 1.5;
+        }
+        &__btn{
+            grid-row: 5/6;
+        }
+        &__heading, &__copy{
+            padding: 0 $tablet-gutter;
+        }
+    }
+    .required-items{
+        padding: 3rem $tablet-gutter 0 $tablet-gutter;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+        &__heading{
+            font-size: 1.25rem;
+        }
+        &__heading, &__list{
+            grid-column: 2/3;
+        }
+        &__list{
+            margin-bottom: 2rem;
+        }
+        &__image{
+            grid-column: 1/2;
+            grid-row: 1/3;
+            width: 80%;
+            align-self: end;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .artpreneur-awards{
+        grid-template-columns: auto 43%;
+        row-gap: .5rem;
+        &__heading{
+            text-align: left;
+        }
+        &__image{
+            grid-column: 2/3;
+            grid-row: 1/5;
+        }
+        &__btn{
+            grid-row: 4/5;
+            justify-self: start;
+            margin-left: $tablet-gutter;
+        }
+        &__heading, &__copy, &__btn{
+            grid-column: 1/2;
+        }
+    }
+    .required-items{
+        padding: 5rem $tablet-gutter 0 $tablet-gutter;
+        grid-template-columns: auto 53%;
+        &__heading{
+            font-size: 1.5rem;
+        }
+        &__list{
+            margin-bottom: 4rem;
+            &-item{
+                &-term{
+                    font-size: 1.25rem;
+                }
+            }
+        }
+        &__image{
+            width: 58%;
+        }
+    }
+}
 </style>
