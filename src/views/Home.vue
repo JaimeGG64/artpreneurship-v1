@@ -27,28 +27,28 @@
           <router-link class="program-feature__link" to="/collaborators">
             <dt class="program-feature__term">Collaborators</dt>
             <dd class="program-feature__def">Key industry and community partners who are advocates and network providers.</dd>
-            <img class="program-feature__icon" src="../assets/home/icon-people.svg"/>
+            <img class="program-feature__icon" src="../assets/home/icon-people.svg" alt=""/>
           </router-link>
         </div>
         <div class="program-feature__item-wrapper">
           <router-link class="program-feature__link" to="/business">
             <dt class="program-feature__term">Business</dt>
             <dd class="program-feature__def">Our core mission is to emphasize the importance of the business side of creativity.</dd>
-            <img class="program-feature__icon" src="../assets/home/icon-suitcase.svg"/>
+            <img class="program-feature__icon" src="../assets/home/icon-suitcase.svg" alt=""/>
           </router-link>
         </div>
         <div class="program-feature__item-wrapper">
           <router-link class="program-feature__link" to="/sponsorship">
             <dt class="program-feature__term">Sponsorship</dt>
             <dd class="program-feature__def">Sponsors provide seed funding or other resources to continue the program. </dd>
-            <img class="program-feature__icon" src="../assets/home/icon-dollar.svg"/>
+            <img class="program-feature__icon" src="../assets/home/icon-dollar.svg" alt=""/>
           </router-link>
         </div>
         <div class="program-feature__item-wrapper">
           <router-link class="program-feature__link" to="/awards">
             <dt class="program-feature__term">Awards</dt>
             <dd class="program-feature__def">We celebrate student achievement by giving creatives an opportunity to be recognized.</dd>
-            <img class="program-feature__icon" src="../assets/home/icon-award.svg"/>
+            <img class="program-feature__icon" src="../assets/home/icon-award.svg" alt=""/>
           </router-link>
         </div>
       </dl>
