@@ -126,7 +126,7 @@ export default {
     top: 0;
     line-height: 0;
     &__logo{
-        font-size: 3.75rem;
+        width: 4rem;
         &-wrapper{
             border-bottom: none !important;
         }
@@ -171,7 +171,7 @@ export default {
     }
 }
 main{
-    margin-top: 4rem;
+    margin-top: 5.75rem;
 }
 }
 </style>
