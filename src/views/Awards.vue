@@ -200,4 +200,50 @@ export default {
         }
     }
 }
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .artpreneur-awards{
+        grid-template-columns: auto 34%;
+        row-gap: 0;
+        &__heading, &__copy{
+            padding: 0 $lg-gutter;
+        }
+        &__heading{
+            font-size: 3.75rem;
+        }
+        &__copy{
+            line-height: 1.75;
+        }
+        &__btn{
+            margin-left: $lg-gutter;
+        }
+    }
+    .required-items{
+        padding: 3rem $lg-gutter 0 $lg-gutter;
+        grid-template-columns: auto 50%;
+        row-gap: 3rem;
+        &__heading{
+            font-size: 1.75rem;
+            align-self: end;
+        }
+        &__list{
+            margin-bottom: 5rem;
+            &-item{
+                grid-template-columns: 6rem auto;
+                row-gap: 0;
+                &-term{
+                    font-size: 1.5rem;
+                }
+                &-icon{
+                    width: 3.5rem;
+                    padding-top: 0;
+                    align-self: center;
+                }
+            }
+        }
+        &__image{
+            width: 57%;
+        }
+    }
+}
 </style>
