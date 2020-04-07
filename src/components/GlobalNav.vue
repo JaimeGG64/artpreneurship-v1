@@ -1,6 +1,6 @@
 <template>
     <nav class="global-nav">
-        <router-link to="/">
+        <router-link to="/" class="global-nav__logo-wrapper">
             <img alt="Artpreneurship logo" src="../assets/global/logo.svg" class="global-nav__logo">
         </router-link>
         <button class="global-nav__btn" @click="toggleNavigation" :aria-expanded="isNavOpen ? 'true' : 'false'">
@@ -55,6 +55,9 @@ export default {
     box-sizing: border-box;
     &__logo{
         width: 4.75rem;
+        &-wrapper{
+            line-height: 0;
+        }
     }
     &__btn{
         border: none;
@@ -101,7 +104,6 @@ export default {
             color: $black-hue-3;
             font-family: $default-font;
             font-weight: $weight-regular;
-            text-transform: uppercase;
             text-decoration: none;
             text-align: center;
             font-size: 1.8rem;
@@ -118,18 +120,58 @@ export default {
 
 @media screen and (min-width: map-get($break-point , "lg")) {
 .global-nav{
+    box-shadow: 0px 3px 6px rgba(0,0,0,.07);
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    line-height: 0;
+    &__logo{
+        font-size: 3.75rem;
+        &-wrapper{
+            border-bottom: none !important;
+        }
+    }
     &__btn{
         display: none;
     }
     &__links{
         width: 45rem;
-        justify-content: space-evenly;
         align-items: center;
         position: relative;
         height: unset;
-        width: unset;
+        opacity: 1;
         flex-direction: row;
+        width: 100%;
+        max-width: 50rem;
+        justify-content: space-around;
+        &--active{
+            background: none;
+            height: unset;
+            width: unset;
+            justify-content: start;
+            box-sizing: border-box;
+            opacity: 1;
+        }
     }
+    &__element {
+        display: block;
+        width: unset;
+        height: unset;
+        a{
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: $weight-bold;
+            color: $black-hue-1;
+            padding-right: 1.5rem;
+            padding-bottom: .25rem;
+        }
+    }
+    .router-link-exact-active{
+        border-bottom: $blue .15rem solid;
+    }
+}
+main{
+    margin-top: 4rem;
 }
 }
 </style>
