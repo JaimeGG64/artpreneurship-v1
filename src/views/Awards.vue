@@ -1,37 +1,37 @@
 <template>
-    <main class="Awards">
-        <section>
-            <h1>The Artpreneur Award</h1>
-            <p>The Artpreneur award is given, on an annual basis, to an Art and Design student who, in pursuing the study of art and design, has demonstrated the development of sustainable business practices. The Artpreneur Award is intended to encourage artists, designers, and creators to follow their passion and desire to create art…and to learn that the process of art-making has the power to create a sustainable business. Through art, creators and designers have an important role in society to make meaningful, positive contributions. It is in this spirit that the Artpreneur Award is given to a student who embodies an entrepreneur mindset.</p>
-            <p>The annual award is open to all art and design majors who are currently enrolled at CSUN. The following criteria will be utilized to decide on the student recipient. While studying art and design at CSUN, a student must have started an art-related business or have continued to develop a sustainable business, primarily utilizing their personal artwork, art-making, and other creative endeavors. The award is also meant for students to become motivated and encouraged to create a sustainable business with their art and art-making skills. The selected student will receive $2,000.00</p>
-            <a href="#">Apply Now</a>
-            <picture>
+    <main class="awards">
+        <section class="artpreneur-awards">
+            <h1 class="artpreneur-awards__heading">The Artpreneur Award</h1>
+            <p class="artpreneur-awards__copy">The Artpreneur award is given, on an annual basis, to an Art and Design student who, in pursuing the study of art and design, has demonstrated the development of sustainable business practices. The Artpreneur Award is intended to encourage artists, designers, and creators to follow their passion and desire to create art…and to learn that the process of art-making has the power to create a sustainable business. Through art, creators and designers have an important role in society to make meaningful, positive contributions. It is in this spirit that the Artpreneur Award is given to a student who embodies an entrepreneur mindset.</p>
+            <p class="artpreneur-awards__copy">The annual award is open to all art and design majors who are currently enrolled at CSUN. The following criteria will be utilized to decide on the student recipient. While studying art and design at CSUN, a student must have started an art-related business or have continued to develop a sustainable business, primarily utilizing their personal artwork, art-making, and other creative endeavors. The award is also meant for students to become motivated and encouraged to create a sustainable business with their art and art-making skills. The selected student will receive $2,000.00</p>
+            <a class="artpreneur-awards__btn" href="#">Apply Now</a>
+            <picture class="artpreneur-awards__image">
                 <source media="(min-width: 1280px)" srcset="../assets/awards/awards-working-xl.jpg">
                 <source media="(min-width: 1024px)" srcset="../assets/awards/awards-working-lg.jpg">
                 <source media="(min-width: 768px)" srcset="../assets/awards/awards-working-md.jpg">
                 <img src="../assets/awards/awards-working.jpg" alt="students working on the computer" style="width: 100%">
             </picture>
         </section>
-        <section>
-            <h2>The Following Items Should Be Included</h2>
-            <dl>
-                <div>
-                    <dt>Application Form & Faculty Letter</dt>
-                    <dd>Students should complete the application form and obtain one faculty letter of support.</dd>
-                    <img src="../assets/global/icon-check.svg" alt=""/>
+        <section class="required-items">
+            <h2 class="required-items__heading">The Following Items Should Be Included</h2>
+            <dl class="required-items__list">
+                <div class="required-items__list-item">
+                    <dt class="required-items__list-item-term">Application Form & Faculty Letter</dt>
+                    <dd class="required-items__list-item-def">Students should complete the application form and obtain one faculty letter of support.</dd>
+                    <img class="required-items__list-item-icon" src="../assets/global/icon-check.svg" alt=""/>
                 </div>
-                <div>
-                    <dt>Presentation</dt>
-                    <dd>Submit a 3 to 5-page slide presentation providing information about their art business with visuals.</dd>
-                    <img src="../assets/global/icon-check.svg" alt=""/>
+                <div class="required-items__list-item">
+                    <dt class="required-items__list-item-term">Presentation</dt>
+                    <dd class="required-items__list-item-def">Submit a 3 to 5-page slide presentation providing information about their art business with visuals.</dd>
+                    <img class="required-items__list-item-icon" src="../assets/global/icon-check.svg" alt=""/>
                 </div>
-                <div>
-                    <dt>Final Process</dt>
-                    <dd>The Scholarship Committee will identify the top three candidates and forward their files to the benefactor for the final decision.</dd>
-                    <img src="../assets/global/icon-check.svg" alt=""/>
+                <div class="required-items__list-item">
+                    <dt class="required-items__list-item-term">Final Process</dt>
+                    <dd class="required-items__list-item-def">The Scholarship Committee will identify the top three candidates and forward their files to the benefactor for the final decision.</dd>
+                    <img class="required-items__list-item-icon" src="../assets/global/icon-check.svg" alt=""/>
                 </div>
             </dl>
-            <img src="../assets/global/air_rally_illustration_5.svg" alt=""/>
+            <img class="required-items__image" src="../assets/global/air_rally_illustration_5.svg" alt=""/>
         </section>
     </main>
 </template>
@@ -42,3 +42,77 @@ export default {
     title: 'Awards',
 };
 </script>
+
+<style lang="scss">
+@import "../scss/button-styles.scss";
+@import "../scss/variables.scss";
+
+.artpreneur-awards{
+    padding: 1rem $mobile-gutter;
+    display: grid;
+    row-gap: $mobile-gutter;
+    &__heading{
+        font-size: 2rem;
+        text-align: center;
+    }
+    &__copy{
+        font-size: 1.1rem;
+        font-weight: $weight-bold;
+    }
+    &__btn{
+        @include base-btn-style($blue, none);
+        width: 8.5rem;
+        justify-self: center;
+        grid-row: 3/4;
+        &:hover,
+        &:focus {
+            @include base-btn-blur(30px, $blue);
+        }
+    }
+    &__image{
+        grid-row: 2/3;
+    }
+}
+.required-items{
+    padding: $mobile-gutter;
+    display: grid;
+    row-gap: $mobile-gutter;
+    &__heading{
+        font-size: 1.75rem;
+        font-weight: $weight-black;
+    }
+    &__list{
+        display: grid;
+        row-gap: $mobile-gutter;
+        &-item{
+            display: grid;
+            row-gap: .5rem;
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: 4.75rem auto;
+            &-term, &-def{
+                grid-column: 2/3;
+            }
+            &-term{
+                grid-row: 1/2;
+                font-size: 1.5rem;
+                line-height: 1.25;
+            }
+            &-def{
+                grid-row: 2/3;
+                margin: 0;
+            }
+            &-icon{
+                grid-column: 1/2;
+                grid-row: 1/3;
+                width: 3rem;
+                padding-top: .5rem;
+            }
+        }
+    }
+    &__image{
+        grid-row: 1/2;
+        width: 50%;
+        justify-self: center;
+    }
+}
+</style>
