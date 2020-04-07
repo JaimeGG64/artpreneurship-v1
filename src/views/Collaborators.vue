@@ -1,6 +1,19 @@
 <template>
     <main class="Collaborators">
-        <h1>Collaborators Page</h1>
+        
+        <section>
+            <div>
+                <h1>Our Collaborators</h1>
+                <p>Our collaborators are alumni, community, and business folks who simply love to support artists, creatives, and designers. Like us, these are the people who believe that art can transform communities and add value to everyday life. These collaborators have provided our students with resources, financial support, mentorships, and simply advocating for our student artists, creative, and designers. Thank you! If you would like to be part of our collaborator community, please reach out to us.</p>
+                <a href="#">Become A Collaborator</a>
+            </div>
+            <picture>
+                <source media="(min-width: 1920px)" srcset="../assets/collaborators/collaborators-celebration-xl.jpg">
+                <source media="(min-width: 1024px)" srcset="../assets/collaborators/collaborators-celebration-lg.jpg">
+                <source media="(min-width: 768px)" srcset="../assets/collaborators/collaborators-celebration-md.jpg">
+                <img src="../assets/collaborators/collaborators-celebration.jpg" alt="student collaborating" style="width: 100%">
+            </picture>
+        </section>
         <section class="collab-list-section">
             <dl class="collab-list-section__list">
                 <Collaborator v-for="(collaborator, index) in collaborators" :key=index :collabInfo=collaborator />
