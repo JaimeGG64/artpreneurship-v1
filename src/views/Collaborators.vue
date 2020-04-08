@@ -121,7 +121,24 @@ export default {
 }
 
 @media screen and (min-width: map-get($break-point , "lg")) {
+    .our-collaborators{
+        grid-template-columns: auto 45%;
+        &__text-wrapper{
+            row-gap: 1.25rem;
+            align-content: center;
+        }
+        &__heading{
+            text-align: left;
+        }
+        &__btn{
+            justify-self: start;
+        }
+        &__image{
+            grid-column: 2/3;
+        }
+    }
     .collab-list-section {
+        padding: 5rem $tablet-gutter;
         &__list{
             grid-template-columns: repeat(3, auto);
         }
@@ -129,8 +146,17 @@ export default {
 }
 
 @media screen and (min-width: map-get($break-point , "xl")) {
+    .our-collaborators{
+        grid-template: auto 37%;
+        &__text-wrapper{
+            padding: $lg-gutter;
+        }
+        &__heading{
+            font-size: 3.5rem;
+        }
+    }
     .collab-list-section {
-        padding: 4rem $lg-gutter;
+        padding: $lg-gutter;
     }
 }
 </style>
