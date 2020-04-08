@@ -79,10 +79,11 @@ export default {
     },
 
     mounted: function() {
-        // Load 3 events into events[]
-        this.loadEvent('85699332009')
-        this.loadEvent('77903821427')
-        this.loadEvent('91637172249')
+        // Load 4 events into events[]
+        this.loadEvent('100936395476')
+        this.loadEvent('101114750942')
+        this.loadEvent('102040028472')
+        this.loadEvent('101909678592')
     }
 }
 </script>

@@ -25,7 +25,8 @@ export default {
         }
     },
     created: function() {
-        this.formattedDateTime = this.formatDate(this.eventObj.start.utc);
+        this.formattedDateTime = this.formatDate(this.eventObj.start.local);
+        console.log(this.eventObj.start.local);
     },
     methods: {
         clickUrl: function() {
@@ -100,16 +101,16 @@ export default {
                     break;
             }
             var parsed = parseInt(hours);
-            if (parsed === 0)
-                formattedTime += '12' + ':' + mins + 'am';
-            else if (parsed < 12) 
-                formattedTime += hours[1] + ':' + mins + 'am';
-            else if (parsed === 12)
-                formattedTime += '12' + ':' + mins + 'pm';
-            else {
+            if (parsed > 12) {
                 parsed -= 12;
                 formattedTime += parsed.toString() + ':' + mins + 'pm';
             }
+            else if (parsed === 12)
+                formattedTime += '12' + ':' + mins + 'pm';
+            else if (parsed > 0) 
+                formattedTime += parsed.toString() + ':' + mins + 'am';
+            else 
+                formattedTime += '12' + ':' + mins + 'am';
             return {
                 date: formattedDate,
                 time: formattedTime,
