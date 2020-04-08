@@ -1,6 +1,19 @@
 <template>
-    <main class="Collaborators">
-        <h1>Collaborators Page</h1>
+    <main class="collaborators">
+        
+        <section class="our-collaborators">
+            <div class="our-collaborators__text-wrapper">
+                <h1 class="our-collaborators__heading">Our Collaborators</h1>
+                <p class="our-collaborators__copy">Our collaborators are alumni, community, and business folks who simply love to support artists, creatives, and designers. Like us, these are the people who believe that art can transform communities and add value to everyday life. These collaborators have provided our students with resources, financial support, mentorships, and simply advocating for our student artists, creative, and designers. Thank you! If you would like to be part of our collaborator community, please reach out to us.</p>
+                <a class="our-collaborators__btn" href="#">Become A Collaborator</a>
+            </div>
+            <picture class="our-collaborators__image">
+                <source media="(min-width: 1920px)" srcset="../assets/collaborators/collaborators-celebration-xl.jpg">
+                <source media="(min-width: 1024px)" srcset="../assets/collaborators/collaborators-celebration-lg.jpg">
+                <source media="(min-width: 768px)" srcset="../assets/collaborators/collaborators-celebration-md.jpg">
+                <img src="../assets/collaborators/collaborators-celebration.jpg" alt="student collaborating" style="width: 100%">
+            </picture>
+        </section>
         <section class="collab-list-section">
             <dl class="collab-list-section__list">
                 <Collaborator v-for="(collaborator, index) in collaborators" :key=index :collabInfo=collaborator />
@@ -50,6 +63,37 @@ export default {
 
 <style lang="scss">
 @import "../scss/variables.scss";
+@import "../scss/button-styles.scss";
+
+.our-collaborators{
+    display: grid;
+    &__text-wrapper{
+        padding: $mobile-gutter;
+        display: grid;
+        row-gap: 1rem;
+    }
+    &__heading{
+        font-size: 2rem;
+        text-align: center;
+    }
+    &__copy{
+        font-size: 1.1rem;
+        font-weight: $weight-bold;
+    }
+    &__image{
+        grid-row: 1/2;
+    }
+    &__btn{
+        @include base-btn-style($blue, none);
+        width: 14rem;
+        justify-self: center;
+        grid-row: 3/4;
+        &:hover,
+        &:focus {
+            @include base-btn-blur(30px, $blue);
+        }
+    }
+}
 
 .collab-list-section {
     padding: $mobile-gutter;
@@ -60,11 +104,13 @@ export default {
     }
 }
 
-h1 {
-    font-size: 2rem;
-}
-
 @media screen and (min-width: map-get($break-point , "md")) {
+    .our-collaborators{
+        &__text-wrapper{
+            padding: $tablet-gutter;
+            row-gap: 1.5rem;
+        }
+    }
     .collab-list-section {
         padding: $tablet-gutter;
         &__list{
@@ -75,7 +121,24 @@ h1 {
 }
 
 @media screen and (min-width: map-get($break-point , "lg")) {
+    .our-collaborators{
+        grid-template-columns: auto 45%;
+        &__text-wrapper{
+            row-gap: 1.25rem;
+            align-content: center;
+        }
+        &__heading{
+            text-align: left;
+        }
+        &__btn{
+            justify-self: start;
+        }
+        &__image{
+            grid-column: 2/3;
+        }
+    }
     .collab-list-section {
+        padding: 5rem $tablet-gutter;
         &__list{
             grid-template-columns: repeat(3, auto);
         }
@@ -83,8 +146,17 @@ h1 {
 }
 
 @media screen and (min-width: map-get($break-point , "xl")) {
+    .our-collaborators{
+        grid-template: auto 37%;
+        &__text-wrapper{
+            padding: $lg-gutter;
+        }
+        &__heading{
+            font-size: 3.5rem;
+        }
+    }
     .collab-list-section {
-        padding: 4rem $lg-gutter;
+        padding: $lg-gutter;
     }
 }
 </style>

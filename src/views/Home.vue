@@ -105,7 +105,7 @@ export default {
   }
   &__btn{
     @include base-btn-style($blue, none);
-    width: 8.5rem;
+    width: 9rem;
     justify-self: center;
     &:hover,
     &:focus {
@@ -130,7 +130,7 @@ export default {
   }
   &__btn{
     @include base-btn-style($yellow-hue-1, none);
-    width: 8.5rem;
+    width: 9rem;
     justify-self: center;
     &:hover,
     &:focus {
@@ -197,7 +197,7 @@ export default {
   }
   &__btn{
     @include base-btn-style($white, none);
-    width: 8.5rem;
+    width: 9rem;
     justify-self: center;
     &:hover,
     &:focus {

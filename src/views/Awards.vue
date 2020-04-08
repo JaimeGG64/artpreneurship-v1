@@ -61,7 +61,7 @@ export default {
     }
     &__btn{
         @include base-btn-style($blue, none);
-        width: 8.5rem;
+        width: 9rem;
         justify-self: center;
         grid-row: 3/4;
         &:hover,
