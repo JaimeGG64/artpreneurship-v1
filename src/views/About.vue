@@ -134,7 +134,7 @@ export default {
   &__btn {
     @include base-btn-style($yellow-hue-1, none);
     grid-row: 4/5;
-    width: 8rem;
+    width: 9rem;
     justify-self: center;
     margin: 3rem 0;
     &:hover,
