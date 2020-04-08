@@ -26,7 +26,6 @@ export default {
     },
     created: function() {
         this.formattedDateTime = this.formatDate(this.eventObj.start.local);
-        console.log(this.eventObj.start.local);
     },
     methods: {
         clickUrl: function() {
