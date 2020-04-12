@@ -10,7 +10,7 @@
                 </span>
             </div>
             <dd class='event-info__sumamry'>{{eventObj.summary}}</dd>
-            <a class="event-info__button" :href='eventObj.url' target=_blank>Sign up</a>
+            <p class="event-info__button" @click="clicked" v-b-modal.emodal>Sign up</p>
     </div>
 </template>
 
@@ -28,9 +28,10 @@ export default {
         this.formattedDateTime = this.formatDate(this.eventObj.start.local);
     },
     methods: {
-        clickUrl: function() {
-
+        clicked: function() {
+            this.$emit('clickSignUp', this.eventObj.url);
         },
+
         formatDate: function(dateToFormat) {
             var formattedDate = ''
             var formattedTime = ''
@@ -122,7 +123,6 @@ export default {
 <style lang="scss">
     @import "../scss/variables.scss";
     @import "../scss/button-styles.scss";
-
     .event-info {
         background: $white;
         padding: 1.5rem;

@@ -39,25 +39,43 @@
             <img class="resources__image" src="../assets/global/air_rally_illustration_4.svg" alt="" />
         </section>
         <section class="upcomming-event">
-            <h2 class="upcomming-event__heading">Upcoming Events</h2>
+            <h2 class="upcomming-event__heading">Upcoming Events & Programs</h2>
             <dl class="event-wrapper__event-list">
-                <EventInfo v-for="(event, index) in events" :key=index :eventObj="event"/>
+                <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb"/>
             </dl>
         </section>
+        <!-- <Modal v-if="displayModal" 
+                @clickSignUp="showModal" 
+                title="Continue to Eventbrite?" 
+                text="This will open a new tab to https://www.eventbrite.com"
+                :url="tempUrl"
+                @clickCancel="displayModal = false"
+                @clickOk="displayModal = false"
+        >
+        </Modal> -->
+        <div @clickSignUp="tempUrl = $event"/>
+        <b-modal class="event-modal" @clickSignUp="showModal" @ok="goToUrl" id="emodal" 
+            centered no-stacking title="Continue to Eventbrite?">
+            <p class="event-modal__text">This will open a new tab to https://www.eventbrite.com/</p>
+        </b-modal>
     </main>
 </template>
 
 <script>
 import EventInfo from '@/components/EventInfo.vue'
+//import Modal from '@/components/Modal.vue'
 
 export default {
     name: 'business',
     title: 'Business',
     components: {
         EventInfo,
+        //Modal,
     },
     data: function() {
         return {
+            tempUrl: '',
+            //displayModal: false,
             events: [],
         }
     },
@@ -75,16 +93,25 @@ export default {
             .then(function (response) {
                 vm.events.push(response.data)
             });
+        },
+        showModal: function() {
+            //this.displayModal = true;
+            this.$bvModal.show('emodal');
+        },
+        goToUrl: function() {
+            var win = window.open(this.tempUrl, '_blank');
+            win.focus();
         }
     },
-
     mounted: function() {
-        // Load 4 events into events[]
+        // Load events into events[]
         this.loadEvent('100936395476')
         this.loadEvent('101114750942')
         this.loadEvent('102040028472')
         this.loadEvent('101909678592')
-    }
+        this.loadEvent('101571398788')
+    },
+
 }
 </script>
 
