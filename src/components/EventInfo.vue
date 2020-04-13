@@ -29,7 +29,7 @@ export default {
     },
     methods: {
         clicked: function() {
-            this.$emit('clickSignUp', this.eventObj.url);
+            this.$store.commit('changeUrl', this.eventObj.url);
         },
 
         formatDate: function(dateToFormat) {

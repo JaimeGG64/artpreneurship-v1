@@ -41,19 +41,9 @@
         <section class="upcomming-event">
             <h2 class="upcomming-event__heading">Upcoming Events & Programs</h2>
             <dl class="event-wrapper__event-list">
-                <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb"/>
+                <EventInfo v-for="(eventb, index) in events" :key=index :idx=index :eventObj="eventb"/>
             </dl>
         </section>
-        <!-- <Modal v-if="displayModal" 
-                @clickSignUp="showModal" 
-                title="Continue to Eventbrite?" 
-                text="This will open a new tab to https://www.eventbrite.com"
-                :url="tempUrl"
-                @clickCancel="displayModal = false"
-                @clickOk="displayModal = false"
-        >
-        </Modal> -->
-        <div @clickSignUp="tempUrl = $event"/>
         <b-modal class="event-modal" @clickSignUp="showModal" @ok="goToUrl" id="emodal" 
             centered no-stacking title="Continue to Eventbrite?">
             <p class="event-modal__text">This will open a new tab to https://www.eventbrite.com/</p>
@@ -63,20 +53,21 @@
 
 <script>
 import EventInfo from '@/components/EventInfo.vue'
-//import Modal from '@/components/Modal.vue'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import 'es6-promise/auto'
+Vue.use(Vuex)
 
 export default {
     name: 'business',
     title: 'Business',
     components: {
         EventInfo,
-        //Modal,
     },
     data: function() {
         return {
-            tempUrl: '',
-            //displayModal: false,
             events: [],
+            tempUrl: '',
         }
     },
 
@@ -95,21 +86,16 @@ export default {
             });
         },
         showModal: function() {
-            //this.displayModal = true;
             this.$bvModal.show('emodal');
         },
         goToUrl: function() {
+            this.tempUrl = this.$store.state.eventObjUrl
             var win = window.open(this.tempUrl, '_blank');
             win.focus();
-        }
+        },
     },
-    mounted: function() {
-        // Load events into events[]
+    created: function() {
         this.loadEvent('100936395476')
-        this.loadEvent('101114750942')
-        this.loadEvent('102040028472')
-        this.loadEvent('101909678592')
-        this.loadEvent('101571398788')
     },
 
 }
