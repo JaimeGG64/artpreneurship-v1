@@ -41,7 +41,7 @@
         <section class="upcomming-event">
             <h2 class="upcomming-event__heading">Upcoming Events & Programs</h2>
             <dl class="event-wrapper__event-list">
-                <EventInfo v-for="(eventb, index) in events" :key=index :idx=index :eventObj="eventb"/>
+                <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb"/>
             </dl>
         </section>
         <b-modal class="event-modal" @clickSignUp="showModal" @ok="goToUrl" id="emodal" 
