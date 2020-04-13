@@ -96,6 +96,7 @@ export default {
     },
     created: function() {
         this.loadEvent('100936395476')
+        this.loadEvent('101576155014')
     },
 
 }
