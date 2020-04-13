@@ -90,8 +90,11 @@ export default {
         },
         goToUrl: function() {
             this.tempUrl = this.$store.state.eventObjUrl
-            var win = window.open(this.tempUrl, '_blank');
-            win.focus();
+            if (this.tempUrl !== '') {
+                var win = window.open(this.tempUrl, '_blank');
+                win.focus();
+            }
+            this.$store.commit('changeUrl', '');
         },
     },
     created: function() {
