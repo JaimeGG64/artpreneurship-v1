@@ -93,8 +93,8 @@ export default {
             if (this.tempUrl !== '') {
                 var win = window.open(this.tempUrl, '_blank');
                 win.focus();
+                this.$store.commit('changeUrl', '');
             }
-            this.$store.commit('changeUrl', '');
         },
     },
     created: function() {
