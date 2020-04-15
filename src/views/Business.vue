@@ -40,14 +40,14 @@
         </section>
         <section class="upcomming-event">
             <h2 class="upcomming-event__heading">Upcoming Events & Programs</h2>
-            <dl class="event-wrapper__event-list">
-                <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb"/>
+            <dl class="event-wrapper__event-list"> 
+                <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb" @clickSignUp="confirmDialogue" />
             </dl>
         </section>
-        <b-modal class="event-modal" @clickSignUp="showModal" @ok="goToUrl" id="emodal" 
+        <!-- <b-modal class="event-modal" @clickSignUp="showModal" @ok="goToUrl" id="emodal" 
             centered no-stacking title="Continue to Eventbrite?">
             <p class="event-modal__text">This will open a new tab to https://www.eventbrite.com/</p>
-        </b-modal>
+        </b-modal> -->
     </main>
 </template>
 
@@ -85,15 +85,20 @@ export default {
                 vm.events.push(response.data)
             });
         },
-        showModal: function() {
-            this.$bvModal.show('emodal');
-        },
+        // showModal: function() {
+        //     this.$bvModal.show('emodal');
+        // },
         goToUrl: function() {
             this.tempUrl = this.$store.state.eventObjUrl
             if (this.tempUrl !== '') {
                 var win = window.open(this.tempUrl, '_blank');
                 win.focus();
                 this.$store.commit('changeUrl', '');
+            }
+        },
+        confirmDialogue () {
+            if (confirm("This will open a new tab to https://www.eventbrite.com/")) {
+                this.goToUrl()
             }
         },
     },

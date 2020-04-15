@@ -10,7 +10,8 @@
                 </span>
             </div>
             <dd class='event-info__sumamry'>{{eventObj.summary}}</dd>
-            <p class="event-info__button" @click="clicked" v-b-modal.emodal>Sign up</p>
+            <!-- <p class="event-info__button" @click="clicked" v-b-modal.emodal>Sign up</p> -->
+            <p class="event-info__button" @click="clicked">Sign up</p>
     </div>
 </template>
 
@@ -29,6 +30,7 @@ export default {
     },
     methods: {
         clicked: function() {
+            this.$emit('clickSignUp')
             this.$store.commit('changeUrl', this.eventObj.url);
         },
 
