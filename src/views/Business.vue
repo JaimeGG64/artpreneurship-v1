@@ -39,16 +39,24 @@
             <img class="resources__image" src="../assets/global/air_rally_illustration_4.svg" alt="" />
         </section>
         <section class="upcomming-event">
-            <h2 class="upcomming-event__heading">Upcoming Events</h2>
-            <dl class="event-wrapper__event-list">
-                <EventInfo v-for="(event, index) in events" :key=index :eventObj="event"/>
+            <h2 class="upcomming-event__heading">Upcoming Events & Programs</h2>
+            <dl class="event-wrapper__event-list"> 
+                <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb" @clickSignUp="confirmDialogue" />
             </dl>
         </section>
+        <!-- <b-modal class="event-modal" @clickSignUp="showModal" @ok="goToUrl" id="emodal" 
+            centered no-stacking title="Continue to Eventbrite?">
+            <p class="event-modal__text">This will open a new tab to https://www.eventbrite.com/</p>
+        </b-modal> -->
     </main>
 </template>
 
 <script>
 import EventInfo from '@/components/EventInfo.vue'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import 'es6-promise/auto'
+Vue.use(Vuex)
 
 export default {
     name: 'business',
@@ -59,6 +67,7 @@ export default {
     data: function() {
         return {
             events: [],
+            tempUrl: '',
         }
     },
 
@@ -75,16 +84,31 @@ export default {
             .then(function (response) {
                 vm.events.push(response.data)
             });
-        }
+        },
+        // showModal: function() {
+        //     this.$bvModal.show('emodal');
+        // },
+        goToUrl: function() {
+            this.tempUrl = this.$store.state.eventObjUrl;
+            if (this.tempUrl !== '') {
+                var win = window.open(this.tempUrl, '_blank');
+                win.focus();
+                this.$store.dispatch('changeUrl', '').then(() => {
+                    // do nothing
+                })
+            }
+        },
+        confirmDialogue () {
+            if (confirm("This will open a new tab to https://www.eventbrite.com/")) {
+                this.goToUrl()
+            }
+        },
+    },
+    created: function() {
+        this.loadEvent('100936395476')
+        this.loadEvent('101576155014')
     },
 
-    mounted: function() {
-        // Load 4 events into events[]
-        this.loadEvent('100936395476')
-        this.loadEvent('101114750942')
-        this.loadEvent('102040028472')
-        this.loadEvent('101909678592')
-    }
 }
 </script>
 

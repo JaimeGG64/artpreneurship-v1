@@ -10,7 +10,8 @@
                 </span>
             </div>
             <dd class='event-info__sumamry'>{{eventObj.summary}}</dd>
-            <a class="event-info__button" :href='eventObj.url' target=_blank>Sign up</a>
+            <!-- <p class="event-info__button" @click="clicked" v-b-modal.emodal>Sign up</p> -->
+            <p class="event-info__button" @click="clicked">Sign up</p>
     </div>
 </template>
 
@@ -28,9 +29,12 @@ export default {
         this.formattedDateTime = this.formatDate(this.eventObj.start.local);
     },
     methods: {
-        clickUrl: function() {
-
+        clicked: function() {
+            this.$store.dispatch('changeUrl', this.eventObj.url).then(() => {
+                this.$emit('clickSignUp')
+            })
         },
+
         formatDate: function(dateToFormat) {
             var formattedDate = ''
             var formattedTime = ''
@@ -41,40 +45,40 @@ export default {
             
             switch(month) {
                 case '01':
-                    formattedDate += "January ";
+                    formattedDate += "Jan ";
                     break;
                 case '02':
-                    formattedDate += "February ";
+                    formattedDate += "Feb ";
                     break;
                 case '03':
-                    formattedDate += "March ";
+                    formattedDate += "Mar ";
                     break;
                 case '04':
-                    formattedDate += "April ";
+                    formattedDate += "Apr ";
                     break;
                 case '05':
                     formattedDate += "May ";
                     break;
                 case '06':
-                    formattedDate += "June ";
+                    formattedDate += "Jun ";
                     break;
                 case '07':
-                    formattedDate += "July ";
+                    formattedDate += "Jul ";
                     break;
                 case '08':
-                    formattedDate += "August ";
+                    formattedDate += "Aug ";
                     break;
                 case '09':
-                    formattedDate += "September ";
+                    formattedDate += "Sep ";
                     break;
                 case '10':
-                    formattedDate += "October ";
+                    formattedDate += "Oct ";
                     break;
                 case '11':
-                    formattedDate += "November ";
+                    formattedDate += "Nov ";
                     break;
                 case '12':
-                    formattedDate += "December ";
+                    formattedDate += "Dec ";
                     break;
             }
             date[0] === '0' ? 
@@ -122,7 +126,6 @@ export default {
 <style lang="scss">
     @import "../scss/variables.scss";
     @import "../scss/button-styles.scss";
-
     .event-info {
         background: $white;
         padding: 1.5rem;
