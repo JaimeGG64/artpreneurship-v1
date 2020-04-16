@@ -30,8 +30,9 @@ export default {
     },
     methods: {
         clicked: function() {
-            this.$emit('clickSignUp')
-            this.$store.commit('changeUrl', this.eventObj.url);
+            this.$store.dispatch('changeUrl', this.eventObj.url).then(() => {
+                this.$emit('clickSignUp')
+            })
         },
 
         formatDate: function(dateToFormat) {
@@ -44,40 +45,40 @@ export default {
             
             switch(month) {
                 case '01':
-                    formattedDate += "January ";
+                    formattedDate += "Jan ";
                     break;
                 case '02':
-                    formattedDate += "February ";
+                    formattedDate += "Feb ";
                     break;
                 case '03':
-                    formattedDate += "March ";
+                    formattedDate += "Mar ";
                     break;
                 case '04':
-                    formattedDate += "April ";
+                    formattedDate += "Apr ";
                     break;
                 case '05':
                     formattedDate += "May ";
                     break;
                 case '06':
-                    formattedDate += "June ";
+                    formattedDate += "Jun ";
                     break;
                 case '07':
-                    formattedDate += "July ";
+                    formattedDate += "Jul ";
                     break;
                 case '08':
-                    formattedDate += "August ";
+                    formattedDate += "Aug ";
                     break;
                 case '09':
-                    formattedDate += "September ";
+                    formattedDate += "Sep ";
                     break;
                 case '10':
-                    formattedDate += "October ";
+                    formattedDate += "Oct ";
                     break;
                 case '11':
-                    formattedDate += "November ";
+                    formattedDate += "Nov ";
                     break;
                 case '12':
-                    formattedDate += "December ";
+                    formattedDate += "Dec ";
                     break;
             }
             date[0] === '0' ? 

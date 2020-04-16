@@ -16,11 +16,24 @@ const store = new Vuex.Store({
   state: {
     eventObjUrl: ''
   },
+
   mutations: {
     changeUrl (state, newEventObjUrl) {
       state.eventObjUrl = newEventObjUrl;
-    }
-  }
+    },
+  },
+
+  actions: {
+    changeUrl ({ commit } , eventPayload) {
+      // eslint-disable-next-line
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          commit('changeUrl', eventPayload);
+          resolve()
+        }, 100)
+      })
+    },
+  },
 })
 
 new Vue({

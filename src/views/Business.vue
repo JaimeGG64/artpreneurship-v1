@@ -88,12 +88,19 @@ export default {
         // showModal: function() {
         //     this.$bvModal.show('emodal');
         // },
+        retrieveEventUrl: function () {
+            this.tempUrl = this.$store.state.eventObjUrl;
+            return this.tempUrl;
+        },
+
         goToUrl: function() {
-            this.tempUrl = this.$store.state.eventObjUrl
+            this.retrieveEventUrl()
             if (this.tempUrl !== '') {
                 var win = window.open(this.tempUrl, '_blank');
                 win.focus();
-                this.$store.commit('changeUrl', '');
+                this.$store.dispatch('changeUrl', '').then(() => {
+                    // do nothing
+                })
             }
         },
         confirmDialogue () {
