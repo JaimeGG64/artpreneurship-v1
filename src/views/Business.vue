@@ -88,13 +88,8 @@ export default {
         // showModal: function() {
         //     this.$bvModal.show('emodal');
         // },
-        retrieveEventUrl: function () {
-            this.tempUrl = this.$store.state.eventObjUrl;
-            return this.tempUrl;
-        },
-
         goToUrl: function() {
-            this.retrieveEventUrl()
+            this.tempUrl = this.$store.state.eventObjUrl;
             if (this.tempUrl !== '') {
                 var win = window.open(this.tempUrl, '_blank');
                 win.focus();
