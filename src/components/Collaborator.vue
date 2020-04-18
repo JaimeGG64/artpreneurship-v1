@@ -1,10 +1,8 @@
 <template>
     <div class="collab">
         <img class="collab__image" :src="collabInfo.filename" :alt="collabInfo.altTxt">
-        <div class="collab__text-wrapper">
             <dt class="collab__name">{{collabInfo.Name}}</dt>
             <dd class="collab__desc">{{collabInfo.description}}</dd>
-        </div>
     </div>
 </template>
 
@@ -26,11 +24,12 @@ export default {
     border-radius: 10px;
     max-width: 25rem;
     overflow: hidden;
+    padding: $mobile-gutter;
+    display: grid;
+    box-sizing: border-box;
     &__image {
-        width: 100%;
-    }
-    &__text-wrapper {
-        padding: $mobile-gutter;
+        width: 85%;
+        justify-self: center;
     }
     &__name {
         font-size: 1.75rem;
@@ -43,9 +42,6 @@ export default {
 @media screen and (min-width: map-get($break-point , "md")) {
     .collab {
         max-width: 29rem;
-        &__text-wrapper {
-            padding: 1rem 2rem 1.5rem 2rem;
-        }
     }
 }
 
