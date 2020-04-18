@@ -6,7 +6,7 @@
         <p
           class="about-us__copy"
         >Artpreneurship was developed to help all artists, creatives, and designers to start or sustain a business, whether as a sole inventor, contributing innovator, or as an equal partner when developing a new product or service. With proven curriculums and support from collaborators, the goal of Artpreneurship is to create Artpreneurs who will use their thinking, curiosity, and talents to enhance society by developing products and services that improve human lives.</p>
-        <router-link to="/sponsorship" class="about-us__btn">Donate</router-link>
+        <router-link to="/sponsorship" class="about-us__btn">Donation & Sponsorship</router-link>
       </div>
       <picture class="about-us__image">
         <source media="(min-width: 1280px)" srcset="../assets/about/about-group-photo.jpg">
@@ -84,12 +84,9 @@
     </section>
     <section class="cooperation">
       <h2 class="cooperation__heading">Cooperation</h2>
-      <p
-        class="cooperation__copy"
-      >The Artpreneurship Program will complement and align with the efforts of the David Nazarian College of Business and Economics in creating more inclusive entrepreneurship on campus. It is also intended to share and complement the work of Research and Graduate Studies.</p>
-      <p
-        class="cooperation__copy"
-      >Some of the topics listed here will be provided to those students, but again, many of the curriculum items and topics already exist from COBAE, and the Artpreneurship Program will complement and rely heavily on existing entrepreneurship resources.</p>
+      <p class="cooperation__copy">
+        The Artpreneurship Program will complement and align with the efforts of private and nonprofit organizations. We believe in sharing and working together to provide those individuals in the arts and humanities with opportunities to continue to explore and learn. Several organizations, including Toolbox LA, Bixel Exchange, LACI, and many programs out of CSUN will be cooperating to share ideas, approaches, resources, and best practices that offer students the best chance for success. If any individuals or organizations are interested in cooperative opportunities, please contact us.
+      </p>
     </section>
   </main>
 </template>
@@ -134,7 +131,7 @@ export default {
   &__btn {
     @include base-btn-style($yellow-hue-1, none);
     grid-row: 4/5;
-    width: 9rem;
+    width: 14.5rem;
     justify-self: center;
     margin: 3rem 0;
     &:hover,

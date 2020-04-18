@@ -5,7 +5,7 @@
             <p class="footer-wrapper__info--address">Northridge, CA, 91330</p> 
             <section class="footer-wrapper__info--contact">
                 <a class="footer-wrapper__info--contact-phone" href="tel:8181234567">+1 (818) 123-4567</a><br>
-                <a class="footer-wrapper__info--contact-email" href="mailto:info@artpreneurship.com">info@artpreneurship.com</a>
+                <a class="footer-wrapper__info--contact-email" href="mailto:dave.moon@ixla.org?subject=Information About the Artpreneurship Program">info@artpreneurship.com</a>
             </section>
         </section>
         <section class="footer-wrapper__copyright">

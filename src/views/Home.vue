@@ -5,7 +5,7 @@
         <img class="artperneurship__logo" src="../assets/global/logo.svg" alt="" />
         <h1 class="artperneurship__heading">Artpreneurship</h1>
         <p class="artperneurship__copy">Artperneurship is a uniquely designed program that embraces the entrepreneurial mindset, specifically for students of art and humanities. While developing their personal work, students in the program can adapt and transform that work into an entrepreneurial venture.</p>
-        <router-link class="artperneurship__btn" to="/sponsorship">Donate</router-link> 
+        <router-link class="artperneurship__btn" to="/sponsorship">Donation & Sponsorship</router-link> 
       </div>
       <img class="artperneurship__image" src="../assets/global/air_rally_illustration_1.svg" alt="" />
     </section>
@@ -96,7 +96,6 @@ export default {
   }
   &__heading{
     font-size: 2rem;
-    padding: 0 $mobile-gutter;
     text-align: center;
   }
   &__copy{
@@ -105,7 +104,7 @@ export default {
   }
   &__btn{
     @include base-btn-style($blue, none);
-    width: 9rem;
+    width: 14.5rem;
     justify-self: center;
     &:hover,
     &:focus {
@@ -142,25 +141,26 @@ export default {
   &__heading{
     font-size: 2rem;
     font-weight: $weight-black;
-    padding: 0 $mobile-gutter;
+    padding: .5rem $mobile-gutter;
     text-align: left;
   }
 }
 .program-feature{
+  padding: 1.25rem $mobile-gutter 5rem $mobile-gutter;
   &__heading{
     font-size: 2rem;
     font-weight: $weight-black;
     text-align: center;
+    line-height: 2;
   }
   &__copy{
-    padding: 0 $mobile-gutter;
     font-weight: 600;
     font-size: 1.15rem;
   }
   &__list{
     display: grid;
     row-gap: $mobile-gutter;
-    padding: 1.25rem $mobile-gutter 5rem $mobile-gutter;
+    padding-top: 1rem;
   }
   &__item-wrapper{
     border-radius: 7px;
@@ -172,6 +172,9 @@ export default {
     row-gap: 1rem;
     text-decoration: none;
     color: $black-hue-1;
+  }
+  &__term{
+    line-height: 1.25;
   }
   &__def{
     margin: 0;
@@ -253,10 +256,15 @@ export default {
       justify-self: center;
     }
   }
+  .gallery{
+    &__heading{
+      padding: .5rem $tablet-gutter
+    }
+  }
   .program-feature{
     display: grid;
     grid-template-columns: auto 58%;
-    column-gap: 8.5rem;
+    column-gap: 5.5rem;
     grid-template-rows: 6rem;
     padding: 8rem $tablet-gutter;
     &__heading, &__copy, &__list{
@@ -267,6 +275,7 @@ export default {
     }
     &__heading{
       text-align: left;
+      line-height: initial;
     }
     &__list{
       grid-column: 2/3;

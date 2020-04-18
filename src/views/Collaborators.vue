@@ -5,7 +5,7 @@
             <div class="our-collaborators__text-wrapper">
                 <h1 class="our-collaborators__heading">Our Collaborators</h1>
                 <p class="our-collaborators__copy">Our collaborators are alumni, community, and business folks who simply love to support artists, creatives, and designers. Like us, these are the people who believe that art can transform communities and add value to everyday life. These collaborators have provided our students with resources, financial support, mentorships, and simply advocating for our student artists, creative, and designers. Thank you! If you would like to be part of our collaborator community, please reach out to us.</p>
-                <a class="our-collaborators__btn" href="#">Become A Collaborator</a>
+                <a class="our-collaborators__btn" href="mailto:dave.moon@ixla.org?subject=Becoming an Artpreneurship Collaborator">Become A Collaborator</a>
             </div>
             <picture class="our-collaborators__image">
                 <source media="(min-width: 1920px)" srcset="../assets/collaborators/collaborators-celebration-xl.jpg">

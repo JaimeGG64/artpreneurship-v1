@@ -10,8 +10,7 @@
                 </span>
             </div>
             <dd class='event-info__sumamry'>{{eventObj.summary}}</dd>
-            <!-- <p class="event-info__button" @click="clicked" v-b-modal.emodal>Sign up</p> -->
-            <p class="event-info__button" @click="clicked">Sign up</p>
+            <a class="event-info__button" @click="clicked">Sign up</a>
     </div>
 </template>
 
@@ -155,6 +154,7 @@ export default {
         &__sumamry{
             margin: 0;
             grid-row: 3/4;
+            overflow-x: scroll;
         }
         &__button {
             grid-row: 4/5;
