@@ -39,7 +39,7 @@
             <img class="resources__image" src="../assets/global/air_rally_illustration_4.svg" alt="" />
         </section>
         <section class="upcomming-event">
-            <h2 class="upcomming-event__heading">Upcoming Events & Programs</h2>
+            <h2 class="upcomming-event__heading">Upcoming Activities, Events, and Courses</h2>
             <dl class="event-wrapper__event-list"> 
                 <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb" @clickSignUp="confirmDialogue" />
             </dl>

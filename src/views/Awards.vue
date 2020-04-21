@@ -4,7 +4,7 @@
             <h1 class="artpreneur-awards__heading">The Artpreneur Award</h1>
             <p class="artpreneur-awards__copy">The Artpreneur award is given, on an annual basis, to an Art and Design student who, in pursuing the study of art and design, has demonstrated the development of sustainable business practices. The Artpreneur Award is intended to encourage artists, designers, and creators to follow their passion and desire to create art…and to learn that the process of art-making has the power to create a sustainable business. Through art, creators and designers have an important role in society to make meaningful, positive contributions. It is in this spirit that the Artpreneur Award is given to a student who embodies an entrepreneur mindset.</p>
             <p class="artpreneur-awards__copy">The annual award is open to all art and design majors who are currently enrolled at CSUN. The following criteria will be utilized to decide on the student recipient. While studying art and design at CSUN, a student must have started an art-related business or have continued to develop a sustainable business, primarily utilizing their personal artwork, art-making, and other creative endeavors. The award is also meant for students to become motivated and encouraged to create a sustainable business with their art and art-making skills. The selected student will receive $2,000.00</p>
-            <a class="artpreneur-awards__btn" href="#">Apply Now</a>
+            <a class="artpreneur-awards__btn" href="mailto:dave.moon@ixla.org?subject=Artpreneur Award Application">Apply Now</a>
             <picture class="artpreneur-awards__image">
                 <source media="(min-width: 1280px)" srcset="../assets/awards/awards-working-xl.jpg">
                 <source media="(min-width: 1024px)" srcset="../assets/awards/awards-working-lg.jpg">
@@ -120,20 +120,22 @@ export default {
     .artpreneur-awards{
         padding: 1rem 0;
         padding: 0;
-        align-items: center;
         &__image{
             grid-row: 1/2;
         }
         &__heading{
             font-size: 2.5rem;
+            align-self: end;
         }
         &__copy{
             font-size: 1rem;
             font-weight: $weight-regular;
             line-height: 1.5;
+            align-self: center;
         }
         &__btn{
             grid-row: 5/6;
+            align-self: center;
         }
         &__heading, &__copy{
             padding: 0 $tablet-gutter;

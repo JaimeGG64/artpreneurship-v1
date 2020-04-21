@@ -7,28 +7,36 @@
         controls
         indicators
     >
-    <b-carousel-slide
-        :img-src="getImageOne"
-    ></b-carousel-slide>
-
-    <b-carousel-slide 
-        :img-src="getImageTwo">
-    </b-carousel-slide>
-
+    <b-carousel-slide v-for="image in images" :key="image.location"
+        :img-src="image.location"
+        :img-alt="image.altText"/>
     </b-carousel>
 </template>
 
 <script>
 import imageOne from '../assets/home/carousel/carousel-1.jpg'
 import imageTwo from '../assets/home/carousel/carousel-2.jpg'
+import imageThree from '../assets/home/carousel/carousel-3.jpg'
 
 export default {
     data() {
         return {
-        slide: 0,
-        sliding: null,
-        getImageOne: imageOne,
-        getImageTwo: imageTwo
+            slide: 0,
+            sliding: null,
+            images: {
+                0: {
+                    location: imageOne, 
+                    altText: "students siting at a large table collaborating"
+                },
+                1: {
+                    location: imageTwo,
+                    altText: "students siting a table designing tote bags"
+                },
+                2: {
+                    location: imageThree,
+                    altText: "Two student discussing designs"
+                }
+            }
         };
     }
 };
