@@ -105,8 +105,18 @@ export default {
         },
     },
     created: function() {
-        this.loadEvent('100936395476')
-        this.loadEvent('101576155014')
+        this.events.push({
+            name: {
+                text: "How to Launch a Small Business",
+            },
+            summary: "Students will learn about how to create a side income by understanding the process of side hustle, freelance, soloist, etc.",
+            start: {
+                local: "2020-04-20T12:00:00",
+            },
+            url: "",
+        })
+        this.loadEvent('101645594710')
+        this.loadEvent('102824358424')
     },
 
 }
