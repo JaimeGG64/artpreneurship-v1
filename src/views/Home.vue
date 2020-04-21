@@ -354,6 +354,12 @@ export default {
       font-size: 3.5rem;
     }
   }
+  .gallery{
+    &__heading{
+      padding: 1rem $tablet-gutter;
+      font-size: 2.75rem;
+    }
+  }
   .program-feature{
     padding: 8rem $lg-gutter;
     grid-template-rows: 7.75rem;;
