@@ -5,7 +5,7 @@
             <div class="our-collaborators__text-wrapper">
                 <h1 class="our-collaborators__heading">Our Collaborators</h1>
                 <p class="our-collaborators__copy">Our collaborators are alumni, community, and business folks who simply love to support artists, creatives, and designers. Like us, these are the people who believe that art can transform communities and add value to everyday life. These collaborators have provided our students with resources, financial support, mentorships, and simply advocating for our student artists, creative, and designers. Thank you! If you would like to be part of our collaborator community, please reach out to us.</p>
-                <a class="our-collaborators__btn" href="#">Become A Collaborator</a>
+                <a class="our-collaborators__btn" href="mailto:dave.moon@ixla.org?subject=Becoming an Artpreneurship Collaborator">Become A Collaborator</a>
             </div>
             <picture class="our-collaborators__image">
                 <source media="(min-width: 1920px)" srcset="../assets/collaborators/collaborators-celebration-xl.jpg">
@@ -25,9 +25,11 @@
 <script>
 import Collaborator from '../components/Collaborator.vue'
 
-import JaneDoe from '../assets/collaborators/jane-doe.png'
-import JohnDoe from '../assets/collaborators/john-doe.png'
-import JulieDoe from '../assets/collaborators/julie-doe.png'
+import TomWhite      from '../assets/collaborators/members/Tom-1.png'
+import LiLiu         from '../assets/collaborators/members/Li-1.png'
+import DouglasDavis  from '../assets/collaborators/members/David-1.png'
+import JessicaArana  from '../assets/collaborators/members/Jessica.png'
+import AaronAtchison from '../assets/collaborators/members/Aaron-1.png'
 
 export default {
     name: 'collaborators',
@@ -54,9 +56,11 @@ export default {
         },
     },
     beforeMount() {
-        this.pushCollaborator("Jane Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JaneDoe, "")
-        this.pushCollaborator("John Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JohnDoe, "")
-        this.pushCollaborator("Julie Doe", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ", JulieDoe, "")
+        this.pushCollaborator("Tom White", "Director at the Los Angeles Cleantech Incubator", TomWhite, "")
+        this.pushCollaborator("Li Liu", "Ph.D., Assistant Professor at California State University, Northridge (CSUN)", LiLiu, "")
+        this.pushCollaborator("Douglas Davis", "Founder of The Davis Group LLC", DouglasDavis, "")
+        this.pushCollaborator("Jessica Arana", "Designer, Artist, Educator", JessicaArana, "")
+        this.pushCollaborator("Aaron Atchison", "Founder and Creative Director of Farm Design", AaronAtchison, "")
     },
 }
 </script>
