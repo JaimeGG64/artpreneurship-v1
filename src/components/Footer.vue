@@ -20,7 +20,8 @@
                     <img class="footer-wrapper__copyright--logos-instagram" alt="Link to Instagram." src="../assets/global/instagram.svg">
                 </a>
             </section>
-            <p class="footer-wrapper__copyright--copy">© Copyright {{ year }}. Artpreneurship All Right Reserved</p>
+            <p class="footer-wrapper__copyright--copy" v-if="windowWidth > 590">© Copyright {{ year }}. Artpreneurship All Rights Reserved</p>
+            <p class="footer-wrapper__copyright--copy" v-else>© Copyright {{ year }}.<br>Artpreneurship All Rights Reserved</p>
         </section>
     </footer>
 </template>
@@ -30,10 +31,27 @@ export default {
     data: function(){
         return {
             year: '',
+            windowWidth: window.innerWidth,
         }
     },
     created: function() {
         this.year = new Date().getFullYear();
+    },
+    watch: {
+        windowWidth: function(newWidth) {
+            this.windowWidth = newWidth;
+        }
+    },
+    mounted() {
+        window.addEventListener('resize', () => {
+            this.windowWidth = window.innerWidth
+        })
+    },
+    beforeDestroy() { 
+        window.removeEventListener('resize', this.onResize); 
+    },
+    onResize() {
+        this.windowWidth = window.innerWidth
     },
 }
 </script>
