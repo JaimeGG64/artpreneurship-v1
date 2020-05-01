@@ -1,6 +1,5 @@
 <template>
     <main class="collaborators">
-        
         <section class="our-collaborators">
             <div class="our-collaborators__text-wrapper">
                 <h1 class="our-collaborators__heading">Our Collaborators</h1>
@@ -8,10 +7,10 @@
                 <a class="our-collaborators__btn" href="mailto:dave.moon@ixla.org?subject=Becoming an Artpreneurship Collaborator">Become A Collaborator</a>
             </div>
             <picture class="our-collaborators__image">
-                <source media="(min-width: 1920px)" srcset="../assets/collaborators/collaborators-celebration-xl.jpg">
-                <source media="(min-width: 1024px)" srcset="../assets/collaborators/collaborators-celebration-lg.jpg">
-                <source media="(min-width: 768px)" srcset="../assets/collaborators/collaborators-celebration-md.jpg">
-                <img src="../assets/collaborators/collaborators-celebration.jpg" alt="student collaborating" style="width: 100%">
+                <source media="(min-width: 1280px)" srcset="../assets/collaborators/collaborator-feature-img-xl.jpg">
+                <source media="(min-width: 1024px)" srcset="../assets/collaborators/collaborator-feature-img-lg.jpg">
+                <source media="(min-width: 768px)" srcset="../assets/collaborators/collaborator-feature-img-md.jpg">
+                <img src="../assets/collaborators/collaborator-feature-img.jpg" alt="Group photo with collaborators" style="width: 100%">
             </picture>
         </section>
         <section class="collab-list-section">
