@@ -3,11 +3,11 @@
         <section class="business-side">
             <div class="business-side__text-wrapper">
                 <h1 class="business-side__heading">The Business Side of Creativity</h1>
-                <p class="business-side__copy">
-                    Classroom: Filled with online videos and other online resources with specific topics to help you launch your new business. Additionally, check out the Events section, as we will have many in-person classes for you to attend. Seating is always limited, so please register early.
+                <p @click='scrollToElement("upcoming-events-li")' class="business-side__copy">
+                    Classroom: <br>Filled with online videos and other online resources with specific topics to help you launch your new business. Additionally, check out the Events section, as we will have many in-person classes for you to attend. Seating is always limited, so please register early.
                 </p>
-                <p class="business-side__copy">
-                    Events: Current and future activities, events, and programs are listed here. Check often or sign up for our email list.
+                <p @click='scrollToElement("upcoming-events-li")' class="business-side__copy">
+                    Events: <br>Current and future activities, events, and programs are listed here. Check often or sign up for our email list.
                 </p>
             </div>
             <picture class="business-side__image">
@@ -38,16 +38,12 @@
             </ul>
             <img class="resources__image" src="../assets/global/air_rally_illustration_4.svg" alt="" />
         </section>
-        <section class="upcomming-event">
+        <section class="upcomming-event" id="upcoming-events-li">
             <h2 class="upcomming-event__heading">Upcoming Activities, Events, and Courses</h2>
             <dl class="event-wrapper__event-list"> 
                 <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb" @clickSignUp="confirmDialogue" />
             </dl>
         </section>
-        <!-- <b-modal class="event-modal" @clickSignUp="showModal" @ok="goToUrl" id="emodal" 
-            centered no-stacking title="Continue to Eventbrite?">
-            <p class="event-modal__text">This will open a new tab to https://www.eventbrite.com/</p>
-        </b-modal> -->
     </main>
 </template>
 
@@ -85,9 +81,6 @@ export default {
                 vm.events.push(response.data)
             });
         },
-        // showModal: function() {
-        //     this.$bvModal.show('emodal');
-        // },
         goToUrl: function() {
             this.tempUrl = this.$store.state.eventObjUrl;
             if (this.tempUrl !== '') {
@@ -98,10 +91,18 @@ export default {
                 })
             }
         },
-        confirmDialogue () {
+        confirmDialogue: function () {
             if (confirm("This will open a new tab to https://www.eventbrite.com/")) {
                 this.goToUrl()
             }
+        },
+        scrollToElement: function (element) {
+            var elementToScrollTo = document.getElementById(element).offsetTop;
+            window.scroll({
+                top: elementToScrollTo - 100,
+                left: 0,
+                behavior: 'smooth'
+            });
         },
     },
     created: function() {
