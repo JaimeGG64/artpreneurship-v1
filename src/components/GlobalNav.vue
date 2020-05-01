@@ -142,7 +142,7 @@ export default {
         opacity: 1;
         flex-direction: row;
         width: 100%;
-        max-width: 50rem;
+        max-width: 55rem;
         justify-content: space-around;
         &--active{
             background: none;
