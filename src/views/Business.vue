@@ -3,11 +3,11 @@
         <section class="business-side">
             <div class="business-side__text-wrapper">
                 <h1 class="business-side__heading">The Business Side of Creativity</h1>
-                <p class="business-side__copy">
-                    Classroom: Filled with online videos and other online resources with specific topics to help you launch your new business. Additionally, check out the Events section, as we will have many in-person classes for you to attend. Seating is always limited, so please register early.
+                <p @click='scrollToElement("upcoming-events-li")' class="business-side__copy">
+                    Classroom: <br>Filled with online videos and other online resources with specific topics to help you launch your new business. Additionally, check out the Events section, as we will have many in-person classes for you to attend. Seating is always limited, so please register early.
                 </p>
-                <p class="business-side__copy">
-                    Events: Current and future activities, events, and programs are listed here. Check often or sign up for our email list.
+                <p @click='scrollToElement("upcoming-events-li")' class="business-side__copy">
+                    Events: <br>Current and future activities, events, and programs are listed here. Check often or sign up for our email list.
                 </p>
             </div>
             <picture class="business-side__image">
@@ -17,7 +17,7 @@
                 <img src="../assets/business/business-collaboration.jpg" alt="student collaborating" style="width: 100%">
             </picture>
         </section>
-        <section class="resources">
+        <section class="resources" id="classroom-click">
             <h2 class="resources__heading">Resources</h2>
             <p class="resources__copy">
                 Here you will find business essentials that can help you successfully build your business model, from using a simple Business Model Canvas to developing a comprehensive Integrated Marketing Communications plan. Whatever the resources you need to help launch a thriving business, you will find them here. If you don’t see what you need, contact us and we will find it for you.
@@ -38,7 +38,7 @@
             </ul>
             <img class="resources__image" src="../assets/global/air_rally_illustration_4.svg" alt="" />
         </section>
-        <section class="upcomming-event">
+        <section class="upcomming-event" id="upcoming-events-li">
             <h2 class="upcomming-event__heading">Upcoming Activities, Events, and Courses</h2>
             <dl class="event-wrapper__event-list"> 
                 <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb" @clickSignUp="confirmDialogue" />
@@ -103,6 +103,10 @@ export default {
                 this.goToUrl()
             }
         },
+        scrollToElement: function (element) {
+            var elementToScrollTo = document.getElementById(element).offsetTop;
+            window.scroll(0, elementToScrollTo - 100);
+        },
     },
     created: function() {
         this.events.push({
@@ -124,6 +128,10 @@ export default {
 
 <style lang="scss">
 @import "../scss/variables.scss";
+
+html {
+  scroll-behavior: smooth;
+}
 
 .business-side{
     display: grid;

@@ -11,7 +11,7 @@
             <li class="global-nav__element"><router-link to="/about">About</router-link></li>
             <li class="global-nav__element"><router-link to="/collaborators">Collaborators</router-link></li>
             <li class="global-nav__element"><router-link to="/business">Business</router-link></li>
-            <li class="global-nav__element"><router-link to="/sponsorship">Sponsorship</router-link></li>
+            <li class="global-nav__element"><router-link to="/sponsorship">Donation & Sponsorship</router-link></li>
             <li class="global-nav__element"><router-link to="/awards">Awards</router-link></li>
         </ul>
     </nav>
