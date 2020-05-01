@@ -6,10 +6,10 @@
             <p class="artpreneur-awards__copy">The annual award is open to all art and design majors who are currently enrolled at CSUN. The following criteria will be utilized to decide on the student recipient. While studying art and design at CSUN, a student must have started an art-related business or have continued to develop a sustainable business, primarily utilizing their personal artwork, art-making, and other creative endeavors. The award is also meant for students to become motivated and encouraged to create a sustainable business with their art and art-making skills. The selected student will receive $2,000.00</p>
             <a class="artpreneur-awards__btn" href="mailto:dave.moon@ixla.org?subject=Artpreneur Award Application">Apply Now</a>
             <picture class="artpreneur-awards__image">
-                <source media="(min-width: 1280px)" srcset="../assets/awards/awards-working-xl.jpg">
-                <source media="(min-width: 1024px)" srcset="../assets/awards/awards-working-lg.jpg">
-                <source media="(min-width: 768px)" srcset="../assets/awards/awards-working-md.jpg">
-                <img src="../assets/awards/awards-working.jpg" alt="students working on the computer" style="width: 100%">
+                <source media="(min-width: 1280px)" srcset="../assets/awards/awards-feature-img-xl.jpg">
+                <source media="(min-width: 1024px)" srcset="../assets/awards/awards-feature-img-lg.jpg">
+                <source media="(min-width: 768px)" srcset="../assets/awards/awards-feature-img-md.jpg">
+                <img src="../assets/awards/awards-feature-img.jpg" alt="Students winning an artpreneurship award" style="width: 100%">
             </picture>
         </section>
         <section class="required-items">

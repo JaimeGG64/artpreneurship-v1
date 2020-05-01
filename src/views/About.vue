@@ -9,10 +9,10 @@
         <router-link to="/sponsorship" class="about-us__btn">Donation & Sponsorship</router-link>
       </div>
       <picture class="about-us__image">
-        <source media="(min-width: 1280px)" srcset="../assets/about/about-group-photo.jpg">
-        <source media="(min-width: 1024px)" srcset="../assets/about/about-group-photo-lg.jpg">
-        <source media="(min-width: 768px)" srcset="../assets/about/about-group-photo-md.jpg">
-        <img src="../assets/about/about-group-photo-lg.jpg" alt="group photo on the beach" style="width: 100%">
+        <source media="(min-width: 1280px)" srcset="../assets/about/about-feature-img-xl.jpg">
+        <source media="(min-width: 1024px)" srcset="../assets/about/about-feature-img-lg.jpg">
+        <source media="(min-width: 768px)" srcset="../assets/about/about-feature-img-md.jpg">
+        <img src="../assets/about/about-feature-img.jpg" alt="Group photo in front of a colorful bus" style="width: 100%">
       </picture>
     </section>
     <section class="goals">
