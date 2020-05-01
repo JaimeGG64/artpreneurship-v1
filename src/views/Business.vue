@@ -17,7 +17,7 @@
                 <img src="../assets/business/business-collaboration.jpg" alt="student collaborating" style="width: 100%">
             </picture>
         </section>
-        <section class="resources" id="classroom-click">
+        <section class="resources">
             <h2 class="resources__heading">Resources</h2>
             <p class="resources__copy">
                 Here you will find business essentials that can help you successfully build your business model, from using a simple Business Model Canvas to developing a comprehensive Integrated Marketing Communications plan. Whatever the resources you need to help launch a thriving business, you will find them here. If you don’t see what you need, contact us and we will find it for you.
@@ -44,10 +44,6 @@
                 <EventInfo v-for="(eventb, index) in events" :key=index :eventObj="eventb" @clickSignUp="confirmDialogue" />
             </dl>
         </section>
-        <!-- <b-modal class="event-modal" @clickSignUp="showModal" @ok="goToUrl" id="emodal" 
-            centered no-stacking title="Continue to Eventbrite?">
-            <p class="event-modal__text">This will open a new tab to https://www.eventbrite.com/</p>
-        </b-modal> -->
     </main>
 </template>
 
@@ -85,9 +81,6 @@ export default {
                 vm.events.push(response.data)
             });
         },
-        // showModal: function() {
-        //     this.$bvModal.show('emodal');
-        // },
         goToUrl: function() {
             this.tempUrl = this.$store.state.eventObjUrl;
             if (this.tempUrl !== '') {
@@ -98,14 +91,18 @@ export default {
                 })
             }
         },
-        confirmDialogue () {
+        confirmDialogue: function () {
             if (confirm("This will open a new tab to https://www.eventbrite.com/")) {
                 this.goToUrl()
             }
         },
         scrollToElement: function (element) {
             var elementToScrollTo = document.getElementById(element).offsetTop;
-            window.scroll(0, elementToScrollTo - 100);
+            window.scroll({
+                top: elementToScrollTo - 100,
+                left: 0,
+                behavior: 'smooth'
+            });
         },
     },
     created: function() {
@@ -128,10 +125,6 @@ export default {
 
 <style lang="scss">
 @import "../scss/variables.scss";
-
-html {
-  scroll-behavior: smooth;
-}
 
 .business-side{
     display: grid;
