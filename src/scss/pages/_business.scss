@@ -1,0 +1,161 @@
+.business-side{
+    display: grid;
+    &__text-wrapper{
+        display: grid;
+        row-gap: 1rem;
+        padding: $mobile-gutter;
+    }
+    &__heading{
+        font-size: 2rem;
+        text-align: center;
+    }
+    &__copy{
+        font-weight: $weight-bold;
+        font-size: 1.1rem;
+    }
+    &__image{
+        grid-row: 1/2;
+    }
+}
+.resources{
+    display: grid;
+    row-gap: 1rem;
+    padding: $mobile-gutter;
+    &__heading{
+        font-weight: $weight-black;
+        font-size: 2rem;
+        text-align: center;
+    }
+    &__copy{
+        font-weight: $weight-bold;
+        font-size: 1.1rem;
+    }
+    &__image{
+        grid-row: 1/2;
+        width: 82%;
+        justify-self: center;
+        transform: scaleX(-1);
+    }
+    &__list{
+        margin: 0;
+        padding: 0;
+        display: grid;
+        row-gap: 1rem;
+        &-item{
+            display: grid;
+            grid-template-columns: 6rem auto;
+            &-icon{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                height: 3rem;
+                padding-top: .35rem;
+            }
+        }
+    }
+    
+}
+.upcomming-event{
+    background: $yellow-hue-1;
+    padding: 0 $mobile-gutter ($mobile-gutter * 2) $mobile-gutter;
+    &__heading{
+        font-weight: $weight-black;
+        font-size: 2rem;
+        text-align: center;
+        padding: 2.5rem 0;
+    }
+    .event-wrapper__event-list{
+        display: grid;
+        row-gap: $mobile-gutter;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .business-side{
+        &__text-wrapper{
+            padding: 2rem $tablet-gutter;
+        }
+    }
+    .resources{
+        padding: ($tablet-gutter + 1rem) $tablet-gutter;
+        grid-template-rows: repeat(3,auto);
+        grid-template-columns: 53% auto;
+        column-gap: 2rem;
+        &__heading{
+            grid-row: 1/2;
+            grid-column: 1/3;
+            text-align: left;
+        }
+        &__copy{
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+        &__list{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        }
+        &__image{
+            grid-row: 3/4;
+            grid-column: 2/3;
+            width: 100%;
+            align-self: center;
+        }
+    }
+    .upcomming-event{
+        padding: 0 $tablet-gutter $tablet-gutter $tablet-gutter;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .business-side{
+        grid-template-columns: 47% auto;
+        &__text-wrapper{
+            row-gap: 2rem;
+            align-content: center;
+            padding: 0;
+            grid-template-columns: auto 70% auto;
+        }
+        &__heading{
+            font-size: 3rem;
+            text-align: left;
+        }
+        &__heading, &__copy{
+            grid-column: 2/3;
+        }
+    }
+    .resources{
+        grid-template-columns: 46% auto;
+        row-gap: 2.75rem;
+        &__heading{
+            grid-column: 1/2;
+        }
+        &__copy{
+            grid-column: 1/2;
+        }
+        &__list{
+            row-gap: 2.75rem;
+        }
+        &__image{
+            grid-row: 1/4;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .business-side{
+        &__heading{
+            font-size: 3.25rem;
+            width: 28rem;
+        }
+    }
+    .resources{
+        padding: $lg-gutter;
+        column-gap: 2.5rem;
+        align-items: center;
+        &__heading{
+            font-size: 4rem;
+        }
+    }
+    .upcomming-event{
+        padding: 0 $lg-gutter 4rem $lg-gutter;
+    }
+}

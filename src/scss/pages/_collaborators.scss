@@ -1,0 +1,94 @@
+.our-collaborators{
+    display: grid;
+    &__text-wrapper{
+        padding: $mobile-gutter;
+        display: grid;
+        row-gap: 1rem;
+    }
+    &__heading{
+        font-size: 2rem;
+        text-align: center;
+    }
+    &__copy{
+        font-size: 1.1rem;
+        font-weight: $weight-bold;
+    }
+    &__image{
+        grid-row: 1/2;
+    }
+    &__btn{
+        @include base-btn-style($blue, none);
+        width: 14rem;
+        justify-self: center;
+        grid-row: 3/4;
+        &:hover,
+        &:focus {
+            @include base-btn-blur(30px, $blue);
+        }
+    }
+}
+
+.collab-list-section {
+    padding: $mobile-gutter;
+    &__list{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: $mobile-gutter;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .our-collaborators{
+        &__text-wrapper{
+            padding: $tablet-gutter;
+            row-gap: 1.5rem;
+        }
+    }
+    .collab-list-section {
+        padding: $tablet-gutter;
+        &__list{
+            grid-template-columns: repeat(2, auto);
+            grid-gap: $tablet-gutter;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .our-collaborators{
+        grid-template-columns: auto 45%;
+        &__text-wrapper{
+            row-gap: 1.25rem;
+            align-content: center;
+        }
+        &__heading{
+            text-align: left;
+        }
+        &__btn{
+            justify-self: start;
+        }
+        &__image{
+            grid-column: 2/3;
+        }
+    }
+    .collab-list-section {
+        padding: 5rem $tablet-gutter;
+        &__list{
+            grid-template-columns: repeat(3, auto);
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .our-collaborators{
+        grid-template: auto 37%;
+        &__text-wrapper{
+            padding: $lg-gutter;
+        }
+        &__heading{
+            font-size: 3.5rem;
+        }
+    }
+    .collab-list-section {
+        padding: $lg-gutter;
+    }
+}

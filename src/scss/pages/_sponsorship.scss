@@ -1,26 +1,3 @@
-<template>
-    <main class="sponsorship">
-        <section class="sponsorship-and-donation">
-            <h1 class="sponsorship-and-donation__heading">Donation & Sponsorship</h1>
-            <img class="sponsorship-and-donation__img" src="../assets/sponsorship/sponsorship.svg" alt="">
-            <p class="sponsorship-and-donation__text">Given the multitude of ongoing events and activities that connect the latest entrepreneurial topics to our students, we rely on sponsors who are willing to help support us. We are actively seeking sponsorship opportunities to underwrite many of the expenses relating to our events. </p>
-            <a class="sponsorship-and-donation__btn" href="mailto:dave.moon@ixla.org?subject=Donate to Artpreneurship Program">Donate to Artpreneurship</a>
-        </section>
-    </main>
-</template>
-
-<script>
-export default {
-    name: 'sponsorship',
-    title: 'Sponsorship',
-}
-</script>
-
-<style lang="scss">
-@import "../scss/button-styles.scss";
-@import "../scss/variables.scss";
-@import "../scss/type.scss";
-
 .sponsorship-and-donation {
     display: grid;
     grid-template-columns: 100%;
@@ -122,4 +99,3 @@ export default {
         }
     }
 }
-</style>
