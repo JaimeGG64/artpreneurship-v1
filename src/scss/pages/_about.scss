@@ -121,7 +121,7 @@
 
 @media screen and (min-width: map-get($break-point , "md")) {
   .about {
-    background: url("../assets/about/about-background-md.png");
+    background: url("../../img/about-background-md.png");
     background-position: center 98%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -270,7 +270,7 @@
 
 @media screen and (min-width: map-get($break-point , "lg")) {
   .about {
-    background: url("../assets/about/about-background-lg.png");
+    background: url("../../img/about-background-lg.png");
     background-position: center 97%;
     background-repeat: no-repeat;
     background-size: contain;
@@ -356,7 +356,7 @@
 
 @media screen and (min-width: map-get($break-point , "xl")) {
   .about {
-    background: url("../assets/about/about-background.png");
+    background: url("../../img/about-background-lg.png");
     background-position: center 98%;
     background-repeat: no-repeat;
     background-size: contain;
