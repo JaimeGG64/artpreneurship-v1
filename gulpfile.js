@@ -5,6 +5,8 @@ const sass = require('gulp-sass');
 
 const babel= require('gulp-babel');
 
+const imagemin = require('gulp-imagemin');
+
 const origin = 'src';
 const destination = 'build';
 
@@ -40,6 +42,13 @@ function js(cb) {
   cb();
 }
 
+function img(cb) {
+  src(`${origin}/img/*`)
+  .pipe(imagemin())
+  .pipe(dest(`${destination}/img`))
+  cb()
+}
+
 function watcher(cb) {
   watch(`${origin}/**/*.html`).on('change', series(html, browserSync.reload))
   watch(`${origin}/**/*.scss`).on('change', series(css, browserSync.reload))
@@ -58,4 +67,4 @@ function server(cb) {
   cb();
 }
 
-exports.default = series(clean, parallel(html, css, js), server, watcher);
+exports.default = series(clean, parallel(html, css, js, img), server, watcher);
