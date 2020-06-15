@@ -26,7 +26,6 @@
     }
     &__btn {
         @include base-btn-style($blue, none);
-        width: 14.5rem;
         justify-self: center;
         &:hover,
         &:focus {

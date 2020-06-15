@@ -18,7 +18,6 @@
     }
     &__btn{
         @include base-btn-style($blue, none);
-        width: 14rem;
         justify-self: center;
         grid-row: 3/4;
         &:hover,
