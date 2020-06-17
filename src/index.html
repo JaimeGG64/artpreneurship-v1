@@ -15,7 +15,8 @@
                     alt="Artpreneurship logo" src="img/logo.svg" class="global-nav__logo"></a><button
                 aria-expanded="false" class="global-nav__btn"><img src="img/menu.svg" alt="Menu"></button>
             <ul class="global-nav__links">
-                <li class="global-nav__element"><a href="index.html" class="router-link-exact-active router-link-active">Home</a></li>
+                <li class="global-nav__element"><a href="index.html"
+                        class="router-link-exact-active router-link-active">Home</a></li>
                 <li class="global-nav__element"><a href="about.html" class="">About</a></li>
                 <li class="global-nav__element"><a href="collaborators.html" class="">Collaborators</a></li>
                 <li class="global-nav__element"><a href="business.html" class="">Business</a></li>
@@ -27,13 +28,15 @@
     <main class="home">
         <section class="artperneurship">
             <div class="artperneurship__text-wrapper">
-                <img src="img/logo.svg" alt="" class="artperneurship__logo"/>
+                <img src="img/logo.svg" alt="" class="artperneurship__logo" />
                 <h1 class="artperneurship__heading">Artpreneurship</h1>
                 <p class="artperneurship__copy">
-                    Artperneurship is a uniquely designed program that embraces the entrepreneurial mindset, specifically for students of art and humanities. While developing their personal work, students in the program can adapt and transform that work into an entrepreneurial venture.
+                    Artperneurship is a uniquely designed program that embraces the entrepreneurial mindset,
+                    specifically for students of art and humanities. While developing their personal work, students in
+                    the program can adapt and transform that work into an entrepreneurial venture.
                 </p>
                 <a href="https://www.paypal.com/" class="artperneurship__btn-donate">
-                    Donate 
+                    Donate
                 </a>
                 <a href="mailto:dave@example.com" class="artperneurship__btn-sponsorship">
                     Sponsorship
@@ -52,42 +55,30 @@
                 Students combine creativity and critical thinking, and they are natural collaborators. Through
                 Artpreneurship, we believe students in the program, while developing their personal work, can adapt and
                 transform that work for an entrepreneurial venture.</p>
-                <a href="about.html" class="about-program__btn">Learn More</a>
+            <a href="about.html" class="about-program__btn">Learn More</a>
         </section>
         <section class="gallery">
             <h2 class="gallery__heading">Gallery</h2>
-            <div role="region" id="carousel-1" aria-busy="false" class="carousel slide carousel-fade">
-                <div id="carousel-1___BV_inner_" role="list" class="carousel-inner">
-                    <div role="listitem" class="carousel-item active" aria-current="true" aria-posinset="1"
-                        aria-setsize="3" id="__BVID__19"><img src="img/carousel-1.jpg"
-                            alt="students siting at a large table collaborating" class="img-fluid w-100 d-block">
-                        <!---->
+            <div id="photo-gallery" class="carousel slide carousel-fade" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block img-fluid w-100" src="img/carousel-1.jpg" alt="students siting at a large table collaborating">
                     </div>
-                    <div role="listitem" class="carousel-item" aria-current="false" aria-posinset="2" aria-setsize="3"
-                        id="__BVID__20"><img src="img/carousel-2.jpg"
-                            alt="students siting a table designing tote bags" class="img-fluid w-100 d-block">
-                        <!---->
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid w-100" src="img/carousel-2.jpg" alt="students siting a table designing tote bags">
                     </div>
-                    <div role="listitem" class="carousel-item" aria-current="false" aria-posinset="3" aria-setsize="3"
-                        id="__BVID__21"><img src="img/carousel-3.jpg" alt="Two student discussing designs"
-                            class="img-fluid w-100 d-block">
-                        <!---->
+                    <div class="carousel-item">
+                        <img class="d-block img-fluid w-100" src="img/carousel-3.jpg" alt="two student discussing designs">
                     </div>
-                </div><a href="#" role="button" aria-controls="carousel-1___BV_inner_"
-                    class="carousel-control-prev"><span aria-hidden="true"
-                        class="carousel-control-prev-icon"></span><span class="sr-only">Previous Slide</span></a><a
-                    href="#" role="button" aria-controls="carousel-1___BV_inner_" class="carousel-control-next"><span
-                        aria-hidden="true" class="carousel-control-next-icon"></span><span class="sr-only">Next
-                        Slide</span></a>
-                <ol id="carousel-1___BV_indicators_" aria-hidden="false" aria-label="Select a slide to display"
-                    aria-owns="carousel-1___BV_inner_" class="carousel-indicators">
-                    <li role="button" id="carousel-1___BV_indicator_1_" tabindex="0" aria-current="true"
-                        aria-label="Goto Slide 1" aria-controls="carousel-1___BV_inner_" class="active"></li>
-                    <li role="button" id="carousel-1___BV_indicator_2_" tabindex="0" aria-current="false"
-                        aria-label="Goto Slide 2" aria-controls="carousel-1___BV_inner_" class=""></li>
-                    <li role="button" id="carousel-1___BV_indicator_3_" tabindex="0" aria-current="false"
-                        aria-label="Goto Slide 3" aria-controls="carousel-1___BV_inner_" class=""></li>
-                </ol>
+                </div>
+                <a class="carousel-control-prev" href="#photo-gallery" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#photo-gallery" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </section>
         <section class="program-feature">
@@ -97,8 +88,7 @@
                 <div class="program-feature__item-wrapper"><a href="collaborators.html" class="program-feature__link">
                         <dt class="program-feature__term">Collaborators</dt>
                         <dd class="program-feature__def">Key industry and community partners who are advocates and
-                            network providers.</dd><img src="img/icon-people.svg" alt=""
-                            class="program-feature__icon">
+                            network providers.</dd><img src="img/icon-people.svg" alt="" class="program-feature__icon">
                     </a></div>
                 <div class="program-feature__item-wrapper"><a href="business.html" class="program-feature__link">
                         <dt class="program-feature__term">Business</dt>
@@ -109,8 +99,7 @@
                 <div class="program-feature__item-wrapper"><a href="sponsorship.html" class="program-feature__link">
                         <dt class="program-feature__term">Sponsorship</dt>
                         <dd class="program-feature__def">Sponsors provide seed funding or other resources to continue
-                            the program. </dd><img src="img/icon-dollar.svg" alt=""
-                            class="program-feature__icon">
+                            the program. </dd><img src="img/icon-dollar.svg" alt="" class="program-feature__icon">
                     </a></div>
                 <div class="program-feature__item-wrapper"><a href="awards.html" class="program-feature__link">
                         <dt class="program-feature__term">Awards</dt>
@@ -122,8 +111,8 @@
         </section>
         <section class="knowbility">
             <p class="knowbility__copy">
-                We are partnering with <img src="img/knowbility-logo.svg" alt="Knowbility" class="knowbility__logo"></p><a href="https://www.knowbility.org/" target="_blank"
-                class="knowbility__btn">Learn More</a>
+                We are partnering with <img src="img/knowbility-logo.svg" alt="Knowbility" class="knowbility__logo"></p>
+            <a href="https://www.knowbility.org/" target="_blank" class="knowbility__btn">Learn More</a>
         </section>
     </main>
     <footer class="footer-wrapper">
@@ -137,14 +126,23 @@
         </section>
         <section class="footer-wrapper__copyright">
             <section class="footer-wrapper__copyright--logos"><a href="#"><img alt="Link to Facebook."
-                        src="img/facebook.svg" class="footer-wrapper__copyright--logos-facebook"></a><a
-                    href="#"><img alt="Link to Twitter." src="img/twitter.svg"
+                        src="img/facebook.svg" class="footer-wrapper__copyright--logos-facebook"></a><a href="#"><img
+                        alt="Link to Twitter." src="img/twitter.svg"
                         class="footer-wrapper__copyright--logos-twitter"></a><a href="#"><img alt="Link to Instagram."
                         src="img/instagram.svg" class="footer-wrapper__copyright--logos-instagram"></a>
             </section>
             <p class="footer-wrapper__copyright--copy">© Copyright 2020. Artpreneurship All Rights Reserved</p>
         </section>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
     <script src="/js/script.js"></script>
 </body>
 
