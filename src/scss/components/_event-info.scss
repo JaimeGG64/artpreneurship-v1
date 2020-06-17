@@ -40,9 +40,9 @@
 }
 @media screen and (min-width: map-get($break-point , "md")) {
     .event-info{
-        grid-template-columns: 17% 51% auto;
+        grid-template-columns: 5.75rem 48% auto;
         grid-template-rows: repeat(4,auto);
-        column-gap: 2rem;
+        column-gap: 1rem;
         row-gap: 1rem;
         &__name {
             grid-row: 1/2;
