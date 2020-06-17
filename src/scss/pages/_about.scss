@@ -6,8 +6,8 @@
   grid-template-columns: 100%;
   grid-template-rows: 4;
   &__text-wrapper {
-    width: 100%;
     display: grid;
+    row-gap: 1rem;
   }
   &__heading {
     @extend %mobile-heading;
@@ -17,14 +17,18 @@
     font-weight: $weight-bold;
     font-size: 1.1rem;
   }
-  &__btn {
-    @include base-btn-style($yellow-hue-1, none);
-    grid-row: 4/5;
-    width: 14.5rem;
+  &__btn-donate, &__btn-sponsorship{
     justify-self: center;
-    margin: 3rem 0;
-    &:hover,
-    &:focus {
+  }
+  &__btn-donate{
+    @include base-btn-style($blue, none);
+    &:hover, &:focus {
+      @include base-btn-blur(30px, $blue);
+    }
+  }
+  &__btn-sponsorship {
+    @include base-btn-style($yellow-hue-1, none);
+    &:hover, &:focus {
       @include base-btn-blur(30px, $yellow-hue-1);
     }
   }
@@ -129,9 +133,6 @@
   .about-us {
     grid-template-columns: 100%;
     grid-template-rows: 4;
-    &__text-wrapper {
-      row-gap: 1rem;
-    }
     &__heading {
       text-align: center;
       font-size: 2rem;
@@ -139,12 +140,6 @@
     &__copy {
       padding: 0 $tablet-gutter;
       font-weight: $weight-bold;
-    }
-    &__btn {
-      @include base-btn-style($yellow-hue-1, none);
-      grid-row: 4/5;
-      justify-self: center;
-      margin: 3rem 0;
     }
     &__image {
       grid-row: 1/2;
@@ -276,37 +271,24 @@
     background-size: contain;
   }
   .about-us {
-    grid-template-columns: 54% 46%;
-    grid-template-rows: repeat(5, auto);
+    grid-template-columns: 54% auto;
     row-gap: 1.25rem;
-    &__heading,
-    &__copy,
-    &__btn {
+    &__text-wrapper{
+      grid-template-columns: auto 75% auto;
+      align-content: center;
+    }
+    &__copy, &__heading, &__btn-donate, &__btn-sponsorship {
       grid-column: 2/3;
     }
-    &__text-wrapper {
-      grid-row: 1/6;
-      width: 76%;
-      row-gap: 2rem;
-      justify-self: center;
-      align-self: center;
-    }
-    &__heading {
-      grid-row: 2/3;
-      padding: 0;
+    &__heading, &__copy {
       text-align: left;
-    }
-    &__copy {
-      grid-row: 3/4;
       padding: 0;
     }
-    &__btn {
+    &__btn-donate, &__btn-sponsorship{
       justify-self: start;
-      margin: 0;
     }
     &__image {
       grid-column: 1/2;
-      grid-row: 1/6;
       width: 100%;
     }
   }
@@ -362,7 +344,19 @@
     background-size: contain;
   }
   .about-us {
-    grid-template-columns: 56% 44%;
+    grid-template-columns: 55% auto;
+    &__text-wrapper{
+      grid-template-columns: auto repeat(2,35%) auto;
+    }
+    &__heading, &__copy{
+      grid-column: 2/4;
+    }
+    &__btn-donate{
+      grid-column: 2/3;
+    }
+    &__btn-sponsorship{
+      grid-column: 3/4;
+    }
     &__heading {
       font-size: 3.5rem;
       font-weight: $weight-black;

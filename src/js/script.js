@@ -1,1 +1,5 @@
-console.log([1,2,3].map(n => n **2));
+var getNavbarToggleButton = document.querySelector(".global-nav__btn");
+getNavbarToggleButton.addEventListener("click", () => { 
+    let getNavLinks = document.querySelector(".global-nav__links");
+    getNavLinks.classList.toggle("global-nav__links--active");
+}, false);

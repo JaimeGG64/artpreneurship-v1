@@ -20,7 +20,6 @@
             grid-column: 2/3;
             &-phone, &-email {
                 @extend .copy-bold;
-                color: #333333;
                 font-weight: $weight-bold;
                 text-decoration: none;
             }
@@ -41,7 +40,6 @@
         }
         &--copy{
             grid-row: 2/2;
-            width: 70%;
             font-size: .95rem;
             text-align: left;
             color: grey;
