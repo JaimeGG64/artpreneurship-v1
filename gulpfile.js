@@ -67,4 +67,5 @@ function server(cb) {
   cb();
 }
 
+exports.prod = series(clean, parallel(html, css, js, img));
 exports.default = series(clean, parallel(html, css, js, img), server, watcher);
