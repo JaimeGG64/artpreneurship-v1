@@ -8,7 +8,7 @@ const babel= require('gulp-babel');
 const imagemin = require('gulp-imagemin');
 
 const origin = 'src';
-const destination = 'build';
+const destination = 'dist';
 
 sass.compiler = require('node-sass');
 
