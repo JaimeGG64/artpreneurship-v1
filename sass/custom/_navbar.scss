@@ -1,0 +1,134 @@
+.site-header {
+    width: 100%;
+    background: $white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.75rem;
+    box-sizing: border-box;
+    .custom-logo {
+        width: 4.75rem;
+        line-height: 0;
+    }
+    .site-title {
+        display: none;
+    }
+    .menu-toggle {
+        border: none;
+        position: fixed;
+        top: 1rem;
+        right: 0;
+        padding: 1.75rem;
+        z-index: 100;
+        border-radius: 10px 0 0 10px;
+        background: $white;
+        cursor: pointer;
+    }
+    .toggled {
+        .menu {
+            background: rgba(255, 255, 255, 0.95);
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            box-sizing: border-box;
+            opacity: 1;
+        }
+        .menu-item {
+            height: 3rem;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                color: $black-hue-3;
+                font-family: $default-font;
+                font-weight: $weight-regular;
+                text-decoration: none;
+                text-align: center;
+                font-size: 1.8rem;
+                line-height: 0;
+            }
+        }
+    }
+    .menu {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 0;
+        width: 0;
+        z-index: 50;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 0.3s;
+    }
+    .menu-main-menu-container {
+        height: 100%;
+    }
+}
+
+body{
+    font-family: $default-font;
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .site-header {
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.07);
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        line-height: 0;
+        .custom-logo {
+            width: 4rem;
+            border-bottom: none !important;
+        }
+        .menu-toggle {
+            display: none;
+        }
+        .menu {
+            width: auto;
+            align-items: center;
+            position: relative;
+            height: inherit;
+            opacity: 1;
+            flex-direction: row;
+            justify-content: space-around;
+            .toggled {
+                background: none;
+                height: unset;
+                width: unset;
+                justify-content: start;
+                box-sizing: border-box;
+                opacity: 1;
+            }
+        }
+        .menu-item {
+            display: block;
+            width: unset;
+            height: unset;
+            a {
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: $weight-bold;
+                color: $black-hue-1;
+                padding-right: 1.5rem;
+                line-height: 1.75;
+            }
+        }
+        .current-menu-item {
+            border-bottom: $blue 0.15rem solid;
+        }
+    }
+    main {
+        margin-top: 5.75rem;
+    }
+}
+
+.main-navigation {
+    width: 100%;
+    max-width: 55rem;
+}

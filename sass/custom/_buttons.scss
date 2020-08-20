@@ -1,0 +1,50 @@
+@mixin base-btn-style($buttonColor, $borderProperties) {
+    /* Only need to pass in the button color and border properties. This check will set the correct
+        text color. 
+        If the button is yellow, the text should be black. Otherwise the text color is white. */
+    @if ($buttonColor == $yellow-hue-1) or ($buttonColor == $white) {
+        color: $black-hue-1;
+    } @else {
+        color: $white;
+    }
+    background-color: $buttonColor;
+    border: $borderProperties;
+
+    // Unchanging properties in the base button.
+    font-family: $default-font; // from variables.scss
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: .85rem 2.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    align-self: baseline;
+    box-sizing: border-box;
+    min-width: 12.5rem;
+}
+
+@mixin base-btn-blur($blur, $shadowColor) {
+    box-shadow: 0px 0px $blur $shadowColor;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.btn-blue{
+    a{
+        @include base-btn-style($blue, none);
+        &:hover, &:focus {
+            @include base-btn-blur(30px, $blue);
+        }
+    }
+    
+}
+
+.btn-yellow{
+    a{
+        @include base-btn-style($yellow-hue-1, none);
+        &:hover, &:focus {
+            @include base-btn-blur(30px, $yellow-hue-1);
+        }
+    }
+    
+}
