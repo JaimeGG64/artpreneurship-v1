@@ -21,7 +21,6 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
-
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -49,25 +48,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	- Alignments
 
 --------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
-
 /* Normalize
 --------------------------------------------- */
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
 	 ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css?family=Lato:400,900,700&display=swap");
-
 html {
 	line-height: 1.15;
 	-webkit-text-size-adjust: 100%;
@@ -75,7 +68,6 @@ html {
 
 /* Sections
 	 ========================================================================== */
-
 /**
  * Remove the margin in all browsers.
  */
@@ -101,7 +93,6 @@ h1 {
 
 /* Grouping content
 	 ========================================================================== */
-
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
@@ -123,7 +114,6 @@ pre {
 
 /* Text-level semantics
 	 ========================================================================== */
-
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -189,7 +179,6 @@ sup {
 
 /* Embedded content
 	 ========================================================================== */
-
 /**
  * Remove the border on images inside links in IE 10.
  */
@@ -199,7 +188,6 @@ img {
 
 /* Forms
 	 ========================================================================== */
-
 /**
  * 1. Change the font styles in all browsers.
  * 2. Remove the margin in Firefox and Safari.
@@ -345,7 +333,6 @@ textarea {
 
 /* Interactive
 	 ========================================================================== */
-
 /*
  * Add the correct display in Edge, IE 10+, and Firefox.
  */
@@ -362,7 +349,6 @@ summary {
 
 /* Misc
 	 ========================================================================== */
-
 /**
  * Add the correct display in IE 10+.
  */
@@ -379,7 +365,6 @@ template {
 
 /* Box sizing
 --------------------------------------------- */
-
 /* Inherit box-sizing to more easily change it's value on a component level.
 @link http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 *,
@@ -395,7 +380,6 @@ html {
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
-
 /* Typography
 --------------------------------------------- */
 body,
@@ -542,9 +526,7 @@ a:visited {
 	color: #800080;
 }
 
-a:hover,
-a:focus,
-a:active {
+a:hover, a:focus, a:active {
 	color: #191970;
 }
 
@@ -552,8 +534,7 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
 	outline: 0;
 }
 
@@ -579,8 +560,7 @@ input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa;
 }
 
-button:active,
-button:focus,
+button:active, button:focus,
 input[type="button"]:active,
 input[type="button"]:focus,
 input[type="reset"]:active,
@@ -642,11 +622,9 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
-
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
-
 /* Navigation
 --------------------------------------------- */
 .main-navigation {
@@ -705,10 +683,8 @@ textarea {
 	display: block;
 }
 
-.site-main .comment-navigation,
-.site-main
-.posts-navigation,
-.site-main
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
 .post-navigation {
 	margin: 0 0 1.5em;
 }
@@ -868,10 +844,8 @@ textarea {
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
-
 /* Jetpack infinite scroll
 --------------------------------------------- */
-
 /* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
 .infinite-scroll .posts-navigation,
 .infinite-scroll.neverending .site-footer {
@@ -886,10 +860,8 @@ textarea {
 /*--------------------------------------------------------------
 # Utilities
 --------------------------------------------------------------*/
-
 /* Accessibility
 --------------------------------------------- */
-
 /* Text meant only for screen readers. */
 .screen-reader-text {
 	border: 0;
@@ -932,20 +904,16 @@ textarea {
 /* Alignments
 --------------------------------------------- */
 .alignleft {
-
 	/*rtl:ignore*/
 	float: left;
-
 	/*rtl:ignore*/
 	margin-right: 1.5em;
 	margin-bottom: 1.5em;
 }
 
 .alignright {
-
 	/*rtl:ignore*/
 	float: right;
-
 	/*rtl:ignore*/
 	margin-left: 1.5em;
 	margin-bottom: 1.5em;
@@ -960,17 +928,16 @@ textarea {
 }
 
 .btn-blue a {
-
 	/* Only need to pass in the button color and border properties. This check will set the correct
-        text color.
+        text color. 
         If the button is yellow, the text should be black. Otherwise the text color is white. */
-	color: #fff;
+	color: #ffffff;
 	background-color: #2772e5;
 	border: none;
 	font-family: "Lato", sans-serif;
 	font-size: 1.15rem;
 	font-weight: 700;
-	padding: 0.85rem 2.5rem;
+	padding: .85rem 2.5rem;
 	border-radius: 10px;
 	text-decoration: none;
 	text-align: center;
@@ -980,16 +947,14 @@ textarea {
 	min-width: 12.5rem;
 }
 
-.btn-blue a:hover,
-.btn-blue a:focus {
-	box-shadow: 0 0 30px #2772e5;
+.btn-blue a:hover, .btn-blue a:focus {
+	box-shadow: 0px 0px 30px #2772e5;
 	transition: box-shadow 0.2s ease-in-out;
 }
 
 .btn-yellow a {
-
 	/* Only need to pass in the button color and border properties. This check will set the correct
-        text color.
+        text color. 
         If the button is yellow, the text should be black. Otherwise the text color is white. */
 	color: #231f20;
 	background-color: #ffd800;
@@ -997,7 +962,7 @@ textarea {
 	font-family: "Lato", sans-serif;
 	font-size: 1.15rem;
 	font-weight: 700;
-	padding: 0.85rem 2.5rem;
+	padding: .85rem 2.5rem;
 	border-radius: 10px;
 	text-decoration: none;
 	text-align: center;
@@ -1007,9 +972,8 @@ textarea {
 	min-width: 12.5rem;
 }
 
-.btn-yellow a:hover,
-.btn-yellow a:focus {
-	box-shadow: 0 0 30px #ffd800;
+.btn-yellow a:hover, .btn-yellow a:focus {
+	box-shadow: 0px 0px 30px #ffd800;
 	transition: box-shadow 0.2s ease-in-out;
 }
 
@@ -1020,15 +984,10 @@ textarea {
 .hero-with-feature-image__text-wrapper {
 	display: grid;
 	padding: 1rem 1.5rem;
-	row-gap: 0.75rem;
+	row-gap: .75rem;
 }
 
-.hero-with-feature-image__text-wrapper h1,
-.hero-with-feature-image__text-wrapper h2,
-.hero-with-feature-image__text-wrapper h3,
-.hero-with-feature-image__text-wrapper h4,
-.hero-with-feature-image__text-wrapper h5,
-.hero-with-feature-image__text-wrapper h6 {
+.hero-with-feature-image__text-wrapper h1, .hero-with-feature-image__text-wrapper h2, .hero-with-feature-image__text-wrapper h3, .hero-with-feature-image__text-wrapper h4, .hero-with-feature-image__text-wrapper h5, .hero-with-feature-image__text-wrapper h6 {
 	text-align: center;
 	line-height: 1.5;
 }
@@ -1067,11 +1026,9 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-
 	.hero-with-feature-image__text-wrapper {
 		padding: 3.25rem;
 	}
-
 	.hero-with-feature-image__image-wrapper .wp-post-image {
 		height: unset;
 		width: 100%;
@@ -1079,45 +1036,32 @@ textarea {
 }
 
 @media screen and (min-width: 1024px) {
-
 	.hero-with-feature-image {
 		grid-template-columns: repeat(2, 1fr);
 	}
-
 	.hero-with-feature-image__text-wrapper {
 		align-content: center;
 		padding: 0 8.5rem;
 	}
-
-	.hero-with-feature-image__text-wrapper h1,
-	.hero-with-feature-image__text-wrapper h2,
-	.hero-with-feature-image__text-wrapper h3,
-	.hero-with-feature-image__text-wrapper h4,
-	.hero-with-feature-image__text-wrapper h5,
-	.hero-with-feature-image__text-wrapper h6 {
+	.hero-with-feature-image__text-wrapper h1, .hero-with-feature-image__text-wrapper h2, .hero-with-feature-image__text-wrapper h3, .hero-with-feature-image__text-wrapper h4, .hero-with-feature-image__text-wrapper h5, .hero-with-feature-image__text-wrapper h6 {
 		text-align: left;
 	}
-
 	.hero-with-feature-image__text-wrapper h1 {
 		font-size: 3rem;
 		font-weight: 900;
 	}
-
 	.hero-with-feature-image__image-wrapper {
 		height: calc(100vh - 5.5rem);
 	}
-
 	.hero-with-feature-image__image-wrapper .wp-post-image {
 		height: auto;
 		max-width: unset;
 		width: unset;
 	}
-
 	.hero-with-feature-image__image-wrapper--img-content {
 		grid-column: 1/2;
 		grid-row: 1/2;
 	}
-
 	.hero-with-feature-image .menu-donation-sponsorship-container ul {
 		grid-template-columns: repeat(2, 1fr);
 		grid-column-gap: 1rem;
@@ -1172,14 +1116,12 @@ textarea {
 }
 
 @media screen and (min-width: 768px) {
-
 	.goals {
 		display: grid;
 		grid-template-columns: 52% 48%;
 		grid-template-rows: repeat(3, auto);
 		padding: 0;
 	}
-
 	.goals__heading {
 		padding: 0.75rem 3.25rem;
 		grid-row: 1/2;
@@ -1187,25 +1129,21 @@ textarea {
 		font-size: 2rem;
 		text-align: left;
 	}
-
 	.goals__copy {
 		padding: 0 3.25rem 1.5rem 3.25rem;
 		grid-row: 2/3;
 		grid-column: 1/3;
 		line-height: 2rem;
 	}
-
 	.goals__list {
 		grid-row: 3/4;
 		padding: 2rem 0 2rem 3.25rem;
 	}
-
 	.goals__list-item {
 		display: grid;
 		grid-template-columns: 3.75rem auto;
 		margin-bottom: 1rem;
 	}
-
 	.goals__list-item-icon {
 		width: 2rem;
 		justify-self: start;
@@ -1213,7 +1151,6 @@ textarea {
 		grid-row: 1/2;
 		padding-top: 0.4rem;
 	}
-
 	.goals__image {
 		height: 20rem;
 		align-self: center;
@@ -1222,40 +1159,31 @@ textarea {
 }
 
 @media screen and (min-width: 1024px) {
-
 	.goals {
 		grid-template-columns: 55% 45%;
 		grid-template-rows: 5rem auto auto auto 5rem;
 		padding: 0 3.25rem;
 		row-gap: 1rem;
 	}
-
-	.goals__heading,
-	.goals__copy,
-	.goals__list {
+	.goals__heading, .goals__copy, .goals__list {
 		grid-column: 1/2;
 		padding: 0;
 	}
-
 	.goals__heading {
 		grid-row: 2/3;
 		text-align: left;
 	}
-
 	.goals__copy {
 		grid-row: 3/4;
 	}
-
 	.goals__list {
 		grid-row: 4/5;
 		padding-left: 5rem;
 		padding: 0;
 	}
-
 	.goals__list-item {
 		margin-bottom: 1rem;
 	}
-
 	.goals__image {
 		grid-column: 2/3;
 		grid-row: 1/6;
@@ -1263,36 +1191,30 @@ textarea {
 		align-self: center;
 		justify-self: center;
 	}
-
 	.goals {
 		grid-template-rows: repeat(4, auto);
 		padding: 4rem 8.5rem;
 		grid-template-columns: 46%;
 		row-gap: 2rem;
 	}
-
 	.goals__heading {
 		font-size: 3.5rem;
 		font-weight: 900;
 	}
-
 	.goals__copy {
 		font-weight: 700;
 	}
-
 	.goals__list-item {
 		margin-bottom: 1rem;
 		font-size: 1.1rem;
 		margin-bottom: 2rem;
 		grid-template-columns: 7.75rem auto;
 	}
-
 	.goals__list-item-icon {
 		width: 4rem;
 		justify-self: start;
 		padding-top: 0.5rem;
 	}
-
 	.goals__image {
 		height: 82%;
 		justify-self: end;
@@ -1302,7 +1224,7 @@ textarea {
 
 .site-header {
 	width: 100%;
-	background: #fff;
+	background: #ffffff;
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem 1.75rem;
@@ -1326,7 +1248,7 @@ textarea {
 	padding: 1.75rem;
 	z-index: 100;
 	border-radius: 10px 0 0 10px;
-	background: #fff;
+	background: #ffffff;
 	cursor: pointer;
 }
 
@@ -1384,24 +1306,20 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
-
 	.site-header {
-		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.07);
+		box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.07);
 		position: fixed;
 		z-index: 100;
 		top: 0;
 		line-height: 0;
 	}
-
 	.site-header .custom-logo {
 		width: 4rem;
 		border-bottom: none !important;
 	}
-
 	.site-header .menu-toggle {
 		display: none;
 	}
-
 	.site-header .menu {
 		width: auto;
 		align-items: center;
@@ -1411,7 +1329,6 @@ body {
 		flex-direction: row;
 		justify-content: space-around;
 	}
-
 	.site-header .menu .toggled {
 		background: none;
 		height: unset;
@@ -1420,13 +1337,11 @@ body {
 		box-sizing: border-box;
 		opacity: 1;
 	}
-
 	.site-header .menu-item {
 		display: block;
 		width: unset;
 		height: unset;
 	}
-
 	.site-header .menu-item a {
 		text-transform: uppercase;
 		font-size: 1rem;
@@ -1435,11 +1350,9 @@ body {
 		padding-right: 1.5rem;
 		line-height: 1.75;
 	}
-
 	.site-header .current-menu-item {
 		border-bottom: #2772e5 0.15rem solid;
 	}
-
 	main {
 		margin-top: 5.75rem;
 	}
@@ -1449,3 +1362,5 @@ body {
 	width: 100%;
 	max-width: 55rem;
 }
+
+/*# sourceMappingURL=style.css.map */
