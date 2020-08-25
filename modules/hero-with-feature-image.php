@@ -19,13 +19,19 @@ $heading_level = $p['heading_level'];
                     );
                     break;
                 case "collaborators":
-                    echo '<a href="#">Become A Collaborator</a>';
+                    wp_nav_menu(
+                        array(
+                            'menu' => 'Collaborators',
+                        )
+                    );
                     break;
                 case "awards":
-                    echo '<a href="#">Apply</a>';
+                    wp_nav_menu(
+                        array(
+                            'menu' => 'Award Application',
+                        )
+                    );
                     break;
-                default:
-                    echo '';
             }
         ?>
     </div>
