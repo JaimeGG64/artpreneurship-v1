@@ -3,15 +3,26 @@
 $style = "";
 $classes = "";
 
+$repeater = $p['collaborator_container'];
+$order = array();
+
+foreach ($repeater as $i => $row) {
+    $order[$i] = $row['name'];
+}
+
+array_multisort($order, SORT_ASC, $repeater);
+
 ?>
 <section class="collab-list-section">
-    <dl class="collab-list-section__list">
-        <?php foreach ($p['collaborator_container'] as $value) { ?>
-            <div class="collab">
-                <dt class="collab__name"><?php echo $value['name']; ?></dt>
-                <dd class="collab__desc"><?php echo $value['job_title']; ?></dd>
-                <img class="collab__image" src="<?php echo $value['profile_picture']['url']; ?>" alt="<?php echo $value['profile_picture']['alt']; ?>">
-            </div>
-        <?php } ?>
-    </dl>
+    <?php if ($repeater) : ?>
+        <dl class="collab-list-section__list">
+            <?php foreach ($repeater as $i => $row) : ?>
+                <div class="collab">
+                    <img class="collab__image" src="<?php echo $row['profile_picture']['url']; ?>" alt="<?php echo $row['profile_picture']['alt']; ?>">
+                    <dt class="collab__name"><?php echo $row['name']; ?></dt>
+                    <dd class="collab__desc"><?php echo $row['job_title']; ?></dd>
+                </div>
+            <?php endforeach; ?>
+        </dl>
+    <?php endif; ?>
 </section>
