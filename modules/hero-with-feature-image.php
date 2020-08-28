@@ -1,13 +1,13 @@
 <?php 
 
 $style = "";
-$classes = $p['content_order'] == 'image-content' ? 'hero-with-feature-image__image-wrapper--img-content' : '' ;
+$classes = $p['content_order'] == 'image-content' ? 'hero-with-feature-image__image-wrapper hero-with-feature-image__image-wrapper--img-content' : 'hero-with-feature-image__image-wrapper hero-with-feature-image__image-wrapper--content-img' ;
 
 $heading_level = $p['heading_level'];
 ?>
-<section class="hero-with-feature-image">
+<section class="hero-with-feature-image ">
     <div class="hero-with-feature-image__text-wrapper">
-        <?php echo "<" . $heading_level . ">" . $p['headline'] . "</" . $heading_level . ">"; ?>
+        <?php echo '<' . $heading_level . ' class="hero-with-feature-image__headline">' . $p['headline'] . '</' . $heading_level . '>'; ?>
         <?php echo $p['description']; ?>
         <?php
             switch ($p['feature_button']) {
@@ -35,7 +35,7 @@ $heading_level = $p['heading_level'];
             }
         ?>
     </div>
-    <div class="hero-with-feature-image__image-wrapper <?php echo $classes ?>">
+    <div class="<?php echo $classes ?>">
         <?php the_post_thumbnail(); ?>
     </div>
 </section> 

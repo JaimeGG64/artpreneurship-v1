@@ -4,10 +4,6 @@
         display: grid;
         padding: 1rem $mobile-gutter;
         row-gap: .75rem;
-        h1, h2, h3, h4, h5, h6 {
-            text-align: center;
-            line-height: 1.5;
-        }
         p,
         h1,
         dl,
@@ -15,6 +11,12 @@
         dd {
             margin: 0;
         }
+    }
+    &__headline{
+        text-align: center;
+        line-height: 1.25;
+        font-size: 3rem;
+        font-weight: 900;
     }
     &__image-wrapper {
         height: 20rem;
@@ -66,10 +68,6 @@
                 text-align: left;
                 line-height: 1.25;
             }
-            h1 {
-                font-size: 3rem;
-                font-weight: 900;
-            }
         }
         &__image-wrapper {
             height: calc(100vh - 5.5rem);
@@ -78,9 +76,14 @@
                 max-width: unset;
                 width: unset;
             }
+            &--img-content, &--content-img{
+                grid-row: 1/2;
+            }
             &--img-content {
                 grid-column: 1/2;
-                grid-row: 1/2;
+            }
+            &--content-img {
+                grid-column: 2/3;
             }
         }
         .menu-donation-sponsorship-container{
