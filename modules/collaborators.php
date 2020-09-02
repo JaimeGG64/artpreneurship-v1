@@ -22,6 +22,9 @@ array_multisort($sorted, SORT_ASC, $repeater);
                     <dt class="collab__name"><?php echo $display['name']; ?></dt>
                     <dd class="collab__desc"><?php echo $display['job_title']; ?></dd>
                 </div>
+                <?php var_dump($display['profile_picture']); ?>
+                <?php var_dump($display['profile_picture']['url']); ?>
+
             <?php endforeach; ?>
         </dl>
     <?php endif; ?>
