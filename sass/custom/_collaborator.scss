@@ -1,0 +1,67 @@
+.collab-list-section {
+    padding: $mobile-gutter;
+    &__list{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: $mobile-gutter;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .collab-list-section {
+        padding: $tablet-gutter;
+        &__list{
+            grid-template-columns: repeat(2, auto);
+            grid-gap: $tablet-gutter;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .collab-list-section {
+        padding: 5rem $tablet-gutter;
+        &__list{
+            grid-template-columns: repeat(3, auto);
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .collab-list-section {
+        padding: $lg-gutter;
+    }
+}
+
+.collab {
+    box-shadow: 0 .25rem 1.25rem rgba(0, 0, 0, .07);
+    width: 100%;
+    justify-self: center;
+    border-radius: 10px;
+    max-width: 25rem;
+    overflow: hidden;
+    padding: $mobile-gutter;
+    display: grid;
+    box-sizing: border-box;
+    &__image {
+        width: 85%;
+        justify-self: center;
+    }
+    &__name {
+        font-size: 1.75rem;
+    }
+    &__desc {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .collab {
+        max-width: 29rem;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .collab {
+        max-width: 29rem;
+    }
+}
