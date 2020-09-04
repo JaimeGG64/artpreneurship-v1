@@ -39,9 +39,16 @@ array_multisort($sorted, SORT_REGULAR, $repeater);
                         <div class="event-info__timestamp"><?php echo formatTimeStamp($display['event_timestamp']); ?></div>
                         <a class="event-info__button" href="<?php echo $display['event_link']; ?>">Sign up</a>
                     </div>
+                    <?php $eventCount++; ?>
                 <?php endif; ?> 
             <?php endforeach; ?>
         </dl>
     <?php endif; ?> 
-
+    <?php if ($eventCount == 0) : ?>
+        <div class="event-info">
+            <dt class="event-info__name">No upcoming events.</dt>
+            <dd class="event-info__description">Have any ideas? Contact Dave Moon.</dd>
+            <a class="event-info__button" href="">Contact</a>
+        </div>
+    <?php endif; ?> 
 </section>
