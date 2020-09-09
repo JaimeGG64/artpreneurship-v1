@@ -11,24 +11,24 @@ $sorted = array();
 function formatTimeStamp($CMSDateAndTime) {
     $getDate = substr($CMSDateAndTime, 0, 10);
     $unixDateStamp = strtotime($getDate);
-    $formatDate = date("M j, Y", $unixDateStamp);
+    $formatDate = date("M jS", $unixDateStamp);
 
     $getTime = substr($CMSDateAndTime, 10);
     $unixTimeStamp = strtotime($getTime);
-	$formatTime = date("h:ia", $unixTimeStamp);
+	$formatTime = date("g:ia", $unixTimeStamp);
 	
     return '<span class="event-info__timestamp-date">' . $formatDate . '</span>' .
             '<span class="event-info__timestamp-time">' . $formatTime . '</span>'; 
 }
-
-foreach ($repeater as $i => $sortBy) {
-    $sorted[$i] = $sortBy['event_timestamp'];
+if ($repeater) {
+    foreach ($repeater as $i => $sortBy) {
+        $sorted[$i] = $sortBy['event_timestamp'];
+    }
+    array_multisort($sorted, SORT_REGULAR, $repeater);
 }
-array_multisort($sorted, SORT_REGULAR, $repeater);
 ?>
-
 <section id="upcoming-events-li" class="upcoming-event">
-    <h2 class="upcoming-event__heading">Upcoming Activities, Events, and Courses</h2>
+    <h2 class="upcoming-event__heading"><?php echo $p['upcoming_events_headline']; ?></h2>
     <?php if ($repeater) : ?>
         <dl class="event-wrapper__event-list">
             <?php foreach ($repeater as $i => $display) : ?>
@@ -45,10 +45,6 @@ array_multisort($sorted, SORT_REGULAR, $repeater);
         </dl>
     <?php endif; ?> 
     <?php if ($eventCount == 0) : ?>
-        <div class="event-info">
-            <dt class="event-info__name">No upcoming events.</dt>
-            <dd class="event-info__description">Have any ideas? Contact Dave Moon.</dd>
-            <a class="event-info__button" href="">Contact</a>
-        </div>
+        <p>No upcoming events.</p>
     <?php endif; ?> 
 </section>
