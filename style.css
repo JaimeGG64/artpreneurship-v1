@@ -1573,4 +1573,125 @@ body {
 	}
 }
 
+.program-feature {
+	padding: 1.25rem 1.5rem 5rem 1.5rem;
+}
+
+.program-feature__heading {
+	font-size: 2rem;
+	font-weight: 900;
+	text-align: center;
+	line-height: 2;
+}
+
+.program-feature__copy {
+	font-weight: 600;
+	font-size: 1.15rem;
+}
+
+.program-feature__list {
+	display: grid;
+	row-gap: 1.5rem;
+	padding-top: 1rem;
+}
+
+.program-feature__item-wrapper {
+	border-radius: 7px;
+	padding: 2rem;
+	box-shadow: 0 3px 30px rgba(0, 0, 0, 0.07);
+}
+
+.program-feature__link {
+	display: grid;
+	row-gap: 1rem;
+	text-decoration: none;
+	color: #231f20;
+}
+
+.program-feature__term {
+	line-height: 1.25;
+}
+
+.program-feature__def {
+	margin: 0;
+}
+
+.program-feature__icon {
+	width: 4rem;
+	grid-row: 1/2;
+}
+
+@media screen and (min-width: 768px) {
+	.program-feature {
+		display: grid;
+		grid-template-columns: auto 58%;
+		column-gap: 5.5rem;
+		grid-template-rows: 6rem;
+		padding: 8rem 3.25rem;
+	}
+	.program-feature__heading, .program-feature__copy, .program-feature__list {
+		padding: 0;
+	}
+	.program-feature__item-wrapper {
+		padding: 1.25rem;
+	}
+	.program-feature__heading {
+		text-align: left;
+		line-height: initial;
+	}
+	.program-feature__list {
+		grid-column: 2/3;
+		grid-row: 1/3;
+	}
+	.program-feature__link {
+		row-gap: .25rem;
+	}
+	.program-feature__term {
+		font-size: 1.15rem;
+	}
+	.program-feature__def {
+		font-size: 1rem;
+	}
+	.program-feature__icon {
+		width: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.program-feature {
+		grid-template-columns: 1fr 3fr;
+		column-gap: 7.5rem;
+	}
+	.program-feature__list {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 1.75rem;
+	}
+	.program-feature__item-wrapper {
+		padding: 1.5rem 1rem;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.program-feature {
+		padding: 8rem 8.5rem;
+		grid-template-rows: 7.75rem;
+		grid-template-columns: 1fr 3fr;
+	}
+	.program-feature__link {
+		row-gap: 0rem;
+	}
+	.program-feature__heading {
+		font-size: 3rem;
+	}
+	.program-feature__item-wrapper {
+		padding: 2rem;
+	}
+	.program-feature__term {
+		font-size: 1.25rem;
+	}
+	.program-feature__icon {
+		width: 3rem;
+	}
+}
+
 /*# sourceMappingURL=style.css.map */
