@@ -1,0 +1,111 @@
+.upcoming-event{
+    background: $yellow-hue-1;
+    padding: 0 $mobile-gutter ($mobile-gutter * 2) $mobile-gutter;
+    &__heading{
+        font-weight: $weight-black;
+        font-size: 2rem;
+        text-align: center;
+        padding: 2.5rem 0;
+    }
+    .event-wrapper__event-list{
+        display: grid;
+        row-gap: $mobile-gutter;
+    }
+}
+
+.event-info {
+    background: $white;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    border-radius: 7px;
+    row-gap: 1.25rem;
+    box-shadow: 0px 3px 20px rgba(0,0,0,.07);
+    &__name {
+        grid-row: 2/3;
+    }
+    &__timestamp{
+        display: flex;
+        justify-content: space-between;
+        
+        &-time,&-date{
+            display: block;
+        }
+        &-date{
+            font-size: 1.25rem;
+            font-weight: $weight-black;
+        }
+        &-time{
+            font-weight: $weight-bold;
+        }
+    }
+    &__description{
+        margin: 0;
+        grid-row: 3/4;
+    }
+    &__button {
+        grid-row: 4/5;
+        width: 9rem;
+        justify-self: center;
+        @include base-btn-style($blue, none);
+        &:hover, &:focus{
+            @include base-btn-blur(30px, $blue);
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .event-info{
+        grid-template-columns: 5.75rem 48% auto;
+        grid-template-rows: repeat(4,auto);
+        column-gap: 1rem;
+        row-gap: 1rem;
+        &__name {
+            grid-row: 1/2;
+            grid-column: 2/3;
+        }
+        &__description{
+            grid-column: 2/3;
+            grid-row: 2/5;
+        }
+        &__button{
+            grid-column: 3/4;
+            grid-row: 1/5;
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            align-self: end;
+        }
+        &__timestamp{
+            flex-direction: column;
+            justify-self: flex-start;
+            align-self: center;
+            grid-row: 1/5;
+            &-time,&-date{
+                text-align: left;
+                width: 8rem;
+                font-size: 1.2rem;
+                font-weight: $weight-black;
+            }
+        }
+    }
+    .upcoming-event{
+        padding: 0 $tablet-gutter $tablet-gutter $tablet-gutter;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .event-info{
+        grid-template-columns: 1fr 3fr 1fr;
+        &__timestamp{
+            justify-self: center;
+        }
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .upcoming-event{
+        padding: 0 $lg-gutter 4rem $lg-gutter;
+    }
+}
