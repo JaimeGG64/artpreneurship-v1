@@ -25,6 +25,9 @@
       row-gap: 1rem;
       text-decoration: none;
       color: $black-hue-1;
+      &:visited{
+        color: $black-hue-1;
+      }
     }
     &__term{
       line-height: 1.25;

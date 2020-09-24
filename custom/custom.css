@@ -454,6 +454,8 @@ body {
     .event-info__button:hover, .event-info__button:focus {
       box-shadow: 0px 0px 30px #2772e5;
       transition: box-shadow 0.2s ease-in-out; }
+    .event-info__button:hover, .event-info__button:focus, .event-info__button:visited {
+      color: #ffffff; }
 
 @media screen and (min-width: 768px) {
   .event-info {
@@ -520,6 +522,8 @@ body {
     row-gap: 1rem;
     text-decoration: none;
     color: #231f20; }
+    .program-feature__link:visited {
+      color: #231f20; }
   .program-feature__term {
     line-height: 1.25; }
   .program-feature__def {

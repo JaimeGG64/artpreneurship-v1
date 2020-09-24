@@ -52,6 +52,9 @@
         &:hover, &:focus{
             @include base-btn-blur(30px, $blue);
         }
+        &:hover, &:focus, &:visited {
+            color: $white;
+        }
     }
 }
 
