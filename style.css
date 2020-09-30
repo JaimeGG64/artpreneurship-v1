@@ -103,15 +103,9 @@ hr {
 	overflow: visible;
 }
 
-<<<<<<< HEAD
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
-=======
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
  */
 pre {
 	font-family: monospace, monospace;
@@ -209,15 +203,9 @@ textarea {
 	margin: 0;
 }
 
-<<<<<<< HEAD
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
-=======
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
  */
 button,
 input {
@@ -271,19 +259,11 @@ fieldset {
 	padding: 0.35em 0.75em 0.625em;
 }
 
-<<<<<<< HEAD
 /**
  * 1. Correct the text wrapping in Edge and IE.
  * 2. Correct the color inheritance from `fieldset` elements in IE.
  * 3. Remove the padding so developers are not caught out when they zero out
  *		`fieldset` elements in all browsers.
-=======
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
  */
 legend {
 	box-sizing: border-box;
@@ -294,13 +274,8 @@ legend {
 	white-space: normal;
 }
 
-<<<<<<< HEAD
 /**
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
-=======
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
  */
 progress {
 	vertical-align: baseline;
@@ -563,11 +538,7 @@ a:hover, a:active {
 	outline: 0;
 }
 
-<<<<<<< HEAD
 /* Forms
-=======
-/* Forms
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
 --------------------------------------------- */
 button,
 input[type="button"],
@@ -778,13 +749,6 @@ textarea {
 .widget {
 	margin: 0 0 1.5em;
 }
-<<<<<<< HEAD
-=======
-
-.widget select {
-	max-width: 100%;
-}
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
 
 .widget select {
 	max-width: 100%;
@@ -964,13 +928,8 @@ textarea {
 }
 
 .btn-blue a {
-<<<<<<< HEAD
 	/* Only need to pass in the button color and border properties. This check will set the correct
         text color. 
-=======
-	/* Only need to pass in the button color and border properties. This check will set the correct
-        text color. 
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
         If the button is yellow, the text should be black. Otherwise the text color is white. */
 	color: #ffffff;
 	background-color: #2772e5;
@@ -994,13 +953,8 @@ textarea {
 }
 
 .btn-yellow a {
-<<<<<<< HEAD
 	/* Only need to pass in the button color and border properties. This check will set the correct
         text color. 
-=======
-	/* Only need to pass in the button color and border properties. This check will set the correct
-        text color. 
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
         If the button is yellow, the text should be black. Otherwise the text color is white. */
 	color: #231f20;
 	background-color: #ffd800;
@@ -1190,11 +1144,7 @@ textarea {
 	}
 }
 
-<<<<<<< HEAD
 .goals__heading, .curricula__heading {
-=======
-.goals__heading {
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
 	padding: 1rem 1.5rem;
 	font-weight: 900;
 	font-size: 2rem;
@@ -1548,13 +1498,8 @@ body {
 	grid-row: 4/5;
 	width: 9rem;
 	justify-self: center;
-<<<<<<< HEAD
 	/* Only need to pass in the button color and border properties. This check will set the correct
         text color. 
-=======
-	/* Only need to pass in the button color and border properties. This check will set the correct
-        text color. 
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
         If the button is yellow, the text should be black. Otherwise the text color is white. */
 	color: #ffffff;
 	background-color: #2772e5;
@@ -1753,7 +1698,6 @@ body {
 	}
 }
 
-<<<<<<< HEAD
 .curricula {
 	display: grid;
 	grid-template-columns: 100%;
@@ -1860,7 +1804,50 @@ body {
 @media screen and (min-width: 1024px) {
 	.curricula__copy-wrapper {
 		padding: 0 7rem 0 3.25rem;
-=======
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.curricula {
+		grid-template-rows: 5rem auto 5rem;
+		grid-template-columns: 42% 58%;
+	}
+	.curricula__heading, .curricula__copy {
+		grid-column: 1/2;
+	}
+	.curricula__heading {
+		font-size: 2.25rem;
+	}
+	.curricula__copy-wrapper {
+		padding: 12rem 7rem;
+	}
+	.curricula__list {
+		padding: 3.25rem 7rem 3.25rem 2.5rem;
+		row-gap: 2.5rem;
+		width: 70%;
+		justify-self: center;
+		padding: 0;
+		align-self: center;
+	}
+	.curricula__list-item-wrapper {
+		grid-template-columns: 6.75rem auto;
+		row-gap: .25rem;
+	}
+	.curricula__list-term {
+		font-size: 1.5rem;
+	}
+	.curricula__list-def {
+		font-size: 1rem;
+		margin: 0;
+	}
+	.curricula__list-icon {
+		width: 4rem;
+		padding: 0;
+		grid-row: 1/3;
+		align-self: center;
+	}
+}
+
 .goals {
 	display: grid;
 	grid-template-columns: 100%;
@@ -1975,49 +1962,10 @@ body {
 		height: 28rem;
 		align-self: center;
 		justify-self: center;
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
 	}
 }
 
 @media screen and (min-width: 1280px) {
-<<<<<<< HEAD
-	.curricula {
-		grid-template-rows: 5rem auto 5rem;
-		grid-template-columns: 42% 58%;
-	}
-	.curricula__heading, .curricula__copy {
-		grid-column: 1/2;
-	}
-	.curricula__heading {
-		font-size: 2.25rem;
-	}
-	.curricula__copy-wrapper {
-		padding: 12rem 7rem;
-	}
-	.curricula__list {
-		padding: 3.25rem 7rem 3.25rem 2.5rem;
-		row-gap: 2.5rem;
-		width: 70%;
-		justify-self: center;
-		padding: 0;
-		align-self: center;
-	}
-	.curricula__list-item-wrapper {
-		grid-template-columns: 6.75rem auto;
-		row-gap: .25rem;
-	}
-	.curricula__list-term {
-		font-size: 1.5rem;
-	}
-	.curricula__list-def {
-		font-size: 1rem;
-		margin: 0;
-	}
-	.curricula__list-icon {
-		width: 4rem;
-		padding: 0;
-		grid-row: 1/3;
-=======
 	.goals {
 		grid-template-rows: repeat(4, auto);
 		padding: 4rem 7rem;
@@ -2045,8 +1993,130 @@ body {
 	.goals__image {
 		height: 82%;
 		justify-self: end;
->>>>>>> b7057a24da77236cac32fa3b013868918497a57d
 		align-self: center;
+	}
+}
+
+.required-items {
+	padding: 1.5rem;
+	display: grid;
+	row-gap: 1.5rem;
+}
+
+.required-items__heading {
+	font-size: 1.75rem;
+	font-weight: 900;
+}
+
+.required-items__list {
+	display: grid;
+	row-gap: 1.5rem;
+}
+
+.required-items__list-item {
+	display: grid;
+	row-gap: .5rem;
+	grid-template-rows: repeat(2, auto);
+	grid-template-columns: 4.75rem auto;
+}
+
+.required-items__list-item-term, .required-items__list-item-def {
+	grid-column: 2/3;
+}
+
+.required-items__list-item-term {
+	grid-row: 1/2;
+	font-size: 1.5rem;
+	line-height: 1.25;
+}
+
+.required-items__list-item-def {
+	grid-row: 2/3;
+	margin: 0;
+}
+
+.required-items__list-item-icon {
+	grid-column: 1/2;
+	grid-row: 1/3;
+	width: 3rem;
+	padding-top: .5rem;
+}
+
+.required-items__image {
+	grid-row: 1/2;
+	width: 50%;
+	justify-self: center;
+}
+
+@media screen and (min-width: 768px) {
+	.required-items {
+		padding: 3rem 3.25rem 0 3.25rem;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, auto);
+	}
+	.required-items__heading {
+		font-size: 1.25rem;
+	}
+	.required-items__heading, .required-items__list {
+		grid-column: 2/3;
+	}
+	.required-items__list {
+		margin-bottom: 2rem;
+	}
+	.required-items__image {
+		grid-column: 1/2;
+		grid-row: 1/3;
+		width: 80%;
+		align-self: end;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.required-items {
+		padding: 5rem 3.25rem 0 3.25rem;
+		grid-template-columns: auto 53%;
+	}
+	.required-items__heading {
+		font-size: 1.5rem;
+	}
+	.required-items__list {
+		margin-bottom: 4rem;
+	}
+	.required-items__list-item-term {
+		font-size: 1.25rem;
+	}
+	.required-items__image {
+		width: 58%;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.required-items {
+		padding: 3rem 7rem 0 7rem;
+		grid-template-columns: auto 50%;
+		row-gap: 3rem;
+	}
+	.required-items__heading {
+		font-size: 1.75rem;
+		align-self: end;
+	}
+	.required-items__list {
+		margin-bottom: 5rem;
+	}
+	.required-items__list-item {
+		grid-template-columns: 6rem auto;
+		row-gap: 0;
+	}
+	.required-items__list-item-term {
+		font-size: 1.5rem;
+	}
+	.required-items__list-item-icon {
+		width: 3.5rem;
+		padding-top: 0;
+		align-self: center;
+	}
+	.required-items__image {
+		width: 57%;
 	}
 }
 
