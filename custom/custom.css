@@ -16,7 +16,8 @@
   display: block;
   align-self: baseline;
   box-sizing: border-box;
-  min-width: 12.5rem; }
+  min-width: 12.5rem;
+  width: max-content; }
   .btn-blue a:hover, .btn-blue a:focus {
     box-shadow: 0px 0px 30px #2772e5;
     transition: box-shadow 0.2s ease-in-out; }
@@ -38,7 +39,8 @@
   display: block;
   align-self: baseline;
   box-sizing: border-box;
-  min-width: 12.5rem; }
+  min-width: 12.5rem;
+  width: max-content; }
   .btn-yellow a:hover, .btn-yellow a:focus {
     box-shadow: 0px 0px 30px #ffd800;
     transition: box-shadow 0.2s ease-in-out; }
@@ -48,7 +50,7 @@
   .hero-with-feature-image__text-wrapper {
     display: grid;
     padding: 1rem 1.5rem;
-    row-gap: .75rem; }
+    row-gap: 0.75rem; }
     .hero-with-feature-image__text-wrapper p,
     .hero-with-feature-image__text-wrapper h1,
     .hero-with-feature-image__text-wrapper dl,
@@ -78,39 +80,70 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; }
+    display: flex;
+    flex-direction: column; }
+    .hero-with-feature-image div:last-child ul li {
+      display: flex;
+      padding-bottom: 1rem;
+      justify-content: center; }
 
 @media screen and (min-width: 768px) {
   .hero-with-feature-image__text-wrapper {
     padding: 3.25rem; }
   .hero-with-feature-image__image-wrapper .wp-post-image {
-    height: unset;
-    width: 100%; } }
+    height: unset; } }
 
 @media screen and (min-width: 1024px) {
   .hero-with-feature-image {
     grid-template-columns: repeat(2, 1fr); }
+    .hero-with-feature-image--content-img {
+      grid-template-areas: "text image"; }
+    .hero-with-feature-image--img-content {
+      grid-template-areas: "image text"; }
+    .hero-with-feature-image--half {
+      grid-template-columns: 1fr 1fr; }
+    .hero-with-feature-image--one-two {
+      grid-template-columns: 1fr 2fr; }
+    .hero-with-feature-image--two-one {
+      grid-template-columns: 2fr 1fr; }
+    .hero-with-feature-image--three-five {
+      grid-template-columns: 3fr 5fr; }
+    .hero-with-feature-image--five-three {
+      grid-template-columns: 5fr 3fr; }
+    .hero-with-feature-image--five-seven {
+      grid-template-columns: 5fr 7fr; }
+    .hero-with-feature-image--seven-five {
+      grid-template-columns: 7fr 5fr; }
+    .hero-with-feature-image--seven-nine {
+      grid-template-columns: 7fr 9fr; }
+    .hero-with-feature-image--nine-seven {
+      grid-template-columns: 9fr 7fr; }
     .hero-with-feature-image__text-wrapper {
       align-content: center;
+      grid-area: text;
       padding: 0 7rem; }
-      .hero-with-feature-image__text-wrapper h1, .hero-with-feature-image__text-wrapper h2, .hero-with-feature-image__text-wrapper h3, .hero-with-feature-image__text-wrapper h4, .hero-with-feature-image__text-wrapper h5, .hero-with-feature-image__text-wrapper h6 {
+      .hero-with-feature-image__text-wrapper h1,
+      .hero-with-feature-image__text-wrapper h2,
+      .hero-with-feature-image__text-wrapper h3,
+      .hero-with-feature-image__text-wrapper h4,
+      .hero-with-feature-image__text-wrapper h5,
+      .hero-with-feature-image__text-wrapper h6 {
         text-align: left;
         line-height: 1.25; }
     .hero-with-feature-image__image-wrapper {
-      height: calc(100vh - 5.5rem); }
+      height: calc(100vh - 5.5rem);
+      grid-area: image; }
       .hero-with-feature-image__image-wrapper .wp-post-image {
         height: auto;
         max-width: unset;
         width: unset; }
-      .hero-with-feature-image__image-wrapper--img-content, .hero-with-feature-image__image-wrapper--content-img {
-        grid-row: 1/2; }
-      .hero-with-feature-image__image-wrapper--img-content {
-        grid-column: 1/2; }
-      .hero-with-feature-image__image-wrapper--content-img {
-        grid-column: 2/3; }
-    .hero-with-feature-image .menu-donation-sponsorship-container ul {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 1rem; } }
+    .hero-with-feature-image div:last-child ul {
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .hero-with-feature-image div:last-child ul li {
+        justify-content: start;
+        padding-right: 1rem;
+        padding-bottom: 0; } }
 
 .collab-list-section {
   padding: 1.5rem; }
@@ -450,7 +483,8 @@ body {
     display: block;
     align-self: baseline;
     box-sizing: border-box;
-    min-width: 12.5rem; }
+    min-width: 12.5rem;
+    width: max-content; }
     .event-info__button:hover, .event-info__button:focus {
       box-shadow: 0px 0px 30px #2772e5;
       transition: box-shadow 0.2s ease-in-out; }

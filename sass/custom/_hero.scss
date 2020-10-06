@@ -1,9 +1,21 @@
+$image-width: (
+    "half": 1fr 1fr,
+    "one-two": 1fr 2fr,
+    "two-one": 2fr 1fr,
+    "three-five": 3fr 5fr,
+    "five-three": 5fr 3fr,
+    "five-seven": 5fr 7fr,
+    "seven-five": 7fr 5fr,
+    "seven-nine": 7fr 9fr,
+    "nine-seven": 9fr 7fr
+);
+
 .hero-with-feature-image {
     display: grid;
     &__text-wrapper {
         display: grid;
         padding: 1rem $mobile-gutter;
-        row-gap: .75rem;
+        row-gap: 0.75rem;
         p,
         h1,
         dl,
@@ -12,7 +24,7 @@
             margin: 0;
         }
     }
-    &__headline{
+    &__headline {
         text-align: center;
         line-height: 1.25;
         font-size: 3rem;
@@ -34,12 +46,18 @@
             transform: translate(-50%, -50%);
         }
     }
-    div:last-child{
-        ul{
+    div:last-child {
+        ul {
             list-style: none;
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
+            li {
+                display: flex;
+                padding-bottom: 1rem;
+                justify-content: center;
+            }
         }
     }
 }
@@ -49,10 +67,9 @@
         &__text-wrapper {
             padding: $tablet-gutter;
         }
-        &__image-wrapper{
-            .wp-post-image{
+        &__image-wrapper {
+            .wp-post-image {
                 height: unset;
-                width: 100%;
             }
         }
     }
@@ -61,35 +78,49 @@
 @media screen and (min-width: map-get($break-point , "lg")) {
     .hero-with-feature-image {
         grid-template-columns: repeat(2, 1fr);
+        &--content-img {
+            grid-template-areas: "text image";
+        }
+        &--img-content {
+            grid-template-areas: "image text";
+        }
+        @each $name, $size in $image-width {
+            &--#{$name} {
+                grid-template-columns: $size;
+            }
+        }
         &__text-wrapper {
             align-content: center;
+            grid-area: text;
             padding: 0 $lg-gutter;
-            h1, h2, h3, h4, h5, h6 {
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
                 text-align: left;
                 line-height: 1.25;
             }
         }
         &__image-wrapper {
             height: calc(100vh - 5.5rem);
-            .wp-post-image{
+            grid-area: image;
+            .wp-post-image {
                 height: auto;
                 max-width: unset;
                 width: unset;
             }
-            &--img-content, &--content-img{
-                grid-row: 1/2;
-            }
-            &--img-content {
-                grid-column: 1/2;
-            }
-            &--content-img {
-                grid-column: 2/3;
-            }
         }
-        .menu-donation-sponsorship-container{
-            ul{
-                grid-template-columns: repeat(2, 1fr);
-                grid-column-gap: 1rem;
+        div:last-child {
+            ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                li {
+                    justify-content: start;
+                    padding-right: 1rem;
+                    padding-bottom: 0;
+                }
             }
         }
     }

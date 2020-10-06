@@ -30,9 +30,12 @@ if (!$pb) { ?>
         $module = $p["acf_fc_layout"];
 		$module = str_replace('_', '-', $module);
         include(locate_template('/modules/' . $module .'.php'));
-    }
+	}
 }
 ?>
+	<section>
+		<?php the_content(); ?>
+	</section>
 </main>
 
 <?php
