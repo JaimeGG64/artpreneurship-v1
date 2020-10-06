@@ -13,7 +13,7 @@ $repeater = $p['list'];
         <dl class="program-feature__list">
             <?php foreach ($repeater as $i => $display) : ?>
                 <div class="program-feature__item-wrapper">
-                    <a href="" class="program-feature__link">
+                    <a href="<?php echo $display['list_link']?>" class="program-feature__link">
                         <dt class="program-feature__term"><?php echo $display['list_heading']; ?></dt>
                         <dd class="program-feature__def"><?php echo $display['list_description']; ?></dd>
                         <img class="program-feature__icon" 
