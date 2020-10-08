@@ -3,7 +3,7 @@
     grid-template-columns: 100%;
     grid-template-rows: repeat(2, auto);
     box-shadow: 0 -.5rem 1.5rem rgba(0, 0, 0, 0.09);
-    &__logo {
+    &__logo, img {
         width: 4.75rem;
     }
     &__info {
@@ -13,13 +13,9 @@
         background: white;
         color: $black-hue-1;
         padding: 3.5rem $mobile-gutter;
-        &--address{
-            @extend .copy;
-        }
         &--contact {
             grid-column: 2/3;
             &-phone, &-email {
-                @extend .copy-bold;
                 font-weight: $weight-bold;
                 text-decoration: none;
             }
@@ -43,7 +39,7 @@
             font-size: .95rem;
             text-align: left;
             color: white;
-            @extend .copy;
+            margin: 0;
         }
     }
 }
@@ -52,7 +48,7 @@
     .footer-wrapper {
         grid-template-columns: 100%;
         grid-template-rows: repeat(2, auto);
-        &__logo {
+        &__logo, img {
             justify-self: left;
         }
         &__info {
@@ -64,6 +60,7 @@
                 grid-column: 3/4;
                 justify-self: right;
                 font-size: $tablet-font-size;
+                margin: 0;
             }
             &--contact {
                 grid-column: 2/3;
@@ -102,7 +99,7 @@
     .footer-wrapper {
         grid-template-columns: 100%;
         grid-template-rows: repeat(2, auto);
-        &__logo {
+        &__logo, img {
             width: 5.5rem;
             grid-row: 1/1;
             grid-column: 2/2;

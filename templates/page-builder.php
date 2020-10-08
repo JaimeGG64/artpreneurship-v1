@@ -11,7 +11,7 @@ if (!$pb) { ?>
 
 	<?php get_header();  ?>
 
-	<main>
+	<main id="primary">
 		<tr>
 			<td>
 				<h1>Coming soon!</h1>
@@ -24,7 +24,7 @@ if (!$pb) { ?>
 
 	get_header('1'); 
     ?>
-    <main>
+    <main id="primary">
     <?php
 	foreach($pb as $p) {
         $module = $p["acf_fc_layout"];
