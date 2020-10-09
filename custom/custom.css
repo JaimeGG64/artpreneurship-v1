@@ -551,6 +551,9 @@ body {
   .upcoming-event .event-wrapper__event-list {
     display: grid;
     row-gap: 1.5rem; }
+  .upcoming-event p {
+    text-align: center;
+    font-size: 1.15rem; }
 
 .event-info {
   background: #ffffff;

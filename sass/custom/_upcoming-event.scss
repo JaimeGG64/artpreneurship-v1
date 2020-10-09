@@ -11,6 +11,10 @@
         display: grid;
         row-gap: $mobile-gutter;
     }
+    p{
+        text-align: center;
+        font-size: 1.15rem;
+    }
 }
 
 .event-info {
