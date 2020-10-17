@@ -1,0 +1,70 @@
+h1,
+h2,
+h3,
+p,
+b,
+strong,
+a,
+li,
+dt,
+dl {
+    font-family: $default-font;
+    margin: 0;
+    color: $black-hue-1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.main-heading,
+h1 {
+    font-weight: 900;
+    font-size: 4.5rem;
+}
+
+.secondary-heading,
+h2 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.tertiary-heading,
+h3 {
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+
+.copy,
+p,
+li,
+dd,
+a {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.copy-bold,
+p,
+dl,
+a {
+    strong,
+    b,
+    dt {
+        font-weight: 700;
+        font-size: 1.15rem;
+        line-height: 1.875;
+    }
+}
+
+%mobile-heading {
+    padding: 1rem $mobile-gutter;
+    font-weight: $weight-black;
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 133.33%;
+    }
+}

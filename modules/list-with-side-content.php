@@ -9,8 +9,7 @@ $repeater = $p['list'];
 <section class="curricula">
     <div class="curricula__copy-wrapper">
         <h2 class="curricula__heading"><?php echo $p['headline']; ?></h2>
-        <p class="curricula__copy"><?php echo $p['paragraph']; ?></p>
-        <p class="curricula__copy"><?php echo $p['paragraph1']; ?></p>
+        <?php echo $p['content']; ?>
     </div>
     <?php if ($repeater) : ?>
         <dl class="curricula__list">

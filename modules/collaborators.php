@@ -3,7 +3,7 @@
 $style = "";
 $classes = "";
 
-$repeater = $p['collaborator_list'];
+$repeater = $p['collaborator_container'];
 $sorted = array();
 
 foreach ($repeater as $i => $sortBy) {

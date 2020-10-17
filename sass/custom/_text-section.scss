@@ -1,0 +1,28 @@
+.text-section {
+    padding-bottom: 2.5rem;
+    padding: 0 $mobile-gutter;
+    display: grid;
+    * {
+        margin: 1rem 0;
+    }
+    h2{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "md")) {
+    .text-section {
+        justify-content: center;
+        padding: 9rem $tablet-gutter;
+    }
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+    .text-section {
+        padding: 10rem 0;
+        * {
+            max-width: 42rem;
+        }
+    }
+}

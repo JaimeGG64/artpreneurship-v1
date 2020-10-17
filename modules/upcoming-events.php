@@ -37,7 +37,7 @@ if ($repeater) {
                         <dt class="event-info__name"><?php echo $display['event_name']; ?></dt>
                         <dd class="event-info__description"><?php echo $display['event_description']; ?></dd>
                         <div class="event-info__timestamp"><?php echo formatTimeStamp($display['event_timestamp']); ?></div>
-                        <a class="event-info__button" href="<?php echo $display['event_link']; ?>">Sign up</a>
+                        <a class="event-info__button" target="_blank" href="<?php echo $display['event_link']; ?>">Sign up</a>
                     </div>
                     <?php $eventCount++; ?>
                 <?php endif; ?> 
@@ -45,6 +45,6 @@ if ($repeater) {
         </dl>
     <?php endif; ?> 
     <?php if ($eventCount == 0) : ?>
-        <p>No upcoming events.</p>
+        <p>No upcoming events</p>
     <?php endif; ?> 
 </section>
