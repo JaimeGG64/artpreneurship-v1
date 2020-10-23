@@ -22,7 +22,7 @@
     align-self: baseline;
     box-sizing: border-box;
     min-width: 12.5rem;
-    width: max-content;
+    width: inherit;
 }
 
 @mixin base-btn-blur($blur, $shadowColor) {
