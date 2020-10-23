@@ -222,6 +222,52 @@ a dt {
   .text-section h2 {
     text-align: center;
     font-size: 2.5rem; }
+  .text-section__link {
+    justify-self: center; }
+    .text-section__link--yellow {
+      /* Only need to pass in the button color and border properties. This check will set the correct
+        text color. 
+        If the button is yellow, the text should be black. Otherwise the text color is white. */
+      color: #231f20;
+      background-color: #ffd800;
+      border: none;
+      font-family: "Lato", sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: .85rem 2.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      align-self: baseline;
+      box-sizing: border-box;
+      min-width: 12.5rem; }
+      .text-section__link--yellow:hover, .text-section__link--yellow:focus {
+        box-shadow: 0px 0px 30px #ffd800;
+        transition: box-shadow 0.2s ease-in-out; }
+    .text-section__link--blue {
+      /* Only need to pass in the button color and border properties. This check will set the correct
+        text color. 
+        If the button is yellow, the text should be black. Otherwise the text color is white. */
+      color: #ffffff;
+      background-color: #2772e5;
+      border: none;
+      font-family: "Lato", sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      padding: .85rem 2.5rem;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      align-self: baseline;
+      box-sizing: border-box;
+      min-width: 12.5rem; }
+      .text-section__link--blue:hover, .text-section__link--blue:focus {
+        box-shadow: 0px 0px 30px #2772e5;
+        transition: box-shadow 0.2s ease-in-out; }
+    .text-section__link--yellow, .text-section__link--blue {
+      width: max-content; }
 
 @media screen and (min-width: 768px) {
   .text-section {
@@ -688,8 +734,7 @@ body {
     display: block;
     align-self: baseline;
     box-sizing: border-box;
-    min-width: 12.5rem;
-    width: inherit; }
+    min-width: 12.5rem; }
     .event-info__button:hover, .event-info__button:focus {
       box-shadow: 0px 0px 30px #2772e5;
       transition: box-shadow 0.2s ease-in-out; }

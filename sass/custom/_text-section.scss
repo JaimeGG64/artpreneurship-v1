@@ -5,9 +5,29 @@
     * {
         margin: 1rem 0;
     }
-    h2{
+    h2 {
         text-align: center;
         font-size: 2.5rem;
+    }
+    &__link {
+        justify-self: center;
+        &--yellow {
+            @include base-btn-style($yellow-hue-1, none);
+            &:hover,
+            &:focus {
+                @include base-btn-blur(30px, $yellow-hue-1);
+            }
+        }
+        &--blue {
+            @include base-btn-style($blue, none);
+            &:hover,
+            &:focus {
+                @include base-btn-blur(30px, $blue);
+            }
+        }
+        &--yellow, &--blue {
+            width: max-content;
+        }
     }
 }
 
