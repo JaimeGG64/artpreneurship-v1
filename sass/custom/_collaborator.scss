@@ -19,7 +19,7 @@
 
 @media screen and (min-width: map-get($break-point , "lg")) {
     .collab-list-section {
-        padding: 5rem $tablet-gutter;
+        padding: 5rem $lg-gutter;
         &__list{
             grid-template-columns: repeat(3, auto);
         }
@@ -28,7 +28,7 @@
 
 @media screen and (min-width: map-get($break-point , "xl")) {
     .collab-list-section {
-        padding: $lg-gutter;
+        padding: 5rem $xl-gutter;
     }
 }
 

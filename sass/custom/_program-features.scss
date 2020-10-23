@@ -93,7 +93,7 @@
 
 @media screen and (min-width: map-get($break-point , "xl")) {
     .program-feature{
-        padding: 8rem $lg-gutter;
+        padding: 8rem $xl-gutter;
         grid-template-rows: 7.75rem;;
         grid-template-columns: 1fr 3fr;
         &__link{

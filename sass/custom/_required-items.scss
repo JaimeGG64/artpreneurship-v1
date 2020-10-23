@@ -87,7 +87,7 @@
 
 @media screen and (min-width: map-get($break-point , "xl")) {
     .required-items{
-        padding: 3rem $lg-gutter 0 $lg-gutter;
+        padding: 3rem $xl-gutter 0 $xl-gutter;
         grid-template-columns: auto 50%;
         row-gap: 3rem;
         &__heading{

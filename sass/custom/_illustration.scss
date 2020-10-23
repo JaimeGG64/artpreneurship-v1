@@ -123,7 +123,7 @@
     }
     .goals {
         grid-template-rows: repeat(4, auto);
-        padding: 4rem $lg-gutter;
+        padding: 4rem $xl-gutter;
         grid-template-columns: 46%;
         row-gap: 2rem;
         &__heading {

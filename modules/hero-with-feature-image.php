@@ -38,6 +38,6 @@ $heading_level = $p['heading_level'];
         ?>
     </div>
     <div class="hero-with-feature-image__image-wrapper">
-        <?php the_post_thumbnail(); ?>
+        <img src="<?php echo $p['feature_image']['url']; ?>" alt="<?php echo $p['feature_image']['alt']; ?>"/>
     </div>
 </section> 

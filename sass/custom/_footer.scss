@@ -108,7 +108,7 @@
         }
         &__info {
             grid-template-columns: 25% 50% 25%;
-            padding: 4.5rem $lg-gutter;
+            padding: 4.5rem $xl-gutter;
             text-align: left;
             &--address {
                 grid-column: 2/2;
@@ -126,7 +126,7 @@
             }
         }
         &__copyright {
-            padding: 1.5rem $lg-gutter;
+            padding: 1.5rem $xl-gutter;
             &--logos {
                 display: none;
             }

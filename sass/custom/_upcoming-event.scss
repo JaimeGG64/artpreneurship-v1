@@ -113,6 +113,6 @@
 
 @media screen and (min-width: map-get($break-point , "xl")) {
     .upcoming-event{
-        padding: 0 $lg-gutter 4rem $lg-gutter;
+        padding: 0 $xl-gutter 4rem $xl-gutter;
     }
 }

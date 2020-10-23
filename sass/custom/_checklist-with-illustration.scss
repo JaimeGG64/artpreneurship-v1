@@ -1,4 +1,4 @@
-.goals {
+.checklist-with-illustration {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: repeat(4, auto);
@@ -6,13 +6,10 @@
     &__heading {
       @extend %mobile-heading;
     }
-    &__copy {
-      font-weight: $weight-bold;
-      font-size: 1.1rem;
-    }
     &__list {
       grid-row: 3/4;
       padding: 2rem 0;
+      margin: 0;
     }
     &__list-item {
       display: grid;
@@ -36,7 +33,7 @@
 }
 
 @media screen and (min-width: map-get($break-point , "md")) {
-    .goals {
+    .checklist-with-illustration {
         display: grid;
         grid-template-columns: 52% 48%;;
         grid-template-rows: repeat(3, auto);
@@ -52,7 +49,6 @@
           padding: 0 $tablet-gutter 1.5rem $tablet-gutter;
           grid-row: 2/3;
           grid-column: 1/3;
-          line-height: 2rem
         }
         &__list {
           grid-row: 3/4;
@@ -79,7 +75,7 @@
 }
 
 @media screen and (min-width: map-get($break-point , "lg")) {
-    .goals {
+    .checklist-with-illustration {
         grid-template-columns: 55% 45%;
         grid-template-rows: 5rem auto auto auto 5rem;
         padding: 0 $tablet-gutter;
@@ -116,17 +112,15 @@
 }
 
 @media screen and (min-width: map-get($break-point , "xl")) {
-    .goals {
+    .checklist-with-illustration {
         grid-template-rows: repeat(4, auto);
-        padding: 4rem $lg-gutter;
+        padding: 4rem $xl-gutter;
         grid-template-columns: 46%;
         row-gap: 2rem;
+        column-gap: 2rem;
         &__heading {
           font-size: 3.5rem;
           font-weight: $weight-black;
-        }
-        &__copy {
-          font-weight: $weight-bold;
         }
         &__list-item {
           margin-bottom: 1rem;
@@ -141,7 +135,6 @@
         }
         &__image {
           height: 82%;
-          justify-self: end;
           align-self: center;
         }
     }

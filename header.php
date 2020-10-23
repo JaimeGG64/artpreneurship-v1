@@ -50,7 +50,16 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'artpreneurship-v1'); ?></button>
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="17" aria-labelledby="toggleMenu" >
+					<title id="toggleMenu">Primary Menu</title>
+					<g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+						<path data-name="Line 4" d="M1 8h22" />
+						<path data-name="Line 5" d="M1 1h22" />
+						<path data-name="Line 6" d="M1 16h22" />
+					</g>
+				</svg>
+				</button>
 				<?php
 				wp_nav_menu(
 					array(
