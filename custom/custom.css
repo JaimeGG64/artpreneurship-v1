@@ -65,6 +65,17 @@ a dt {
   html {
     font-size: 133.33%; } }
 
+.hero-with-feature-image div:last-child ul, .feature-illustration-with-logo div:last-child ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; }
+  .hero-with-feature-image div:last-child ul li, .feature-illustration-with-logo div:last-child ul li {
+    display: flex;
+    padding-bottom: 1rem;
+    justify-content: center; }
+
 .btn-blue a {
   /* Only need to pass in the button color and border properties. This check will set the correct
         text color. 
@@ -142,16 +153,6 @@ a dt {
       left: 50%;
       top: 50%;
       transform: translate(-50%, -40%); }
-  .hero-with-feature-image div:last-child ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; }
-    .hero-with-feature-image div:last-child ul li {
-      display: flex;
-      padding-bottom: 1rem;
-      justify-content: center; }
 
 @media screen and (min-width: 768px) {
   .hero-with-feature-image__text-wrapper {
@@ -212,6 +213,129 @@ a dt {
 @media screen and (min-width: 1280px) {
   .hero-with-feature-image__text-wrapper {
     padding: 0 7rem; } }
+
+.feature-illustration-with-logo {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(4, auto);
+  row-gap: 1rem; }
+  .feature-illustration-with-logo__text-wrapper {
+    display: grid;
+    row-gap: 1rem; }
+  .feature-illustration-with-logo__illustration {
+    width: 63%;
+    grid-row: 1/2;
+    justify-self: center; }
+  .feature-illustration-with-logo .custom-logo {
+    display: none; }
+  .feature-illustration-with-logo__heading {
+    font-size: 2rem;
+    text-align: center; }
+  .feature-illustration-with-logo__copy {
+    font-weight: 600;
+    padding: 0 1.5rem; }
+  .feature-illustration-with-logo__btn-sponsorship, .feature-illustration-with-logo__btn-donate {
+    justify-self: center; }
+  .feature-illustration-with-logo__btn-donate {
+    /* Only need to pass in the button color and border properties. This check will set the correct
+        text color. 
+        If the button is yellow, the text should be black. Otherwise the text color is white. */
+    color: #ffffff;
+    background-color: #2772e5;
+    border: none;
+    font-family: "Lato", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: .85rem 2.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    align-self: baseline;
+    box-sizing: border-box;
+    min-width: 12.5rem; }
+    .feature-illustration-with-logo__btn-donate:hover, .feature-illustration-with-logo__btn-donate:focus {
+      box-shadow: 0px 0px 30px #2772e5;
+      transition: box-shadow 0.2s ease-in-out; }
+  .feature-illustration-with-logo__btn-sponsorship {
+    /* Only need to pass in the button color and border properties. This check will set the correct
+        text color. 
+        If the button is yellow, the text should be black. Otherwise the text color is white. */
+    color: #231f20;
+    background-color: #ffd800;
+    border: none;
+    font-family: "Lato", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: .85rem 2.5rem;
+    border-radius: 10px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    align-self: baseline;
+    box-sizing: border-box;
+    min-width: 12.5rem; }
+    .feature-illustration-with-logo__btn-sponsorship:hover, .feature-illustration-with-logo__btn-sponsorship:focus {
+      box-shadow: 0px 0px 30px #ffd800;
+      transition: box-shadow 0.2s ease-in-out; }
+
+@media screen and (min-width: 768px) {
+  .feature-illustration-with-logo {
+    grid-template-columns: auto 42%;
+    row-gap: 1.5rem;
+    column-gap: 1.35rem;
+    padding: 5rem 3.25rem; }
+    .feature-illustration-with-logo__text-wrapper {
+      row-gap: 1.5rem;
+      align-self: center;
+      grid-row: 1/5; }
+    .feature-illustration-with-logo__heading, .feature-illustration-with-logo__copy {
+      padding: 0;
+      text-align: left; }
+    .feature-illustration-with-logo .custom-logo {
+      display: block;
+      width: 5.5rem; }
+    .feature-illustration-with-logo__btn-sponsorship, .feature-illustration-with-logo__btn-donate {
+      justify-self: start; }
+    .feature-illustration-with-logo__illustration {
+      grid-column: 2/3;
+      grid-row: 1/5;
+      width: 100%;
+      align-self: center; } }
+
+@media screen and (min-width: 1024px) {
+  .feature-illustration-with-logo {
+    grid-template-columns: auto 52%;
+    column-gap: 1rem; }
+    .feature-illustration-with-logo__text-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 1rem; }
+    .feature-illustration-with-logo .custom-logo, .feature-illustration-with-logo__heading, .feature-illustration-with-logo__copy {
+      grid-column: 1/3; }
+    .feature-illustration-with-logo div:last-child ul {
+      flex-direction: row; }
+      .feature-illustration-with-logo div:last-child ul li {
+        justify-content: start;
+        padding-right: 1rem;
+        padding-bottom: 0; } }
+
+@media screen and (min-width: 1024px) {
+  .feature-illustration-with-logo {
+    padding: 5rem 5rem;
+    row-gap: 1.5rem; }
+    .feature-illustration-with-logo__text-wrapper {
+      grid-template-columns: 37% auto; }
+    .feature-illustration-with-logo .custom-logo {
+      width: 6.5rem; }
+    .feature-illustration-with-logo__heading {
+      font-size: 4.3rem;
+      line-height: 1.25; }
+    .feature-illustration-with-logo__illustration {
+      width: 100%; } }
+
+@media screen and (min-width: 1280px) {
+  .feature-illustration-with-logo {
+    padding: 5rem 7rem; } }
 
 .text-section {
   padding-bottom: 2.5rem;

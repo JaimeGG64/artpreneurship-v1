@@ -1,15 +1,3 @@
-$image-width: (
-    "half": 1fr 1fr,
-    "one-two": 1fr 2fr,
-    "two-one": 2fr 1fr,
-    "three-five": 3fr 5fr,
-    "five-three": 5fr 3fr,
-    "five-seven": 5fr 7fr,
-    "seven-five": 7fr 5fr,
-    "seven-nine": 7fr 9fr,
-    "nine-seven": 9fr 7fr
-);
-
 .hero-with-feature-image {
     display: grid;
     &__text-wrapper {
@@ -47,18 +35,7 @@ $image-width: (
         }
     }
     div:last-child {
-        ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            li {
-                display: flex;
-                padding-bottom: 1rem;
-                justify-content: center;
-            }
-        }
+        @extend %style-wp-nav ;
     }
 }
 
@@ -111,14 +88,7 @@ $image-width: (
             }
         }
         div:last-child {
-            ul {
-                flex-direction: row;
-                li {
-                    justify-content: start;
-                    padding-right: 1rem;
-                    padding-bottom: 0;
-                }
-            }
+            @include style-wp-nav-lg ;
         }
     }
 }

@@ -1,0 +1,25 @@
+%style-wp-nav {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        li {
+            display: flex;
+            padding-bottom: 1rem;
+            justify-content: center;
+        }
+    }
+}
+
+@mixin style-wp-nav-lg {
+    ul {
+        flex-direction: row;
+        li {
+            justify-content: start;
+            padding-right: 1rem;
+            padding-bottom: 0;
+        }
+    }
+}

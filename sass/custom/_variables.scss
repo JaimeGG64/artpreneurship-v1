@@ -26,6 +26,18 @@ $break-point: (
     "xl": 1280px
 );
 
+$image-width: (
+    "half": 1fr 1fr,
+    "one-two": 1fr 2fr,
+    "two-one": 2fr 1fr,
+    "three-five": 3fr 5fr,
+    "five-three": 5fr 3fr,
+    "five-seven": 5fr 7fr,
+    "seven-five": 7fr 5fr,
+    "seven-nine": 7fr 9fr,
+    "nine-seven": 9fr 7fr
+);
+
 // Gutters
 $mobile-gutter: 1.5rem;
 $tablet-gutter: 3.25rem;
