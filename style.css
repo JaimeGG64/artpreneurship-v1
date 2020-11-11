@@ -2953,4 +2953,73 @@ body {
 	}
 }
 
+.knowbility {
+	background: #FAD4DD;
+	height: 20rem;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	row-gap: 1.5rem;
+}
+
+.knowbility p {
+	font-size: 2rem;
+	padding: 0 1.5rem;
+	font-weight: 700;
+	text-align: center;
+	line-height: 2.5rem;
+}
+
+.knowbility__btn {
+	/* Only need to pass in the button color and border properties. This check will set the correct
+        text color. 
+        If the button is yellow, the text should be black. Otherwise the text color is white. */
+	color: #231f20;
+	background-color: #ffffff;
+	border: none;
+	font-family: "Lato", sans-serif;
+	font-size: 1.15rem;
+	font-weight: 700;
+	padding: .85rem 2.5rem;
+	border-radius: 10px;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	align-self: baseline;
+	box-sizing: border-box;
+	min-width: 12.5rem;
+	width: 9rem;
+	justify-self: center;
+}
+
+.knowbility__btn:hover, .knowbility__btn:focus {
+	box-shadow: 0px 0px 30px #ffffff;
+	transition: box-shadow 0.2s ease-in-out;
+}
+
+.knowbility img {
+	height: 3rem;
+	vertical-align: bottom;
+}
+
+/*@media screen and (min-width: map-get($break-point , "md")) {
+
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+
+}*/
+@media screen and (min-width: 1280px) {
+	.knowbility {
+		height: 24rem;
+		row-gap: 2.5rem;
+	}
+	.knowbility__copy {
+		font-size: 2.25rem;
+	}
+	.knowbility__logo {
+		height: 5.75rem;
+	}
+}
+
 /*# sourceMappingURL=style.css.map */

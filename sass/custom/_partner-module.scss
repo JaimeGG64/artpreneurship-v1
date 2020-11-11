@@ -1,0 +1,48 @@
+.knowbility{
+    background: #FAD4DD;
+    height: 20rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    row-gap: 1.5rem;
+    p {
+      font-size: 2rem;
+      padding: 0 $mobile-gutter;
+      font-weight: $weight-bold;
+      text-align: center;
+      line-height: 2.5rem;
+    }
+    &__btn{
+      @include base-btn-style($white, none);
+      width: 9rem;
+      justify-self: center;
+      &:hover,
+      &:focus {
+        @include base-btn-blur(30px, $white);
+      }
+    }
+    img {
+      height: 3rem;
+      vertical-align: bottom;
+    }
+}
+/*@media screen and (min-width: map-get($break-point , "md")) {
+
+}
+
+@media screen and (min-width: map-get($break-point , "lg")) {
+
+}*/
+
+@media screen and (min-width: map-get($break-point , "xl")) {
+    .knowbility{
+        height: 24rem;
+        row-gap: 2.5rem;
+        p {
+          font-size: 2.25rem;
+        }
+        img {
+          height: 5.75rem;
+        }
+    }
+}
