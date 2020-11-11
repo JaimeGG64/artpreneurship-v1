@@ -1,4 +1,4 @@
-.knowbility{
+.partner_module{
     background: #FAD4DD;
     height: 20rem;
     display: grid;
@@ -35,7 +35,7 @@
 }*/
 
 @media screen and (min-width: map-get($break-point , "xl")) {
-    .knowbility{
+    .partner_module{
         height: 24rem;
         row-gap: 2.5rem;
         p {
