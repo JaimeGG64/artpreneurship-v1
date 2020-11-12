@@ -43,7 +43,7 @@
 @media screen and (min-width: map-get($break-point , "lg")) {
     .hero-with-feature-illustration {
         grid-template-columns: repeat(2, 1fr);
-        padding: 2rem $lg-gutter;
+        padding: 3rem $lg-gutter;
         column-gap: 1rem;
         &--content-img {
             grid-template-areas:
@@ -90,6 +90,6 @@
 
 @media screen and (min-width: map-get($break-point , "xl")) {
     .hero-with-feature-illustration {
-        padding: 4rem $xl-gutter;
+        padding: 5rem $xl-gutter;
     }
 }

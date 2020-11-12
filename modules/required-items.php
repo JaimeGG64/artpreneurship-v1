@@ -9,7 +9,7 @@ $repeater = $p['list'];
 <section class="required-items">
     <h2 class="required-items__heading"><?php echo $p['headline']; ?></h2>
     <img class="required-items__image" 
-        src="<?php echo $p['illustration']['url']; ?>" 
+        src="<?php echo $p['illustration']['url'] ?>" 
         alt="<?php echo $p['illustration']['alt']; ?>"/>
     <?php if ($repeater) : ?>
         <dl class="required-items__list">

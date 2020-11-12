@@ -42,6 +42,7 @@
     padding: $mobile-gutter;
     display: grid;
     box-sizing: border-box;
+    align-content: start;
     &__image {
         width: 85%;
         justify-self: center;

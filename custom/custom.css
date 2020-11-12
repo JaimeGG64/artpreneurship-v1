@@ -314,7 +314,7 @@ a dt {
 @media screen and (min-width: 1024px) {
 	.hero-with-feature-illustration {
 		grid-template-columns: repeat(2, 1fr);
-		padding: 2rem 5rem;
+		padding: 3rem 5rem;
 		column-gap: 1rem;
 	}
 	.hero-with-feature-illustration--content-img {
@@ -384,7 +384,7 @@ a dt {
 
 @media screen and (min-width: 1280px) {
 	.hero-with-feature-illustration {
-		padding: 4rem 7rem;
+		padding: 5rem 7rem;
 	}
 }
 
@@ -416,7 +416,6 @@ a dt {
 }
 
 .feature-illustration-with-logo__copy {
-	font-weight: 600;
 	padding: 0 1.5rem;
 }
 
@@ -507,33 +506,17 @@ a dt {
 
 @media screen and (min-width: 1024px) {
 	.feature-illustration-with-logo {
+		padding: 5rem 5rem;
+		row-gap: 1.5rem;
 		grid-template-columns: auto 52%;
 		column-gap: 1rem;
 	}
 	.feature-illustration-with-logo__text-wrapper {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 37% auto;
 		column-gap: 1rem;
 	}
 	.feature-illustration-with-logo .custom-logo, .feature-illustration-with-logo__heading, .feature-illustration-with-logo__copy {
 		grid-column: 1/3;
-	}
-	.feature-illustration-with-logo div:last-child ul {
-		flex-direction: row;
-	}
-	.feature-illustration-with-logo div:last-child ul li {
-		justify-content: start;
-		padding-right: 1rem;
-		padding-bottom: 0;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	.feature-illustration-with-logo {
-		padding: 5rem 5rem;
-		row-gap: 1.5rem;
-	}
-	.feature-illustration-with-logo__text-wrapper {
-		grid-template-columns: 37% auto;
 	}
 	.feature-illustration-with-logo .custom-logo {
 		width: 6.5rem;
@@ -545,11 +528,20 @@ a dt {
 	.feature-illustration-with-logo__illustration {
 		width: 100%;
 	}
+	.feature-illustration-with-logo div:last-child ul {
+		flex-direction: row;
+	}
+	.feature-illustration-with-logo div:last-child ul li {
+		justify-content: start;
+		padding-right: 1rem;
+		padding-bottom: 0;
+	}
 }
 
 @media screen and (min-width: 1280px) {
 	.feature-illustration-with-logo {
 		padding: 5rem 7rem;
+		column-gap: 3rem;
 	}
 }
 
@@ -565,6 +557,7 @@ a dt {
 
 .text-section h2 {
 	text-align: center;
+	margin: 0;
 	font-size: 2.5rem;
 }
 
@@ -687,6 +680,7 @@ a dt {
 	padding: 1.5rem;
 	display: grid;
 	box-sizing: border-box;
+	align-content: start;
 }
 
 .collab__image {
@@ -2066,6 +2060,10 @@ body {
 	text-align: left;
 }
 
+.gallery .carousel-inner {
+	line-height: 0;
+}
+
 @media screen and (min-width: 768px) {
 	.gallery__heading {
 		padding: 0.5rem 3.25rem;
@@ -2076,6 +2074,84 @@ body {
 	.gallery__heading {
 		padding: 1rem 3.25rem;
 		font-size: 2.75rem;
+	}
+}
+
+.email-newsletter form #mc_embed_signup_scroll {
+	justify-content: center;
+	display: grid;
+	row-gap: 1rem;
+	padding: 2rem 0;
+}
+
+.email-newsletter form #mc_embed_signup_scroll h2 {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 900;
+}
+
+.email-newsletter form #mc_embed_signup_scroll input[type="email"], .email-newsletter form #mc_embed_signup_scroll input[type="text"] {
+	border-radius: 10px;
+	padding: .5rem 1rem;
+	font-size: 1.15rem;
+	border: none;
+	background-color: rgba(255, 255, 255, 0.84);
+}
+
+.email-newsletter form #mc_embed_signup_scroll .clear {
+	display: grid;
+	justify-content: center;
+}
+
+.email-newsletter--yellow {
+	background: #ffd800;
+}
+
+.email-newsletter--yellow input[type="submit"] {
+	/* Only need to pass in the button color and border properties. This check will set the correct
+        text color. 
+        If the button is yellow, the text should be black. Otherwise the text color is white. */
+	color: #ffffff;
+	background-color: #f3665b;
+	border: none;
+	font-family: "Lato", sans-serif;
+	font-size: 1.15rem;
+	font-weight: 700;
+	padding: .85rem 2.5rem;
+	border-radius: 10px;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	align-self: baseline;
+	box-sizing: border-box;
+	min-width: 12.5rem;
+}
+
+.email-newsletter--yellow input[type="submit"]:hover, .email-newsletter--yellow input[type="submit"]:focus {
+	box-shadow: 0px 0px 30px #f3665b;
+	transition: box-shadow 0.2s ease-in-out;
+}
+
+@media screen and (min-width: 1024px) {
+	.email-newsletter form #mc_embed_signup_scroll {
+		padding: 5rem 0;
+		row-gap: .5rem;
+		column-gap: 1.5rem;
+		grid-template-areas: "headline headline headline" "text-name text-email submit-btn";
+	}
+	.email-newsletter form #mc_embed_signup_scroll h2 {
+		grid-area: headline;
+		padding: .5rem;
+	}
+	.email-newsletter form #mc_embed_signup_scroll input[type="email"] {
+		grid-area: text-email;
+	}
+	.email-newsletter form #mc_embed_signup_scroll input[type="text"] {
+		grid-area: text-name;
+	}
+	.email-newsletter form #mc_embed_signup_scroll .clear {
+		grid-area: submit-btn;
+		align-self: end;
 	}
 }
 
