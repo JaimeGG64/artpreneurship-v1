@@ -8,12 +8,15 @@
 }
 
 .gallery{
-    &__heading{
-      font-size: 2rem;
-      font-weight: $weight-black;
-      padding: .5rem $mobile-gutter;
-      text-align: left;
-    }
+  &__heading{
+    font-size: 2rem;
+    font-weight: $weight-black;
+    padding: .5rem $mobile-gutter;
+    text-align: left;
+  }
+  .carousel-inner{
+    line-height: 0;
+  }
 }
 
 @media screen and (min-width: map-get($break-point , "md")) {

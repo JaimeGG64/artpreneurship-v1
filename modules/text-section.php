@@ -4,7 +4,8 @@ $classes = "";
 ?>
 
 <section class="text-section">
-    <h2 class="text-section__heading"><?php echo $p['text_section_headline'] ?></h2>
+    <h2 class="text-section__heading">
+        <?php echo $p['text_section_headline'] ?></h2>
     <?php 
         echo $p['text_section_copy']
     ?>
