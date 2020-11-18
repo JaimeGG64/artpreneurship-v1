@@ -2,6 +2,9 @@
     padding-bottom: 2.5rem;
     padding: 0 $mobile-gutter;
     display: grid;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
     * {
         margin: 1rem 0;
     }
@@ -36,12 +39,14 @@
     .text-section {
         justify-content: center;
         padding: 9rem $tablet-gutter;
+        background-size: 100% 100%;
     }
 }
 
 @media screen and (min-width: map-get($break-point , "lg")) {
     .text-section {
         padding: 10rem 0;
+        background-size: contain;
         * {
             max-width: 42rem;
         }
