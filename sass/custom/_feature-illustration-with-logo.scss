@@ -80,7 +80,7 @@
 
 @media screen and (min-width: map-get($break-point , "lg")) {
     .feature-illustration-with-logo {
-        padding: 5rem $lg-gutter;
+        padding: 3rem $lg-gutter;
         row-gap: 1.5rem;
         grid-template-columns: auto 52%;
         column-gap: 1rem;
@@ -111,7 +111,7 @@
 
 @media screen and (min-width: map-get($break-point , "xl")) {
     .feature-illustration-with-logo {
-        padding: 5rem $xl-gutter;
+        padding: 3rem $xl-gutter;
         column-gap: 3rem;
     }
 }

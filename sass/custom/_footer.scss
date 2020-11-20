@@ -21,16 +21,33 @@
     }
     &__copyright {
         background: $black-hue-1;
-        display: grid;
-        grid-template-rows: repeat(2, auto);
-        padding: 2rem $mobile-gutter;
-        padding-bottom: 1rem;
-        &--copy{
+        display: flex;
+        padding: 1.5rem;
+        flex-direction: column;
+        &-text{
             color: $white;
-            grid-row: 2/2;
-            font-size: .95rem;
             text-align: left;
-            margin: 0;
+        }
+        a {
+            color: $white;
+            border: .25rem $white solid;
+            margin: .25rem;
+            text-decoration: none;
+            border-radius: 100%;
+            width: 2.5rem;
+            display: flex;
+            height: 2.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__social-media-icons{
+        display: flex;
+        justify-content: center;
+        .fab {
+            display: block;
+            height: min-content;
+            font-size: 1.15rem;
         }
     }
 }
@@ -51,6 +68,12 @@
         }
         .widget:last-child, section:last-child {
             justify-self: start;
+        }
+        &__copyright {
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            align-items: center;
+            padding: 1.25rem;
         }
     }
 }

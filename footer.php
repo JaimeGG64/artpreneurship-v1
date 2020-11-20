@@ -12,10 +12,14 @@
 
 ?>
 
+<?php 
+	$sm = get_field('social_media', 'option');
+	$year = date("Y");
+?>
+
 <footer id="colophon" class="site-footer">
 	<div class="site-info">
 		<?php
-		$year = date("Y");
 		$artpreneurship_v1_description = get_bloginfo('description', 'display');
 		?>
 	</div><!-- .site-info -->
@@ -27,10 +31,16 @@
 		<?php dynamic_sidebar('contact-sidebar') ?>
 	</div>
 	<section class="footer__copyright">
-		<section class="footer__copyright--logos">
-			<a href="#"><img alt="Link to Facebook." src="img/facebook.svg" class="footer__copyright--logos-facebook"></a><a href="#"><img alt="Link to Twitter." src="img/twitter.svg" class="footer__copyright--logos-twitter"></a><a href="#"><img alt="Link to Instagram." src="img/instagram.svg" class="footer__copyright--logos-instagram"></a>
-		</section>
-		<p class="footer__copyright--copy">© Copyright <?php echo $year ?>. Artpreneurship All Rights Reserved</p>
+		<?php if($sm) : ?>
+			<div class="footer__social-media-icons">
+				<?php foreach($sm as $s) { ?>
+					<a href="<?php echo $s['social_media_url'] ?>" target="_blank" rel="nofollow">
+						<i class="fab <?php echo $s['social_media_icon_name'] ?>"></i>
+					</a>
+				<?php } ?>
+			</div>
+		<?php endif ?>
+		<p class="footer__copyright-text">© Copyright <?php echo $year ?>. Artpreneurship All Rights Reserved</p>
 		<?php
 		if (is_customize_preview()) :
 		?>
