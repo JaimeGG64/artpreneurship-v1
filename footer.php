@@ -15,6 +15,19 @@
 <?php 
 	$sm = get_field('social_media', 'option');
 	$year = date("Y");
+
+	function trim_social_media_name($socialMediaName) {
+		$faPosition = 3;
+		$trimOffFistPart = substr($socialMediaName, $faPosition);
+		if(strpos($trimOffFistPart, '-')){
+			$dashPositon = strpos($trimOffFistPart, '-');
+			$formatedName = substr($socialMediaName, $faPosition, $dashPositon);
+			return $formatedName;
+		}
+		else{
+			return $trimOffFistPart;
+		}
+	} 
 ?>
 
 <footer id="colophon" class="site-footer">
@@ -35,6 +48,7 @@
 			<div class="footer__social-media-icons">
 				<?php foreach($sm as $s) { ?>
 					<a href="<?php echo $s['social_media_url'] ?>" target="_blank" rel="nofollow">
+						<span class="sr-only"> <?php echo trim_social_media_name($s['social_media_icon_name']) ?> </span>
 						<i class="fab <?php echo $s['social_media_icon_name'] ?>"></i>
 					</a>
 				<?php } ?>

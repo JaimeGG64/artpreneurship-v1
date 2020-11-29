@@ -1467,7 +1467,7 @@ a dt {
     justify-content: space-between;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 1.25rem; } }
+    padding: 1.25rem 3.5rem; } }
 
 @media screen and (min-width: 1024px) {
   .footer {
