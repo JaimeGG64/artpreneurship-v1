@@ -46,9 +46,10 @@
 	<section class="footer__copyright">
 		<?php if($sm) : ?>
 			<div class="footer__social-media-icons">
+				<h2 class="sr-only">Social Media</h2>
 				<?php foreach($sm as $s) { ?>
 					<a href="<?php echo $s['social_media_url'] ?>" target="_blank" rel="nofollow">
-						<span class="sr-only"> <?php echo trim_social_media_name($s['social_media_icon_name']) ?> </span>
+						<span class="sr-only"> Artpreneurship <?php echo trim_social_media_name($s['social_media_icon_name']) ?> </span>
 						<i class="fab <?php echo $s['social_media_icon_name'] ?>"></i>
 					</a>
 				<?php } ?>
