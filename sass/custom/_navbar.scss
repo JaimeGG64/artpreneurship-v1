@@ -49,6 +49,12 @@
                 line-height: 0;
             }
         }
+        .current-menu-item {
+            a {
+                color: $black-hue-1;
+                font-weight: $weight-bold;
+            }
+        }
     }
     .menu {
         list-style: none;
@@ -71,7 +77,7 @@
     }
 }
 
-body{
+body {
     font-family: $default-font;
 }
 

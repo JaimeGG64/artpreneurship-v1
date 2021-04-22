@@ -1018,6 +1018,11 @@ a dt {
 	line-height: 0;
 }
 
+.site-header .toggled .current-menu-item a {
+	color: #231f20;
+	font-weight: 700;
+}
+
 .site-header .menu {
 	list-style: none;
 	display: flex;
