@@ -12,6 +12,7 @@
         text-align: center;
         margin: 0;
         font-size: 2.5rem;
+        font-weight: $weight-black;
     }
     &__link {
         justify-self: center;
@@ -29,7 +30,8 @@
                 @include base-btn-blur(30px, $blue);
             }
         }
-        &--yellow, &--blue {
+        &--yellow,
+        &--blue {
             width: max-content;
         }
     }
@@ -48,7 +50,7 @@
         padding: 10rem 0;
         background-size: contain;
         * {
-            max-width: 42rem;
+            max-width: 43rem;
         }
     }
 }
